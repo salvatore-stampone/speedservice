@@ -1,0 +1,11 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --light-clr: #F5F5F5;
+  --primary-clr: #1357A0;
+  --secondary-clr: #9D6629;
+}
