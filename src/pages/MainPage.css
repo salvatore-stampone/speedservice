@@ -1,50 +1,18 @@
+.main-page {
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+    overflow-y: auto;
+}
+
 .section {
     border: 3px solid red;
     display: flex;
-    height: 500px;
+    height: 100vh;
+    scroll-snap-align: start;
 }
 
 .logo {
     aspect-ratio: 1/1;
     width: 300px;
     margin: 0 auto;
-}
-
-.section-one {
-    flex-direction: column;
-    background-color: white;
-}
-
-.section-one__name {
-    width: 100%;
-    font-size: 88px;
-    display: flex;
-    justify-content: center;
-    color: var(--primary-clr);
-    font-weight: 700;
-}
-
-.section-two {
-    flex-direction: column;
-    background-color: var(--primary-clr);
-    align-items: center;
-    justify-content: center;
-}
-
-.section-two__motto {
-    color: var(--light-clr);
-    font-size: 64px;
-    font-weight: 700;
-}
-
-.section-two__subtext {
-    color: lightgray;
-    font-size: 32px;
-}
-
-.section-three {
-    flex-direction: column;
-    background-color: var(--secondary-clr);
-    align-items: center;
-    justify-content: center;
 }

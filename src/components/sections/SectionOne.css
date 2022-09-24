@@ -1,0 +1,14 @@
+.section-one {
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+}
+
+.section-one__name {
+    width: 100%;
+    font-size: 88px;
+    display: flex;
+    justify-content: center;
+    color: var(--primary-clr);
+    font-weight: 700;
+}

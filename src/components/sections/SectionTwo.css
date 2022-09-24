@@ -1,0 +1,17 @@
+.section-two {
+    flex-direction: column;
+    background-color: var(--primary-clr);
+    align-items: center;
+    justify-content: center;
+}
+
+.section-two__motto {
+    color: var(--light-clr);
+    font-size: 64px;
+    font-weight: 700;
+}
+
+.section-two__subtext {
+    color: lightgray;
+    font-size: 32px;
+}
