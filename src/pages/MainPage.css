@@ -5,14 +5,18 @@
 }
 
 .section {
-    border: 3px solid red;
     display: flex;
     height: 100vh;
     scroll-snap-align: start;
 }
 
-.logo {
-    aspect-ratio: 1/1;
-    width: 300px;
-    margin: 0 auto;
+.section__header {
+    color: var(--light-clr);
+    font-size: 64px;
+    font-weight: 700;
+}
+
+.section__subheader {
+    color: lightgray;
+    font-size: 32px;
 }
