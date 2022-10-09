@@ -1,11 +1,37 @@
+/* @import url('http://fonts.cdnfonts.com/css/century-gothic'); */
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;700;900&display=swap');
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  /* font-family: 'Century Gothic', sans-serif; */
+  font-family: 'Lexend Deca', sans-serif;
+  scroll-behavior: smooth;
 }
 
 :root {
   --light-clr: #F5F5F5;
   --primary-clr: #1357A0;
   --secondary-clr: #9D6629;
+}
+
+.whatsapp__float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 40px;
+  background-color: #25d366;
+  color: #FFF;
+  border-radius: 50%;
+  box-shadow: 2px 2px 8px -4px black;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.whatsapp__icon {
+  font-size: 30px;
 }
