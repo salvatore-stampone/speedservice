@@ -23,6 +23,7 @@
     flex-direction: column;
     /* box-shadow: 0 2px 4px black; */
     padding: 30px;
+    color: var(--dark-clr);
 }
 
 .section-three__card-title:first-of-type {
@@ -52,6 +53,7 @@
     margin-right: 8px;
     min-width: 25px;
     min-height: 25px;
+    color: var(--dark-clr);
 }
 
 .section-three__image {

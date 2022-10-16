@@ -11,7 +11,7 @@ import { BsBoxSeam } from "react-icons/bs"
 
 export const SectionThree = () => {
     return (
-        <div id='section-three' className='section section-three'>
+        <div id='services' className='section section-three'>
             <span className='section__title'>I Nostri Servizi</span>
 
             <div className='section-three__cards'>
@@ -105,7 +105,7 @@ export const SectionThree = () => {
                     </h3>
                     <h3 className='section-three__card-subtitle'>
                         <BsBoxSeam className='section-three__icon' />
-                        Scatole Doppia Onda su Misura
+                        Scatole a Doppia Onda
                     </h3>
                 </div>
             </div>

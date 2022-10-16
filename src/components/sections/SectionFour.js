@@ -3,9 +3,24 @@ import './SectionFour.css'
 
 export const SectionFour = () => {
     return (
-        <div className='section section-one'>
-            <img src={require('../../assets/images/logo-no-text.png')} alt='Logo' className='logo' />
-            <span className='section-one__name'>SPEEDSERVICE</span>
+        <div id='additional-services' className='section section-four'>
+            <div class="section-four__wrapper">
+                <span className='section__title section__title--black'>Servizi Aggiuntivi</span>
+                <div className='section-four__cards'>
+                    <div className='section-four__card'>
+                        <h2 className='section-four__card-title'>T-10</h2>
+                    </div>
+                    <div className='section-four__card'>
+                        <h2 className='section-four__card-title'>T-12</h2>
+                    </div>
+                    <div className='section-four__card'>
+                        <h2 className='section-four__card-title'>Triangolazione</h2>
+                    </div>
+                    <div className='section-four__card'>
+                        <h2 className='section-four__card-title'>Document Return</h2>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }

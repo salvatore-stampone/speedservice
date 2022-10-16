@@ -29,6 +29,14 @@
     margin-block: 16px;
 }
 
+.section__title--black {
+    color: var(--dark-clr);
+    margin-block: 0;
+    width: 100%;
+    text-align: center;
+    display: block;
+}
+
 .horizontal-rule {
     width: 100%;
     color: var(--primary-clr);

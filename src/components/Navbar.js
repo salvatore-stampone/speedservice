@@ -6,25 +6,25 @@ export default function Navbar() {
         <nav className='navbar'>
             <ul className='navbar__nav-list'>
                 <li className='navbar__nav-item'>
-                    <a href="#section-one" className='navbar__nav-link'>Home</a>
+                    <a href="#home" className='navbar__nav-link'>Home</a>
                 </li>
                 {/* <li className='navbar__nav-item'>
-                    <a href="#section-two" className='navbar__nav-link'>Two</a>
+                    <a href="#welcome" className='navbar__nav-link'>Benvenuti</a>
                 </li> */}
                 <li className='navbar__nav-item'>
-                    <a href="#section-three" className='navbar__nav-link'>Servizi</a>
+                    <a href="#services" className='navbar__nav-link'>Servizi</a>
                 </li>
                 <li className='navbar__nav-item'>
-                    <a href="#section-four" className='navbar__nav-link'>Servizi Aggiuntivi</a>
+                    <a href="#additional-services" className='navbar__nav-link'>Servizi Aggiuntivi</a>
                 </li>
                 <li className='navbar__nav-item'>
-                    <a href="#section-five" className='navbar__nav-link'>Come Raggiungerci</a>
+                    <a href="#where" className='navbar__nav-link'>Vieni a Trovarci</a>
                 </li>
                 <li className='navbar__nav-item'>
-                    <a href="#section-six" className='navbar__nav-link'>Chi Siamo</a>
+                    <a href="#about" className='navbar__nav-link'>Chi Siamo</a>
                 </li>
                 <li className='navbar__nav-item'>
-                    <a href="#section-one" className='navbar__nav-link'>Contatti</a>
+                    <a href="#contacts" className='navbar__nav-link'>Contattaci</a>
                 </li>
                 {/* <li className='navbar__nav-item'>
                     <a href="#section-one" className='navbar__nav-link'>Monitora Spedizione</a>
