@@ -9,7 +9,7 @@ import { IoEarthOutline } from "react-icons/io5"
 import { FaPeopleCarry, FaTruckLoading } from "react-icons/fa"
 import { BsBoxSeam } from "react-icons/bs"
 
-export const SectionThree = () => {
+export default function SectionThree() {
     return (
         <div id='services' className='section section-three'>
             <span className='section__title'>I Nostri Servizi</span>

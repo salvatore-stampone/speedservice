@@ -1,7 +1,7 @@
 import React from 'react'
 import './SectionTwo.css'
 
-export const SectionTwo = () => {
+export default function SectionTwo() {
     return (
         <div id='welcome' className='section section-two'>
             <span className='section__header'>Campioni di Puntualità</span>
