@@ -3,9 +3,9 @@ import './SectionOne.css'
 
 export default function SectionOne() {
     return (
-        <div id='home' className='section section-one'>
+        <section id='home' className='section section-one'>
             <img src={require('../../assets/images/logo-no-text.png')} alt='Logo' className='logo' />
-            <span className='section-one__name'>SPEEDSERVICE</span>
-        </div>
+            <span className='section-one__name'>NEW SPEEDSERVICE</span>
+        </section>
     )
 }

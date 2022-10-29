@@ -51,19 +51,17 @@
 }
 
 .flipping-card__btn--front {
-    right: 6px;
+    right: 8px;
     top: 84px;
-    rotate: -6deg;
 }
 
 .flipping-card__btn--back {
-    left: 6px;
+    left: 8px;
     top: 84px;
-    rotate: 6deg;
     transform: rotateY(180deg);
 }
 
 .flipping-card__description {
-    width: 67%;
+    width: 81%;
     text-align: center;
 }

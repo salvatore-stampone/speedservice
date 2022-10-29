@@ -6,7 +6,7 @@
     right: 0;
     background-color: var(--primary-clr);
     box-shadow: 0 2px 6px -4px var(--dark-clr);
-    /* TODO right = px della scrollbar */
+    max-width: calc(100% - 8px);
 }
 
 .navbar__nav-list {
@@ -30,6 +30,5 @@
 }
 
 .navbar__nav-link:hover {
-    color: var(--light-clr);
     text-shadow: 0 0 4px var(--light-clr);
 }

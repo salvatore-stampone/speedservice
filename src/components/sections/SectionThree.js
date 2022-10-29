@@ -11,7 +11,7 @@ import { BsBoxSeam } from "react-icons/bs"
 
 export default function SectionThree() {
     return (
-        <div id='services' className='section section-three'>
+        <section id='services' className='section section-three'>
             <span className='section__title'>I Nostri Servizi</span>
 
             <div className='section-three__cards'>
@@ -109,6 +109,6 @@ export default function SectionThree() {
                     </h3>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }

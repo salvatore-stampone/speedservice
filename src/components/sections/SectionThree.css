@@ -1,5 +1,4 @@
 .section-three {
-    flex-direction: column;
     background-color: var(--secondary-clr);
     align-items: center;
     justify-content: flex-start;

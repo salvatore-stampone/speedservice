@@ -8,6 +8,7 @@
   /* font-family: 'Century Gothic', sans-serif; */
   font-family: 'Lexend Deca', sans-serif;
   scroll-behavior: smooth;
+  scrollbar-width: thin;
 }
 
 :root {
@@ -16,6 +17,10 @@
   --primary-clr: #1357A0;
   --primary-clr--dark: #0f447d;
   --secondary-clr: #9D6629;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
 }
 
 .whatsapp__float {

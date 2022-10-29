@@ -1,5 +1,4 @@
 .section-two {
-    flex-direction: column;
     background-color: var(--primary-clr);
     align-items: center;
     justify-content: center;

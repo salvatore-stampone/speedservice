@@ -1,5 +1,4 @@
 .section-four {
-    flex-direction: column;
     background-color: var(--light-clr);
     align-items: center;
     justify-content: center;
@@ -7,7 +6,6 @@
 
 .section-four__wrapper {
     height: calc(100vh - 80px);
-    padding-top: 16px;
 }
 
 .section-four__cards {
