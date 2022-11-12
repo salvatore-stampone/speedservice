@@ -1,7 +1,7 @@
 import React from 'react'
-import './SectionTwo.css'
+import './MottoSection.css'
 
-export default function SectionTwo() {
+export default function MottoSection() {
     return (
         <section id='welcome' className='section section-two'>
             <span className='section__header'>Campioni di Puntualità</span>

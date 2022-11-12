@@ -1,5 +1,5 @@
 import React from 'react'
-import './SectionThree.css'
+import './ServicesSection.css'
 import upsLogo from '../../assets/images/ups-logo.png'
 import brtFermopoint from '../../assets/images/brt-fermopoint.png'
 import inPostPoint from '../../assets/images/inPost-point.png'
@@ -9,7 +9,7 @@ import { IoEarthOutline } from "react-icons/io5"
 import { FaPeopleCarry, FaTruckLoading } from "react-icons/fa"
 import { BsBoxSeam } from "react-icons/bs"
 
-export default function SectionThree() {
+export default function ServicesSection() {
     return (
         <section id='services' className='section section-three'>
             <span className='section__title'>I Nostri Servizi</span>

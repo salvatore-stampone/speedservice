@@ -1,8 +1,8 @@
 import React from 'react'
 import FlippingCard from '../FlippingCard';
-import './SectionFour.css'
+import './AdditionalSection.css'
 
-export default function SectionFour() {
+export default function AdditionalSection() {
     return (
         <section id='additional-services' className='section section-four'>
             <div className='section-four__wrapper'>

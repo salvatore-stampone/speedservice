@@ -1,7 +1,7 @@
 import React from 'react'
-import './SectionFive.css'
+import './MapSection.css'
 
-export default function SectionFive() {
+export default function MapSection() {
     return (
         <section id='where' className='section section-five'>
             <div className='section-five__wrapper'>
