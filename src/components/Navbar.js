@@ -17,9 +17,9 @@ export default function Navbar() {
                 <li className='navbar__nav-item'>
                     <a href="#where" className='navbar__nav-link'>Vieni a Trovarci</a>
                 </li>
-                <li className='navbar__nav-item'>
+                {/* <li className='navbar__nav-item'>
                     <a href="#gallery" className='navbar__nav-link'>Gallery</a>
-                </li>
+                </li> */}
                 <li className='navbar__nav-item'>
                     <a href="#about" className='navbar__nav-link'>Chi Siamo</a>
                 </li>

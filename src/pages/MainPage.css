@@ -14,18 +14,20 @@
 
 .section__header {
     color: var(--light-clr);
-    font-size: 64px;
+    font-size: 4rem;
     font-weight: 700;
+    display: block;
 }
 
 .section__subheader {
     color: lightgray;
-    font-size: 32px;
+    font-size: 2rem;
+    display: block;
 }
 
 .section__title {
     color: var(--light-clr);
-    font-size: 48px;
+    font-size: 3rem;
     font-weight: 700;
     margin-block: 16px;
     display: block;
@@ -33,7 +35,19 @@
     text-align: center;
 }
 
-.section__title--black {
+.section__subtitle {
+    color: var(--light-clr);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-block: 16px;
+    display: block;
+    text-align: center;
+    max-width: 50ch;
+    position: relative;
+}
+
+.section__title--black,
+.section__subtitle--black {
     color: var(--dark-clr);
 }
 

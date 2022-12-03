@@ -1,0 +1,23 @@
+.about-section {
+    background-color: var(--secondary-clr);
+    align-items: center;
+    justify-content: center;
+}
+
+.about-section__wrapper {
+    padding: 75px;
+    background-color: var(--light-clr);
+    border-radius: 50px;
+    box-shadow: 0px 10px 15px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-section__text-wrapper {
+    max-width: 75ch;
+}
+
+.about-section__text {}
+
+.about-section__highlight {
+    color: var(--primary-clr);
+    font-weight: 700;
+}
