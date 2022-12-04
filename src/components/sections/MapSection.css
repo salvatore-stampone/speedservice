@@ -25,7 +25,6 @@
 .section-five__cities {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    max-width: 800px;
 }
 
 .section-five__city {
@@ -59,18 +58,12 @@
     }
 }
 
-@media screen and (min-width: 480px) and (max-width: 768px) {
-    .main-page {
-        scroll-snap-type: y proximity;
-        height: 100vh;
-        overflow-y: auto;
+@media screen and (min-width: 480px) and (max-width: 900px) {
+    .section-five__cities {
+        grid-template-columns: repeat(2, 1fr);
     }
-}
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-    .main-page {
-        scroll-snap-type: y proximity;
-        height: 100vh;
-        overflow-y: auto;
+    .section-five__city:nth-child(-n + 6) {
+        margin-bottom: 12px;
     }
 }

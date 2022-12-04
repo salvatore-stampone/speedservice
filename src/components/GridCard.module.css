@@ -34,6 +34,7 @@
     margin: 16px;
     display: block;
     text-align: center;
+    line-break: anywhere;
 }
 
 .link:hover {
@@ -54,24 +55,19 @@
     .wrapper {
         margin-left: 0;
     }
-
-    .link {
-        line-break: anywhere;
-    }
 }
 
-@media screen and (min-width: 480px) and (max-width: 768px) {
-    .main-page {
-        scroll-snap-type: y proximity;
-        height: 100vh;
-        overflow-y: auto;
+@media screen and (min-width: 480px) and (max-width: 900px) {
+    .card {
+        flex-direction: column;
+        padding: 24px 24px 12px;
     }
-}
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-    .main-page {
-        scroll-snap-type: y proximity;
-        height: 100vh;
-        overflow-y: auto;
+    .title {
+        text-align: center;
+    }
+
+    .wrapper {
+        margin-left: 0;
     }
 }

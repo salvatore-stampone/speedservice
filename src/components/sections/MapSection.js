@@ -1,16 +1,22 @@
 import React from 'react'
 import './MapSection.css'
 
-export default function MapSection({ isSmallScreen }) {
+export default function MapSection({ isSmallScreen, isMediumScreen, isLargeScreen }) {
     return (
         <section id='where' className='section section-five'>
             <div className='section-five__wrapper'>
                 <span className='section__title'>Vieni a Trovarci</span>
-                <div class="mapouter" style={{ width: isSmallScreen ? '300px' : '800px' }}>
-                    <div class="gmap_canvas" style={{ width: isSmallScreen ? '300px' : '800px' }}>
+                <div class="mapouter" style={{
+                    width: isSmallScreen ? '300px' : isMediumScreen ? '450px' : isLargeScreen ? '725px' : '1000px',
+                    height: isSmallScreen || isMediumScreen ? '300px' : isLargeScreen ? '350px' : '400px'
+                }}>
+                    <div class="gmap_canvas" style={{
+                        width: isSmallScreen ? '300px' : isMediumScreen ? '450px' : isLargeScreen ? '725px' : '1000px',
+                        height: isSmallScreen || isMediumScreen ? '300px' : isLargeScreen ? '350px' : '400px'
+                    }}>
                         <iframe title='map'
-                            width={isSmallScreen ? "300" : "800"}
-                            height="300"
+                            width={isSmallScreen ? "300" : isMediumScreen ? "450" : isLargeScreen ? "725" : "1000"}
+                            height={isSmallScreen || isMediumScreen ? "300" : isLargeScreen ? "350" : "400"}
                             className='map-iframe'
                             id="gmap_canvas" src="https://maps.google.com/maps?q=Lucera,%20via%20Napoli,%2016/A,%20Speedservice&t=&z=18&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
                         />

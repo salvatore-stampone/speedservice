@@ -78,14 +78,12 @@
     }
 }
 
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (min-width: 480px) and (max-width: 900px) {
     .main-page {
         scroll-snap-type: y proximity;
     }
-}
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-    .main-page {
-        scroll-snap-type: y proximity;
+    .section {
+        padding-top: 24px;
     }
 }
