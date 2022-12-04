@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/speedservice/static/css/main.9098799a.css",
-    "main.js": "/speedservice/static/js/main.6a74fd83.js",
+    "main.css": "/speedservice/static/css/main.86dfb6b5.css",
+    "main.js": "/speedservice/static/js/main.1447006e.js",
     "static/js/787.ec2abe63.chunk.js": "/speedservice/static/js/787.ec2abe63.chunk.js",
     "static/media/logo-no-text.png": "/speedservice/static/media/logo-no-text.59c31dcf341c15ee5d7c.png",
     "static/media/ups-logo.png": "/speedservice/static/media/ups-logo.36243233afc9b4f4955a.png",
     "static/media/wish-local.png": "/speedservice/static/media/wish-local.0419ada04526b0ba46cf.png",
     "index.html": "/speedservice/index.html",
-    "main.9098799a.css.map": "/speedservice/static/css/main.9098799a.css.map",
-    "main.6a74fd83.js.map": "/speedservice/static/js/main.6a74fd83.js.map",
+    "main.86dfb6b5.css.map": "/speedservice/static/css/main.86dfb6b5.css.map",
+    "main.1447006e.js.map": "/speedservice/static/js/main.1447006e.js.map",
     "787.ec2abe63.chunk.js.map": "/speedservice/static/js/787.ec2abe63.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9098799a.css",
-    "static/js/main.6a74fd83.js"
+    "static/css/main.86dfb6b5.css",
+    "static/js/main.1447006e.js"
   ]
 }
