@@ -9,12 +9,11 @@ import { IoEarthOutline } from "react-icons/io5"
 import { FaPeopleCarry, FaTruckLoading } from "react-icons/fa"
 import { BsBoxSeam } from "react-icons/bs"
 
-export default function ServicesSection() {
+export default function ServicesSection({ isSmallScreen }) {
     return (
         <section id='services' className='section section-three'>
             <span className='section__title'>I Nostri Servizi</span>
-
-            <div className='section-three__cards'>
+            <div className={isSmallScreen ? 'section-three__cards small' : 'section-three__cards'}>
                 <div className='section-three__card'>
                     <h2 className='section-three__card-title'>SPEDIZIONI</h2>
                     <h3 className='section-three__card-subtitle'>
@@ -109,6 +108,6 @@ export default function ServicesSection() {
                     </h3>
                 </div>
             </div>
-        </section>
+        </section >
     )
 }

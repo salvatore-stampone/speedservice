@@ -1,15 +1,15 @@
 import React from 'react'
 import './MapSection.css'
 
-export default function MapSection() {
+export default function MapSection({ isSmallScreen }) {
     return (
         <section id='where' className='section section-five'>
             <div className='section-five__wrapper'>
                 <span className='section__title'>Vieni a Trovarci</span>
-                <div class="mapouter">
-                    <div class="gmap_canvas">
+                <div class="mapouter" style={{ width: isSmallScreen ? '300px' : '800px' }}>
+                    <div class="gmap_canvas" style={{ width: isSmallScreen ? '300px' : '800px' }}>
                         <iframe title='map'
-                            width="800"
+                            width={isSmallScreen ? "300" : "800"}
                             height="300"
                             className='map-iframe'
                             id="gmap_canvas" src="https://maps.google.com/maps?q=Lucera,%20via%20Napoli,%2016/A,%20Speedservice&t=&z=18&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
@@ -17,7 +17,15 @@ export default function MapSection() {
                     </div>
                 </div>
                 <div className='section-five__from'>
-                    <span className='section__title'>Scopri come da:</span>
+                    <span style={{
+                        color: 'var(--light-clr)',
+                        fontSize: '2rem',
+                        fontWeight: '700',
+                        marginInline: '16px',
+                        marginBottom: '24px',
+                        display: 'block',
+                        textAlign: 'center',
+                    }}>Scopri come da:</span>
                     <div className='section-five__cities'>
                         <a className='section-five__city' href='https://www.google.com/maps/dir/Alberona,+FG/Speedservice+Lucera,+Via+Napoli,+Lucera,+FG/@41.4697886,15.1589883,12z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x1339f97ef6f727a7:0x3adc07b7b3d696ee!2m2!1d15.1242439!2d41.432188!1m5!1m1!1s0x1339e1e8ae52f549:0xfb70e0ee17594a01!2m2!1d15.3311763!2d41.5082426!3e0' target='_blank' rel='noreferrer'>
                             Alberona
@@ -46,6 +54,6 @@ export default function MapSection() {
                     </div>
                 </div>
             </div>
-        </section>
+        </section >
     )
 }

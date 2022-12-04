@@ -31,3 +31,49 @@
 .navbar__nav-link:hover {
     text-shadow: 0 0 4px var(--light-clr);
 }
+
+.sidebar {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9998;
+    inset: 0;
+    background-color: var(--primary-clr);
+    transform: translateX(100%);
+    transition: transform 175ms ease-in-out;
+}
+
+.sidebar.active {
+    transform: translateX(0%);
+    transition: transform 175ms ease-in-out;
+}
+
+.sidebar__menu-icon {
+    z-index: 9999;
+    position: fixed;
+    right: 0;
+    top: 0;
+    border: none;
+    font-size: 2.5rem;
+    height: 56px;
+    width: 60px;
+    border-radius: 0 0 0 100%;
+    padding-left: 8px;
+    cursor: pointer;
+}
+
+.sidebar__menu-icon:hover {
+    filter: brightness(.9);
+}
+
+.sidebar .navbar__nav-list {
+    flex-direction: column;
+}
+
+.sidebar .navbar__nav-item {
+    margin-bottom: 24px;
+}
+
+.sidebar .navbar__nav-link {
+    font-size: 1.75rem;
+}

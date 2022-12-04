@@ -1,5 +1,9 @@
 .contacts-section {
     background-color: var(--light-clr);
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+}
+
+.contacts-section__wrapper {
+    max-width: 850px;
 }

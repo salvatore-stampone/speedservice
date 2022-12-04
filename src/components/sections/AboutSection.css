@@ -5,19 +5,51 @@
 }
 
 .about-section__wrapper {
-    padding: 75px;
+    padding: 48px 64px;
     background-color: var(--light-clr);
     border-radius: 50px;
     box-shadow: 0px 10px 15px 10px rgba(0, 0, 0, 0.1);
+    margin: 16px;
 }
 
 .about-section__text-wrapper {
     max-width: 75ch;
 }
 
-.about-section__text {}
+.about-section__text {
+    margin-bottom: 24px;
+    font-size: 1.1rem;
+}
+
+.about-section__text:last-of-type {
+    margin-bottom: 0;
+}
 
 .about-section__highlight {
     color: var(--primary-clr);
     font-weight: 700;
+    font-size: 1.25em;
+}
+
+/* RESPONSIVENESS */
+@media screen and (max-width: 480px) {
+    .about-section__wrapper {
+        padding: 32px 48px 48px;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+    .main-page {
+        scroll-snap-type: y proximity;
+        height: 100vh;
+        overflow-y: auto;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .main-page {
+        scroll-snap-type: y proximity;
+        height: 100vh;
+        overflow-y: auto;
+    }
 }

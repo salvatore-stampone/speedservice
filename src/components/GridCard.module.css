@@ -31,8 +31,47 @@
     font-size: 1.25rem;
     color: var(--primary-clr);
     transition: text-shadow 250ms;
+    margin: 16px;
+    display: block;
+    text-align: center;
 }
 
 .link:hover {
     text-shadow: 0 0 1px var(--primary-clr);
+}
+
+/* RESPONSIVENESS */
+@media screen and (max-width: 480px) {
+    .card {
+        flex-direction: column;
+        padding: 24px 24px 12px;
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    .wrapper {
+        margin-left: 0;
+    }
+
+    .link {
+        line-break: anywhere;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+    .main-page {
+        scroll-snap-type: y proximity;
+        height: 100vh;
+        overflow-y: auto;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .main-page {
+        scroll-snap-type: y proximity;
+        height: 100vh;
+        overflow-y: auto;
+    }
 }

@@ -1,6 +1,7 @@
 /* First child of the 3D Scene */
 .flipping-card {
     width: 100%;
+    max-width: 325px;
     height: 100%;
     position: relative;
     transition: transform 800ms;
