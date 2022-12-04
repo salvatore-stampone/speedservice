@@ -7,17 +7,7 @@
 }
 
 /* RESPONSIVENESS */
-@media screen and (max-width: 480px) {
-    .wrapper {
-        grid-template-columns: repeat(1, 1fr);
-        row-gap: 16px;
-        width: 80%;
-        max-width: 420px;
-        justify-items: center;
-    }
-}
-
-@media screen and (min-width: 480px) and (max-width: 900px) {
+@media screen and (max-width: 900px) {
     .wrapper {
         grid-template-columns: repeat(1, 1fr);
         row-gap: 16px;

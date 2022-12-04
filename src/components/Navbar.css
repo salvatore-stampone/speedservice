@@ -25,7 +25,7 @@
     font-weight: 900;
     font-size: 20px;
     color: var(--light-clr);
-    transition: text-shadow 250ms;
+    transition: text-shadow 175ms;
 }
 
 .navbar__nav-link:hover {
@@ -38,13 +38,39 @@
     height: 100vh;
     z-index: 9998;
     inset: 0;
+    border-radius: 0 0 0 100%;
     background-color: var(--primary-clr);
-    transform: translateX(100%);
+    /* transform: translateX(100%); */
+    transform: scale(0);
+    transform-origin: top right;
     transition: transform 175ms ease-in-out;
 }
 
+.sidebar__backdrop {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9997;
+    inset: 0;
+    border-radius: 0 0 0 100%;
+    background-color: var(--primary-clr--dark);
+    /* transform: translateX(100%); */
+    transform: scale(0);
+    transform-origin: top right;
+    transition: transform 175ms 125ms ease-in-out;
+}
+
 .sidebar.active {
-    transform: translateX(0%);
+    /* transform: translateX(0%); */
+    transform: scale(1);
+    transform-origin: top right;
+    transition: transform 175ms 125ms ease-in-out;
+}
+
+.sidebar.active~.sidebar__backdrop {
+    /* transform: translateX(0%); */
+    transform: scale(2);
+    transform-origin: top right;
     transition: transform 175ms ease-in-out;
 }
 
@@ -72,6 +98,45 @@
 
 .sidebar .navbar__nav-item {
     margin-bottom: 24px;
+    translate: 0 56px;
+    opacity: 0;
+    transition: all 175ms ease-in-out;
+}
+
+.sidebar.active .navbar__nav-item:nth-child(1) {
+    translate: 0 0;
+    opacity: 1;
+    transition: all 175ms ease-in-out;
+}
+
+.sidebar.active .navbar__nav-item:nth-child(2) {
+    translate: 0 0;
+    opacity: 1;
+    transition: all 175ms 150ms ease-in-out;
+}
+
+.sidebar.active .navbar__nav-item:nth-child(3) {
+    translate: 0 0;
+    opacity: 1;
+    transition: all 175ms 300ms ease-in-out;
+}
+
+.sidebar.active .navbar__nav-item:nth-child(4) {
+    translate: 0 0;
+    opacity: 1;
+    transition: all 175ms 450ms ease-in-out;
+}
+
+.sidebar.active .navbar__nav-item:nth-child(5) {
+    translate: 0 0;
+    opacity: 1;
+    transition: all 175ms 600ms ease-in-out;
+}
+
+.sidebar.active .navbar__nav-item:nth-child(6) {
+    translate: 0 0;
+    opacity: 1;
+    transition: all 175ms 750ms ease-in-out;
 }
 
 .sidebar .navbar__nav-link {

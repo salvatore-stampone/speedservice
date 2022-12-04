@@ -47,7 +47,7 @@
 }
 
 .flipping-card__btn:hover {
-    color: var(--primary-clr--dark);
+    filter: brightness(.9);
     cursor: pointer;
 }
 

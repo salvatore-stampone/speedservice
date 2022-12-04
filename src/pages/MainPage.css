@@ -68,17 +68,7 @@
 }
 
 /* RESPONSIVENESS */
-@media screen and (max-width: 480px) {
-    .main-page {
-        scroll-snap-type: y proximity;
-    }
-
-    .section {
-        padding-top: 24px;
-    }
-}
-
-@media screen and (min-width: 480px) and (max-width: 900px) {
+@media screen and (max-width: 900px) {
     .main-page {
         scroll-snap-type: y proximity;
     }

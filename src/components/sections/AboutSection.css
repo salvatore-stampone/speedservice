@@ -32,13 +32,7 @@
 }
 
 /* RESPONSIVENESS */
-@media screen and (max-width: 480px) {
-    .about-section__wrapper {
-        padding: 32px 48px 48px;
-    }
-}
-
-@media screen and (min-width: 480px) and (max-width: 900px) {
+@media screen and (max-width: 900px) {
     .about-section__wrapper {
         padding: 32px 48px 48px;
     }

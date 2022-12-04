@@ -52,6 +52,7 @@ export default function Navbar() {
                 </li> */}
             </ul>
         </div>
+        <div className='sidebar__backdrop'></div>
     </>
 
     const largeNavbar = <nav className='navbar'>

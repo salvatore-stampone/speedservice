@@ -42,22 +42,7 @@
 }
 
 /* RESPONSIVENESS */
-@media screen and (max-width: 480px) {
-    .card {
-        flex-direction: column;
-        padding: 24px 24px 12px;
-    }
-
-    .title {
-        text-align: center;
-    }
-
-    .wrapper {
-        margin-left: 0;
-    }
-}
-
-@media screen and (min-width: 480px) and (max-width: 900px) {
+@media screen and (max-width: 900px) {
     .card {
         flex-direction: column;
         padding: 24px 24px 12px;
