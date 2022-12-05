@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/speedservice/static/css/main.d85e57ea.css",
-    "main.js": "/speedservice/static/js/main.db7fa7d0.js",
-    "static/js/787.ec2abe63.chunk.js": "/speedservice/static/js/787.ec2abe63.chunk.js",
-    "static/media/logo-no-text.png": "/speedservice/static/media/logo-no-text.59c31dcf341c15ee5d7c.png",
-    "static/media/ups-logo.png": "/speedservice/static/media/ups-logo.36243233afc9b4f4955a.png",
-    "static/media/wish-local.png": "/speedservice/static/media/wish-local.0419ada04526b0ba46cf.png",
-    "index.html": "/speedservice/index.html",
-    "main.d85e57ea.css.map": "/speedservice/static/css/main.d85e57ea.css.map",
-    "main.db7fa7d0.js.map": "/speedservice/static/js/main.db7fa7d0.js.map",
-    "787.ec2abe63.chunk.js.map": "/speedservice/static/js/787.ec2abe63.chunk.js.map"
+    "main.css": "/static/css/main.d85e57ea.css",
+    "main.js": "/static/js/main.c3c9d495.js",
+    "static/js/787.ec2abe63.chunk.js": "/static/js/787.ec2abe63.chunk.js",
+    "static/media/logo-no-text.png": "/static/media/logo-no-text.59c31dcf341c15ee5d7c.png",
+    "static/media/ups-logo.png": "/static/media/ups-logo.36243233afc9b4f4955a.png",
+    "static/media/wish-local.png": "/static/media/wish-local.0419ada04526b0ba46cf.png",
+    "index.html": "/index.html",
+    "main.d85e57ea.css.map": "/static/css/main.d85e57ea.css.map",
+    "main.c3c9d495.js.map": "/static/js/main.c3c9d495.js.map",
+    "787.ec2abe63.chunk.js.map": "/static/js/787.ec2abe63.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d85e57ea.css",
-    "static/js/main.db7fa7d0.js"
+    "static/js/main.c3c9d495.js"
   ]
 }
