@@ -1,18 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.d85e57ea.css",
-    "main.js": "/static/js/main.c3c9d495.js",
+    "main.css": "/static/css/main.b812fbe8.css",
+    "main.js": "/static/js/main.ccacc1e8.js",
     "static/js/787.ec2abe63.chunk.js": "/static/js/787.ec2abe63.chunk.js",
     "static/media/logo-no-text.png": "/static/media/logo-no-text.59c31dcf341c15ee5d7c.png",
+    "static/media/tnt-square.png": "/static/media/tnt-square.c944514717beff342521.png",
+    "static/media/ups-square.png": "/static/media/ups-square.584350f57e0623da9fac.png",
     "static/media/ups-logo.png": "/static/media/ups-logo.36243233afc9b4f4955a.png",
+    "static/media/sda-square.png": "/static/media/sda-square.2c9e17d662f23e557919.png",
     "static/media/wish-local.png": "/static/media/wish-local.0419ada04526b0ba46cf.png",
+    "static/media/gls-square.jpg": "/static/media/gls-square.75a4daaed2c5aa658a37.jpg",
+    "static/media/brt-square.jpg": "/static/media/brt-square.f6dfc6e593d239d546e8.jpg",
     "index.html": "/index.html",
-    "main.d85e57ea.css.map": "/static/css/main.d85e57ea.css.map",
-    "main.c3c9d495.js.map": "/static/js/main.c3c9d495.js.map",
+    "main.b812fbe8.css.map": "/static/css/main.b812fbe8.css.map",
+    "main.ccacc1e8.js.map": "/static/js/main.ccacc1e8.js.map",
     "787.ec2abe63.chunk.js.map": "/static/js/787.ec2abe63.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d85e57ea.css",
-    "static/js/main.c3c9d495.js"
+    "static/css/main.b812fbe8.css",
+    "static/js/main.ccacc1e8.js"
   ]
 }
