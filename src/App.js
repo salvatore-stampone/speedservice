@@ -2,14 +2,16 @@ import './App.css';
 import MainPage from './pages/MainPage';
 import { BsWhatsapp } from 'react-icons/bs';
 import Navbar from './components/Navbar';
+import Float from './components/Tracking/Float';
 
 function App() {
   return (
     <>
       <Navbar />
+      <Float />
       <a
         href="https://wa.me/390881042353"
-        className="whatsapp__float"
+        className="float whatsapp__float"
         target="_blank"
         rel="noopener noreferrer"
       >

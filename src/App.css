@@ -23,20 +23,23 @@
   width: 8px;
 }
 
-.whatsapp__float {
+.float {
   position: fixed;
   width: 60px;
   height: 60px;
   bottom: 12px;
-  right: 16px;
-  background-color: #25d366;
-  color: #FFF;
   border-radius: 50%;
   box-shadow: 2px 2px 8px -4px black;
   z-index: 9997;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.whatsapp__float {
+  background-color: #25d366;
+  color: #FFF;
+  right: 16px;
 }
 
 .whatsapp__icon {
