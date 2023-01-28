@@ -25,12 +25,8 @@
 
 .float {
   position: fixed;
-  width: 60px;
-  height: 60px;
   bottom: 12px;
-  border-radius: 50%;
   box-shadow: 2px 2px 8px -4px black;
-  z-index: 9997;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,7 +35,11 @@
 .whatsapp__float {
   background-color: #25d366;
   color: #FFF;
+  z-index: 10;
   right: 16px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
 }
 
 .whatsapp__icon {

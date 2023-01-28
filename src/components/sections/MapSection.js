@@ -6,11 +6,11 @@ export default function MapSection({ isSmallScreen, isMediumScreen, isLargeScree
         <section id='where' className='section section-five'>
             <div className='section-five__wrapper'>
                 <span className='section__title'>Vieni a Trovarci</span>
-                <div class="mapouter" style={{
+                <div className="mapouter" style={{
                     width: isSmallScreen ? '300px' : isMediumScreen ? '450px' : isLargeScreen ? '725px' : '1000px',
                     height: isSmallScreen || isMediumScreen ? '300px' : isLargeScreen ? '350px' : '400px'
                 }}>
-                    <div class="gmap_canvas" style={{
+                    <div className="gmap_canvas" style={{
                         width: isSmallScreen ? '300px' : isMediumScreen ? '450px' : isLargeScreen ? '725px' : '1000px',
                         height: isSmallScreen || isMediumScreen ? '300px' : isLargeScreen ? '350px' : '400px'
                     }}>

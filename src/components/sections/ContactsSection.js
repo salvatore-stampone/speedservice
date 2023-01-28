@@ -8,7 +8,6 @@ export default function ContactsSection() {
             <div className='contacts-section__wrapper'>
                 <span className='section__title section__title--black'>Contattaci</span>
                 <span className='section__subtitle section__subtitle--black'>Per un preventivo gratuito e per qualsiasi dubbio, puoi trovarci ai seguenti recapiti:</span>
-
                 <GridCards />
             </div>
         </section>
