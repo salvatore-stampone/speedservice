@@ -1,9 +1,3 @@
-.section-three {
-    background-color: var(--secondary-clr);
-    align-items: center;
-    justify-content: flex-start;
-}
-
 .section-three__cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -22,7 +16,6 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    /* box-shadow: 0 2px 4px black; */
     padding: 30px;
     color: var(--dark-clr);
 }

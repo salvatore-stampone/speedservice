@@ -1,9 +1,3 @@
-.section-five {
-    background-color: var(--primary-clr);
-    align-items: center;
-    justify-content: flex-start;
-}
-
 .mapouter {
     position: relative;
     text-align: right;

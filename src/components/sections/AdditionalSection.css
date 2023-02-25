@@ -1,14 +1,3 @@
-.section-four {
-    background-color: var(--light-clr);
-    align-items: center;
-    justify-content: flex-start;
-}
-
-/* 
-.section-four__wrapper {
-    height: calc(100vh - 80px);
-} */
-
 .section-four__cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
