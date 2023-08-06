@@ -8,9 +8,6 @@
     min-height: 200px;
     max-width: 400px;
     border-radius: 20px;
-    background: linear-gradient(145deg, var(--light-clr), #dddddd);
-    box-shadow: 20px 20px 60px #acacac,
-        -20px -20px 60px var(--light-clr);
 }
 
 .icon {
