@@ -124,7 +124,7 @@ export default function EstimateSection() {
                 </form>
                 {showEstimate &&
                     (mappedOutput ? (
-                        <div className="bg-[var(--secondary-clr)] border-[var(--light-clr)] border-4 text-[var(--light-clr)] p-8 rounded-full w-fit mx-auto aspect-square grid place-items-center font-bold text-xl">
+                        <div className="bg-[var(--secondary-clr)] border-[var(--light-clr)] border-4 text-[var(--light-clr)] p-8 rounded-full h-20 mx-auto aspect-square grid place-items-center font-bold text-xl no-aspect">
                             {mappedOutput + "€"}
                         </div>
                     ) : (

@@ -51,3 +51,21 @@ input::-webkit-inner-spin-button {
 .whatsapp__icon {
   font-size: 30px;
 }
+
+.no-aspect {
+  aspect-ratio: 1/1;
+
+  @supports not (aspect-ratio: 1 / 1) {
+    &::before {
+      float: left;
+      padding-top: 100%;
+      content: "";
+    }
+
+    &::after {
+      display: block;
+      content: "";
+      clear: both;
+    }
+  }
+}
