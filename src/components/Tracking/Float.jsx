@@ -59,13 +59,13 @@ export default function Float() {
                 <>
                     {/* BACKDROP */}
                     <div
-                        class="absolute inset-0 backdrop-blur-md"
+                        class="absolute z-20 inset-0 backdrop-blur-md"
                         onClick={() => setIsModalOpen(false)}
                     ></div>
                     <div
                         className={`${isModalOpen ? "flex" : "hidden"} ${
                             fade ? "opacity-100" : "opacity-0"
-                        } fixed top-[40%] left-[50%] -translate-x-1/2 -translate-y-1/2 z-10 bg-light w-80 h-40 items-center justify-center rounded-2xl shadow-2xl lg:w-96 transition-opacity duration-500`}
+                        } fixed z-20 top-[40%] left-[50%] -translate-x-1/2 -translate-y-1/2 bg-light w-80 h-40 items-center justify-center rounded-2xl shadow-2xl lg:w-96 transition-opacity duration-500`}
                     >
                         <IoCloseSharp
                             className="absolute top-4 right-5 text-xl cursor-pointer hover:text-primary"

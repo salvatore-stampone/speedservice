@@ -2,7 +2,7 @@
     height: 64px;
     position: fixed;
     inset: 0;
-    z-index: 9999;
+    z-index: 19;
     background-color: var(--primary-clr);
     box-shadow: 0 2px 6px -4px var(--dark-clr);
     max-width: calc(100% - 8px);
@@ -36,7 +36,7 @@
     position: fixed;
     width: 100vw;
     height: 100vh;
-    z-index: 9998;
+    z-index: 18;
     inset: 0;
     border-radius: 0 0 0 100%;
     background-color: var(--primary-clr);
@@ -50,7 +50,7 @@
     position: fixed;
     width: 100vw;
     height: 100vh;
-    z-index: 9997;
+    z-index: 17;
     inset: 0;
     border-radius: 0 0 0 100%;
     background-color: var(--primary-clr--dark);
@@ -75,7 +75,7 @@
 }
 
 .sidebar__menu-icon {
-    z-index: 9999;
+    z-index: 19;
     position: fixed;
     right: 0;
     top: 0;
