@@ -11,7 +11,22 @@
     align-items: center;
     min-height: 100vh;
     scroll-snap-align: start;
-    padding: 88px 0 32px;
+    padding-bottom: 32px;
+}
+
+.section:nth-of-type(3n-2) {
+    background-color: var(--light-clr);
+    color: var(--dark-clr);
+}
+
+.section:nth-of-type(3n-1) {
+    background-color: var(--primary-clr);
+    color: var(--light-clr);
+}
+
+.section:nth-of-type(3n) {
+    background-color: var(--secondary-clr);
+    color: var(--light-clr);
 }
 
 .section__header {

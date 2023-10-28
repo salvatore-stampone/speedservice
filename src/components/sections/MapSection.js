@@ -7,9 +7,11 @@ export default function MapSection({
     isLargeScreen,
 }) {
     return (
-        <section id="where" className="section bg-[var(--secondary-clr)]">
+        <section id="where" className="section">
             <div className="section-five__wrapper">
-                <span className="section__title">Vieni a Trovarci</span>
+                <span className="section__title section__title--black">
+                    Vieni a Trovarci
+                </span>
                 <div
                     className="mapouter"
                     style={{
@@ -77,7 +79,7 @@ export default function MapSection({
                 <div className="section-five__from">
                     <span
                         style={{
-                            color: "var(--light-clr)",
+                            color: "var(--primary-clr)",
                             fontSize: "2rem",
                             fontWeight: "700",
                             marginInline: "16px",

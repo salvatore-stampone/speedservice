@@ -6,6 +6,7 @@ import EstimateSection from "../components/sections/EstimateSection";
 import LogoSection from "../components/sections/LogoSection";
 import MapSection from "../components/sections/MapSection";
 import MottoSection from "../components/sections/MottoSection";
+import ParcelCollectionSection from "../components/sections/ParcelCollectionSection";
 import ServicesSection from "../components/sections/ServicesSection";
 import "./MainPage.css";
 
@@ -39,6 +40,7 @@ export default function MainPage() {
             <ServicesSection isSmallScreen={isSmallScreen} />
             <AdditionalSection />
             <EstimateSection />
+            <ParcelCollectionSection />
             <MapSection
                 isSmallScreen={isSmallScreen}
                 isMediumScreen={isMediumScreen}

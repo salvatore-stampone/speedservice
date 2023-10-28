@@ -4,6 +4,7 @@
     gap: 12px;
     max-width: fit-content;
     margin: 12px auto;
+    color: var(--primary-clr);
 }
 
 /* RESPONSIVENESS */

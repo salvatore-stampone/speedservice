@@ -75,7 +75,18 @@ export default function EstimateSection() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(formData);
+
+        if (
+            formData.height === 0 ||
+            formData["length"] === 0 ||
+            formData.weight === 0 ||
+            formData.width === 0
+        ) {
+            alert(
+                "Informazioni mancanti, si prega di compilare tutti i campi."
+            );
+            return;
+        }
 
         setShowEstimate(true);
     };
@@ -104,7 +115,7 @@ export default function EstimateSection() {
                                 <input
                                     type="number"
                                     id={field.id}
-                                    className="rounded-full min-h-[40px] px-5 py-[5px] w-[200px]"
+                                    className="rounded-full min-h-[40px] px-5 py-[5px] w-[200px] text-dark"
                                     placeholder={field.label + " pacco"}
                                     name={field.name}
                                     onChange={handleInputChange}

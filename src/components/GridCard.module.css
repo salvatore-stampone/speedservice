@@ -26,7 +26,7 @@
     font-weight: 700;
     text-decoration: none;
     font-size: 1.25rem;
-    color: var(--primary-clr);
+    color: var(--secondary-clr);
     transition: text-shadow 250ms;
     margin: 16px;
     display: block;
@@ -35,7 +35,7 @@
 }
 
 .link:hover {
-    text-shadow: 0 0 1px var(--primary-clr);
+    text-shadow: 0 0 1px var(--secondary-clr);
 }
 
 /* RESPONSIVENESS */

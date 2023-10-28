@@ -3,12 +3,9 @@ import "./AboutSection.css";
 
 export default function AboutSection() {
     return (
-        <section id="about" className="section bg-[var(--light-clr)]">
+        <section id="about" className="section">
             <div className="about-section__wrapper">
-                <span
-                    className="section__title section__title--black"
-                    style={{ margin: "0px" }}
-                >
+                <span className="section__title" style={{ margin: "0px" }}>
                     Chi siamo
                 </span>
                 <div className="about-section__text-wrapper">

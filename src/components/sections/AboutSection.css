@@ -1,6 +1,5 @@
 .about-section__wrapper {
     padding: 48px 64px;
-    background-color: var(--light-clr);
     border-radius: 50px;
     box-shadow: 0px 10px 15px 10px rgba(0, 0, 0, 0.1);
     margin: 16px;
@@ -20,7 +19,7 @@
 }
 
 .about-section__highlight {
-    color: var(--primary-clr);
+    color: var(--secondary-clr);
     font-weight: 700;
     font-size: 1.25em;
 }
