@@ -4,43 +4,64 @@ import * as Accordion from "@radix-ui/react-accordion";
 import classNames from "classnames";
 import React, { forwardRef, useState } from "react";
 
-const senderFields = [
-    { id: "name", label: "Nome", type: "text", placeholder: "Mario" },
-    { id: "surname", label: "Cognome", type: "text", placeholder: "Rossi" },
-    {
-        id: "mail",
-        label: "Mail",
-        type: "text",
-        placeholder: "mariorossi@esempio.com",
-    },
-    {
-        id: "phoneNumber",
-        label: "Cellulare",
-        type: "number",
-        placeholder: "3331234567",
-    },
-];
-
 const collectFields = [
     {
         id: "collectName",
         label: "Intestazione",
         type: "text",
-        placeholder: "Antonio Bianchi",
+        placeholder: "Mario Rossi",
     },
     {
-        id: "address",
+        id: "collectAddress",
         label: "Indirizzo",
         type: "text",
         placeholder: "Via Leopardi, 12",
     },
-    { id: "city", label: "Città", type: "text", placeholder: "Roma" },
-    { id: "zipCode", label: "CAP", type: "number", placeholder: "00100" },
+    { id: "collectCity", label: "Città", type: "text", placeholder: "Roma" },
+    {
+        id: "collectZipCode",
+        label: "CAP",
+        type: "number",
+        placeholder: "00100",
+    },
     {
         id: "collectPhoneNumber",
         label: "Cellulare",
         type: "number",
         placeholder: "3339876543",
+    },
+];
+
+const recipientFields = [
+    {
+        id: "recipientName",
+        label: "Intestazione",
+        type: "text",
+        placeholder: "Antonio Bianchi",
+    },
+    {
+        id: "recipientAddress",
+        label: "Indirizzo",
+        type: "text",
+        placeholder: "Via Mazzini, 207",
+    },
+    {
+        id: "recipientCity",
+        label: "Città",
+        type: "text",
+        placeholder: "Milano",
+    },
+    {
+        id: "recipientZipCode",
+        label: "CAP",
+        type: "number",
+        placeholder: "20020",
+    },
+    {
+        id: "recipientPhoneNumber",
+        label: "Cellulare",
+        type: "number",
+        placeholder: "3331234567",
     },
 ];
 
@@ -77,15 +98,16 @@ const parcelFields = [
 
 const RadixAccordion = () => {
     const initialFormData = {
-        name: "",
-        surname: "",
-        mail: "",
-        phoneNumber: null,
         collectName: "",
-        address: "",
-        city: "",
-        zipCode: "",
+        collectAddress: "",
+        collectCity: "",
+        collectZipCode: "",
         collectPhoneNumber: null,
+        recipientName: "",
+        recipientAddress: "",
+        recipientCity: "",
+        recipientZipCode: "",
+        recipientPhoneNumber: null,
         parcelsNumber: 1,
         length: null,
         width: null,
@@ -97,6 +119,22 @@ const RadixAccordion = () => {
 
     const [formData, setFormData] = useState(initialFormData);
     const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+
+    const isNullOrEmpty = (value) => value === "" || value === null;
+
+    const hasEmptyOrNullValues = (obj) => {
+        for (const key in obj) {
+            if (
+                obj.hasOwnProperty(key) &&
+                key !== "payOnDelivery" &&
+                key !== "amountToPay" &&
+                isNullOrEmpty(obj[key])
+            ) {
+                return true;
+            }
+        }
+        return false;
+    };
 
     const handleInputChange = (e) => {
         const { id, value, type, checked } = e.target;
@@ -111,19 +149,7 @@ const RadixAccordion = () => {
         e.preventDefault();
 
         if (
-            !formData.name ||
-            !formData.surname ||
-            !formData.mail ||
-            !formData.phoneNumber ||
-            !formData.collectName ||
-            !formData.address ||
-            !formData.city ||
-            !formData.zipCode ||
-            !formData.collectPhoneNumber ||
-            !formData.parcelsNumber ||
-            !formData.width ||
-            !formData.height ||
-            !formData["length"] ||
+            hasEmptyOrNullValues(formData) ||
             (formData.payOnDelivery && !formData.amountToPay)
         ) {
             alert(
@@ -142,6 +168,7 @@ const RadixAccordion = () => {
                     {
                         ...formData,
                         payOnDelivery: formData.payOnDelivery ? "Sì" : "No",
+                        amountToPay: formData.amountToPay ?? 0,
                     },
                     "user_822onMwRmoXrdFmoP0kTE"
                 )
@@ -172,14 +199,12 @@ const RadixAccordion = () => {
                     onSubmit={handleSubmit}
                     className="flex flex-col items-center"
                 >
-                    {/* SENDER FIELDS */}
+                    {/* COLLECT FIELDS */}
                     <div className="w-full flex flex-col mb-4">
-                        <AccordionItem value="sender">
-                            <AccordionTrigger>
-                                Informazioni Richiedente
-                            </AccordionTrigger>
+                        <AccordionItem value="collect">
+                            <AccordionTrigger>Ritiro presso</AccordionTrigger>
                             <AccordionContent>
-                                {senderFields.map((field) => {
+                                {collectFields.map((field) => {
                                     return (
                                         <div className="flex gap-x-2 w-full justify-between items-center mb-4 last-of-type:mb-0">
                                             <label
@@ -203,13 +228,11 @@ const RadixAccordion = () => {
                                 })}
                             </AccordionContent>
                         </AccordionItem>
-                        {/* COLLECT FIELDS */}
-                        <AccordionItem value="collect">
-                            <AccordionTrigger>
-                                Informazioni Ritiro
-                            </AccordionTrigger>
+                        {/* RECIPIENT FIELDS */}
+                        <AccordionItem value="recipient">
+                            <AccordionTrigger>Destinatario</AccordionTrigger>
                             <AccordionContent>
-                                {collectFields.map((field) => {
+                                {recipientFields.map((field) => {
                                     return (
                                         <div className="flex gap-x-2 w-full justify-between items-center mb-4 last-of-type:mb-0">
                                             <label
