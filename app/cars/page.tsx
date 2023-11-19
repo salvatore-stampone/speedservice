@@ -22,7 +22,12 @@ const page = (props: Props) => {
                     rewind: true,
                     gap: "1rem",
                     focus: "center",
-                    autoWidth: true,
+                    mediaQuery: "min",
+                    breakpoints: {
+                        1280: {
+                            autoWidth: true,
+                        },
+                    },
                 }}
                 aria-label="Images"
             >
@@ -36,13 +41,13 @@ const page = (props: Props) => {
                     <Image src={car3} alt="Image 3" />
                 </SplideSlide>
                 <SplideSlide>
-                    <Image src={car4} alt="Image 3" />
+                    <Image src={car4} alt="Image 4" />
                 </SplideSlide>
                 <SplideSlide>
-                    <Image src={car5} alt="Image 3" />
+                    <Image src={car5} alt="Image 5" />
                 </SplideSlide>
                 <SplideSlide>
-                    <Image src={car6} alt="Image 3" />
+                    <Image src={car6} alt="Image 6" />
                 </SplideSlide>
             </Splide>
             <h2 className="pt-5 text-[18px] font-bold uppercase">
