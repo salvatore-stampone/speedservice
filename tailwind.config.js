@@ -1,8 +1,16 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: ["./src/**/*.{js,jsx,ts,tsx}"],
+    content: [
+        "./app/**/*.{html,js,ts,jsx,tsx,mdx}",
+        "./app/components/**/*.{html,js,ts,jsx,tsx,mdx}",
+    ],
     theme: {
         extend: {
+            fontFamily: {
+                lexend: ["var(--font-lexend)", ...defaultTheme.fontFamily.sans],
+            },
             colors: {
                 light: "#F5F5F5",
                 dark: "#212121",

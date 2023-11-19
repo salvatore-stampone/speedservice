@@ -2,7 +2,7 @@ import emailjs from "@emailjs/browser";
 import { Icon } from "@iconify/react";
 import * as Accordion from "@radix-ui/react-accordion";
 import classNames from "classnames";
-import React, { forwardRef, useState } from "react";
+import { forwardRef, useState } from "react";
 
 const collectFields = [
     {
@@ -200,13 +200,16 @@ const RadixAccordion = () => {
                     className="flex flex-col items-center"
                 >
                     {/* COLLECT FIELDS */}
-                    <div className="w-full flex flex-col mb-4">
+                    <div className="mb-4 flex w-full flex-col">
                         <AccordionItem value="collect">
                             <AccordionTrigger>Ritiro presso</AccordionTrigger>
                             <AccordionContent>
                                 {collectFields.map((field) => {
                                     return (
-                                        <div className="flex gap-x-2 w-full justify-between items-center mb-4 last-of-type:mb-0">
+                                        <div
+                                            className="mb-4 flex w-full items-center justify-between gap-x-2 last-of-type:mb-0"
+                                            key={field.id}
+                                        >
                                             <label
                                                 htmlFor={field.id}
                                                 className="font-bold text-[var(--light-clr)]"
@@ -217,7 +220,7 @@ const RadixAccordion = () => {
                                                 name={field.id}
                                                 type={field.type}
                                                 id={field.id}
-                                                className="rounded-full min-h-[40px] px-5 py-[5px] w-[200px] md:w-[300px]"
+                                                className="min-h-[40px] w-[200px] rounded-full px-5 py-[5px] md:w-[300px]"
                                                 placeholder={field.placeholder}
                                                 onChange={handleInputChange}
                                                 value={formData[field.id]}
@@ -234,7 +237,10 @@ const RadixAccordion = () => {
                             <AccordionContent>
                                 {recipientFields.map((field) => {
                                     return (
-                                        <div className="flex gap-x-2 w-full justify-between items-center mb-4 last-of-type:mb-0">
+                                        <div
+                                            className="mb-4 flex w-full items-center justify-between gap-x-2 last-of-type:mb-0"
+                                            key={field.id}
+                                        >
                                             <label
                                                 htmlFor={field.id}
                                                 className="font-bold text-[var(--light-clr)]"
@@ -245,7 +251,7 @@ const RadixAccordion = () => {
                                                 name={field.id}
                                                 type={field.type}
                                                 id={field.id}
-                                                className="rounded-full min-h-[40px] px-5 py-[5px] w-[200px] md:w-[300px]"
+                                                className="min-h-[40px] w-[200px] rounded-full px-5 py-[5px] md:w-[300px]"
                                                 placeholder={field.placeholder}
                                                 onChange={handleInputChange}
                                                 value={formData[field.id]}
@@ -264,7 +270,10 @@ const RadixAccordion = () => {
                             <AccordionContent>
                                 {parcelFields.map((field) => {
                                     return (
-                                        <div className="flex gap-x-2 w-full justify-between items-center mb-4 last-of-type:mb-0">
+                                        <div
+                                            className="mb-4 flex w-full items-center justify-between gap-x-2 last-of-type:mb-0"
+                                            key={field.id}
+                                        >
                                             <label
                                                 htmlFor={field.id}
                                                 className="font-bold text-[var(--light-clr)]"
@@ -275,7 +284,7 @@ const RadixAccordion = () => {
                                                 name={field.id}
                                                 type={field.type}
                                                 id={field.id}
-                                                className="rounded-full min-h-[40px] px-5 py-[5px] w-[200px] md:w-[300px]"
+                                                className="min-h-[40px] w-[200px] rounded-full px-5 py-[5px] md:w-[300px]"
                                                 placeholder={field.placeholder}
                                                 onChange={handleInputChange}
                                                 value={formData[field.id]}
@@ -287,13 +296,13 @@ const RadixAccordion = () => {
                             </AccordionContent>
                         </AccordionItem>
                     </div>
-                    <hr className="border-white/50 w-full" />
+                    <hr className="w-full border-white/50" />
                     {/* CHECK FIELD */}
-                    <div className="flex gap-x-2 w-full items-center my-4 px-5 h-10">
+                    <div className="my-4 flex h-10 w-full items-center gap-x-2 px-5">
                         <label
                             htmlFor="payOnDelivery"
                             className={classNames(
-                                "font-bold text-[var(--light-clr)] after:content-[''] after:absolute relative after:w-4 after:top-1/2 after:-translate-y-1/2 after:-right-6 after:rounded after:aspect-square cursor-pointer",
+                                "relative cursor-pointer font-bold text-[var(--light-clr)] after:absolute after:-right-6 after:top-1/2 after:aspect-square after:w-4 after:-translate-y-1/2 after:rounded after:content-['']",
                                 formData.payOnDelivery
                                     ? "after:bg-primary"
                                     : "after:bg-white"
@@ -305,16 +314,16 @@ const RadixAccordion = () => {
                             name="payOnDelivery"
                             type="checkbox"
                             id="payOnDelivery"
-                            className="rounded-full min-h-[40px] px-5 py-[5px] w-[200px] md:w-[300px]"
+                            className="min-h-[40px] w-[200px] rounded-full px-5 py-[5px] md:w-[300px]"
                             onChange={handleInputChange}
                             checked={formData.payOnDelivery}
                             hidden
                         />
                         {formData.payOnDelivery && (
-                            <div className="flex items-center justify-between w-full gap-x-4">
+                            <div className="flex w-full items-center justify-between gap-x-4">
                                 <Icon
                                     icon="ic:round-check"
-                                    className="text-white z-10 cursor-pointer"
+                                    className="z-10 cursor-pointer text-white"
                                     onClick={() =>
                                         setFormData((prevFormData) => ({
                                             ...prevFormData,
@@ -326,7 +335,7 @@ const RadixAccordion = () => {
                                     name="amountToPay"
                                     type="number"
                                     id="amountToPay"
-                                    className="rounded-full min-h-[40px] px-5 py-[5px] w-[200px] md:w-[300px] text-black"
+                                    className="min-h-[40px] w-[200px] rounded-full px-5 py-[5px] text-black md:w-[300px]"
                                     placeholder="Importo"
                                     onChange={handleInputChange}
                                     value={formData.amountToPay}
@@ -336,7 +345,7 @@ const RadixAccordion = () => {
                     </div>
                     {!isFormSubmitted && (
                         <button
-                            className="font-bold bg-[var(--primary-clr)] py-[5px] text-[var(--light-clr)] rounded-full w-[334px] text-[24px]"
+                            className="w-[334px] rounded-full bg-[var(--primary-clr)] py-[5px] text-[24px] font-bold text-[var(--light-clr)]"
                             onSubmit={handleSubmit}
                             type="submit"
                         >
@@ -347,7 +356,7 @@ const RadixAccordion = () => {
             </Accordion.Root>
 
             {isFormSubmitted && (
-                <p className="text-light text-[22px] mt-10 max-w-[550px]">
+                <p className="mt-10 max-w-[550px] text-[22px] text-light">
                     La richiesta di ritiro è stata inviata con successo! Presto
                     sarai contattato dal nostro team per la conferma definitiva.
                 </p>
@@ -356,11 +365,14 @@ const RadixAccordion = () => {
     );
 };
 
-const AccordionItem = forwardRef(
-    ({ children, className, ...props }, forwardedRef) => (
+const AccordionItem = forwardRef(function AccordionItem(
+    { children, className, ...props },
+    forwardedRef
+) {
+    return (
         <Accordion.Item
             className={classNames(
-                "mt-px overflow-hidden first:mt-0 first:rounded-t last:rounded-b focus-within:relative focus-within:z-10 w-full",
+                "mt-px w-full overflow-hidden first:mt-0 first:rounded-t last:rounded-b focus-within:relative focus-within:z-10",
                 className
             )}
             {...props}
@@ -368,15 +380,18 @@ const AccordionItem = forwardRef(
         >
             {children}
         </Accordion.Item>
-    )
-);
+    );
+});
 
-const AccordionTrigger = React.forwardRef(
-    ({ children, className, ...props }, forwardedRef) => (
+const AccordionTrigger = forwardRef(function AccordionTrigger(
+    { children, className, ...props },
+    forwardedRef
+) {
+    return (
         <Accordion.Header className="flex">
             <Accordion.Trigger
                 className={classNames(
-                    "text-black hover:brightness-90 transition-[filter] group flex h-[45px] flex-1 cursor-pointer items-center justify-between bg-white px-5 text-[15px] leading-none outline-none",
+                    "group flex h-[45px] flex-1 cursor-pointer items-center justify-between bg-white px-5 text-[15px] leading-none text-black outline-none transition-[filter] hover:brightness-90",
                     className
                 )}
                 {...props}
@@ -385,27 +400,30 @@ const AccordionTrigger = React.forwardRef(
                 {children}
                 <Icon
                     icon="tabler:chevron-down"
-                    className="text-black ease-[cubic-bezier(0.87,_0,_0.13,_1)] transition-transform duration-300 group-data-[state=open]:rotate-180"
+                    className="text-black transition-transform duration-300 ease-[cubic-bezier(0.87,_0,_0.13,_1)] group-data-[state=open]:rotate-180"
                     aria-hidden
                 />
             </Accordion.Trigger>
         </Accordion.Header>
-    )
-);
+    );
+});
 
-const AccordionContent = forwardRef(
-    ({ children, className, ...props }, forwardedRef) => (
+const AccordionContent = forwardRef(function AccordionContent(
+    { children, className, ...props },
+    forwardedRef
+) {
+    return (
         <Accordion.Content
             className={classNames(
-                "text-black bg-transparent data-[state=open]:animate-slideDown data-[state=closed]:animate-slideUp overflow-hidden text-[15px] leading-5",
+                "overflow-hidden bg-transparent text-[15px] leading-5 text-black data-[state=closed]:animate-slideUp data-[state=open]:animate-slideDown",
                 className
             )}
             {...props}
             ref={forwardedRef}
         >
-            <div className="py-[15px] px-5">{children}</div>
+            <div className="px-5 py-[15px]">{children}</div>
         </Accordion.Content>
-    )
-);
+    );
+});
 
 export default RadixAccordion;

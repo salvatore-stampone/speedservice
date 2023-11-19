@@ -1,4 +1,7 @@
-import React, { useState } from "react";
+"use client";
+
+import Link from "next/link";
+import { useState } from "react";
 
 const inputFields = [
     { id: "length", label: "Lunghezza" },
@@ -105,7 +108,10 @@ export default function EstimateSection() {
                 >
                     {inputFields.map((field) => {
                         return (
-                            <div className="flex gap-x-2 w-full justify-between items-center">
+                            <div
+                                className="flex gap-x-2 w-full justify-between items-center"
+                                key={field.id}
+                            >
                                 <label
                                     htmlFor={field.id}
                                     className="font-bold text-[var(--light-clr)]"
@@ -141,12 +147,12 @@ export default function EstimateSection() {
                     ) : (
                         <p className="text-[var(--light-clr)] text-center text-[20px]">
                             Il costo eccede il listino.{" "}
-                            <a
+                            <Link
                                 href="#contacts"
                                 className="hover:drop-shadow-[0_0_4px_var(--light-clr)] transition-[filter] duration-[175ms]"
                             >
                                 Contattaci!
-                            </a>
+                            </Link>
                         </p>
                     ))}
             </div>

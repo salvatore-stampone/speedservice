@@ -1,4 +1,8 @@
-import React, { useEffect, useState } from "react";
+"use client";
+
+import { useWindowSize } from "@/lib/hooks";
+import Link from "next/link";
+import { useState } from "react";
 import { BiMenuAltRight } from "react-icons/bi";
 import { IoClose } from "react-icons/io5";
 import "./Navbar.css";
@@ -40,16 +44,10 @@ const links = [
 ];
 
 export default function Navbar() {
-    const [isSmallScreen, setIsSmallScreen] = useState(
-        window.matchMedia("(max-width: 1280px)").matches //Desktop: false; smartphone: true
-    );
-    const [isNavbarActive, setIsNavbarActive] = useState(false);
+    const { width } = useWindowSize();
+    const isSmallScreen = width < 1280;
 
-    useEffect(() => {
-        window
-            .matchMedia("(max-width: 1280px)")
-            .addEventListener("change", (e) => setIsSmallScreen(e.matches));
-    }, []);
+    const [isNavbarActive, setIsNavbarActive] = useState(false);
 
     const compactNavbar = (
         <>
@@ -67,23 +65,23 @@ export default function Navbar() {
             >
                 {isNavbarActive ? <IoClose /> : <BiMenuAltRight />}
             </button>
-            <div className={`sidebar ${isNavbarActive ? "active" : ""}`}>
+            <nav className={`sidebar ${isNavbarActive ? "active" : ""}`}>
                 <ul className="navbar__nav-list">
                     {links.map((link) => {
                         return (
-                            <li className="navbar__nav-item">
-                                <a
+                            <li className="navbar__nav-item" key={link.text}>
+                                <Link
                                     href={link.href}
                                     className="navbar__nav-link"
                                     onClick={() => setIsNavbarActive(false)}
                                 >
                                     {link.text}
-                                </a>
+                                </Link>
                             </li>
                         );
                     })}
                 </ul>
-            </div>
+            </nav>
             <div className="sidebar__backdrop"></div>
         </>
     );
@@ -93,10 +91,10 @@ export default function Navbar() {
             <ul className="navbar__nav-list">
                 {links.map((link) => {
                     return (
-                        <li className="navbar__nav-item">
-                            <a href={link.href} className="navbar__nav-link">
+                        <li className="navbar__nav-item" key={link.text}>
+                            <Link href={link.href} className="navbar__nav-link">
                                 {link.text}
-                            </a>
+                            </Link>
                         </li>
                     );
                 })}

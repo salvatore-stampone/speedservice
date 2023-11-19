@@ -1,12 +1,16 @@
-import React, { useEffect, useState } from "react";
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import brt from "public/images/logo-squares/brt-square.jpg";
+import dhl from "public/images/logo-squares/dhl-square.png";
+import gls from "public/images/logo-squares/gls-square.jpg";
+import sda from "public/images/logo-squares/sda-square.png";
+import tnt from "public/images/logo-squares/tnt-square.png";
+import ups from "public/images/logo-squares/ups-square.png";
+import { useEffect, useState } from "react";
 import { IoCloseSharp } from "react-icons/io5";
 import { RiArrowDropDownLine } from "react-icons/ri";
-import brt from "../../assets/images/logo-squares/brt-square.jpg";
-import dhl from "../../assets/images/logo-squares/dhl-square.png";
-import gls from "../../assets/images/logo-squares/gls-square.jpg";
-import sda from "../../assets/images/logo-squares/sda-square.png";
-import tnt from "../../assets/images/logo-squares/tnt-square.png";
-import ups from "../../assets/images/logo-squares/ups-square.png";
 import Dropdown from "../Dropdown";
 
 export default function Float() {
@@ -93,20 +97,20 @@ export default function Float() {
                             }
                             menu={couriers.map((courier) => {
                                 return (
-                                    <a
+                                    <Link
                                         className="w-full h-full text-left border-none p-1.5 cursor-pointer block"
                                         href={courier.url}
                                         target="_blank"
                                         rel="noreferrer"
                                         onClick={() => setIsModalOpen(false)}
                                     >
-                                        <img
+                                        <Image
                                             src={courier.image}
                                             alt={courier.name}
                                             className="rounded-full aspect-square w-8 inline-block mr-2"
                                         />
                                         {courier.name}
-                                    </a>
+                                    </Link>
                                 );
                             })}
                             isDropdownOpen={isDropdownOpen}
