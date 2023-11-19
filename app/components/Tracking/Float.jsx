@@ -63,16 +63,16 @@ export default function Float() {
                 <>
                     {/* BACKDROP */}
                     <div
-                        class="absolute z-20 inset-0 backdrop-blur-md"
+                        class="absolute inset-0 z-20 backdrop-blur-md"
                         onClick={() => setIsModalOpen(false)}
                     ></div>
                     <div
                         className={`${isModalOpen ? "flex" : "hidden"} ${
                             fade ? "opacity-100" : "opacity-0"
-                        } fixed z-20 top-[40%] left-[50%] -translate-x-1/2 -translate-y-1/2 bg-light w-80 h-40 items-center justify-center rounded-2xl shadow-2xl lg:w-96 transition-opacity duration-500`}
+                        } fixed left-[50%] top-[40%] z-20 h-40 w-80 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-2xl bg-light shadow-2xl transition-opacity duration-500 lg:w-96`}
                     >
                         <IoCloseSharp
-                            className="absolute top-4 right-5 text-xl cursor-pointer hover:text-primary"
+                            className="absolute right-5 top-4 cursor-pointer text-xl hover:text-primary"
                             onClick={() => {
                                 setIsModalOpen(false);
                                 setIsDropdownOpen(false);
@@ -81,7 +81,7 @@ export default function Float() {
                         <Dropdown
                             trigger={
                                 <button
-                                    className={`text-lg hover:text-primary transition-colors lg:text-xl ${
+                                    className={`text-lg transition-colors hover:text-primary lg:text-xl ${
                                         isDropdownOpen
                                             ? "text-primary"
                                             : "text-black"
@@ -98,16 +98,17 @@ export default function Float() {
                             menu={couriers.map((courier) => {
                                 return (
                                     <Link
-                                        className="w-full h-full text-left border-none p-1.5 cursor-pointer block"
+                                        className="block h-full w-full cursor-pointer border-none p-1.5 text-left"
                                         href={courier.url}
                                         target="_blank"
                                         rel="noreferrer"
                                         onClick={() => setIsModalOpen(false)}
+                                        key={courier.name}
                                     >
                                         <Image
                                             src={courier.image}
                                             alt={courier.name}
-                                            className="rounded-full aspect-square w-8 inline-block mr-2"
+                                            className="mr-2 inline-block aspect-square w-8 rounded-full"
                                         />
                                         {courier.name}
                                     </Link>
@@ -123,7 +124,7 @@ export default function Float() {
                 onClick={() => {
                     setIsModalOpen(!isModalOpen);
                 }}
-                className="float left-4 bg-primary-dark text-light py-4 px-4 rounded-full z-[2] cursor-pointer"
+                className="float left-4 z-[2] cursor-pointer rounded-full bg-primary-dark px-4 py-4 text-light"
             >
                 TRACKING
             </button>
