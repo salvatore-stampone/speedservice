@@ -11,18 +11,20 @@ import car3 from "public/images/cars/1/3.jpeg";
 import car4 from "public/images/cars/1/4.jpeg";
 import car5 from "public/images/cars/1/5.jpeg";
 import car6 from "public/images/cars/1/6.jpeg";
+
 type Props = {};
 
 const page = (props: Props) => {
     return (
         <div className="mx-auto flex max-w-[1024px] flex-col items-center justify-center gap-y-8 px-[22px] py-10">
-            <h1 className="text-[30px] font-bold">IN VENDITA</h1>
+            <h1 className="text-[30px] font-bold">IN PRIMO PIANO</h1>
             <Splide
                 options={{
                     rewind: true,
                     gap: "1rem",
                     focus: "center",
                     mediaQuery: "min",
+                    fixedHeight: "260px",
                     breakpoints: {
                         1280: {
                             autoWidth: true,
@@ -69,7 +71,7 @@ const page = (props: Props) => {
             </p>
             <Link
                 href="tel:3923391613"
-                className="flex items-center gap-x-2 rounded-xl bg-primary px-4 py-3.5 uppercase text-light"
+                className="flex items-center gap-x-2 rounded-xl border border-solid border-dark bg-dark px-4 py-3.5 uppercase text-light transition-colors hover:bg-transparent hover:text-dark"
             >
                 <Icon
                     icon="material-symbols:info-outline-rounded"

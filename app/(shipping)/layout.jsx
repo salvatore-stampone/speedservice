@@ -1,4 +1,3 @@
-import CarsFloat from "@/components/Cars/Float";
 import Float from "@/components/Tracking/Float";
 import dynamic from "next/dynamic";
 import Link from "next/link";
@@ -62,7 +61,7 @@ export default function RootLayout({ children }) {
     return (
         <>
             <NoSSRNavbar />
-            <CarsFloat />
+            {/* <CarsFloat /> */}
             <Float />
             <Link
                 href="https://wa.me/390881042353"

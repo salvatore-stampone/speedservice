@@ -8,7 +8,7 @@ const Float = () => {
     return (
         <>
             <Link
-                href="/cars"
+                href="/used"
                 className="fixed left-4 top-4 z-[2] flex cursor-pointer items-center gap-x-2 rounded-full bg-primary-dark px-4 py-4 text-light shadow-[2px_2px_8px_-4px_black] xl:left-auto xl:right-12 xl:top-20"
             >
                 <Icon icon="maki:car" className="text-[24px] xl:text-[28px]" />
