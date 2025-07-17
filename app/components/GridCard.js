@@ -7,74 +7,62 @@ export default function GridCard({ title, contact }) {
     switch (title) {
         case "Whatsapp":
             return (
-                <div className={styles.card}>
+                <Link
+                    className={styles.card}
+                    href={`https://wa.me/${contact}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     <FaWhatsapp className={styles.icon} />
                     <div className={styles.wrapper}>
                         <h1 className={styles.title}>{title}</h1>
-                        <Link
-                            className={styles.link}
-                            href={`https://wa.me/${contact}`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            +{contact}
-                        </Link>
                     </div>
-                </div>
+                </Link>
             );
 
         case "Telefono":
             return (
-                <div className={styles.card}>
+                <Link
+                    className={styles.card}
+                    href={`tel:+${contact}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     <FaPhoneAlt className={styles.icon} />
                     <div className={styles.wrapper}>
                         <h1 className={styles.title}>{title}</h1>
-                        <Link
-                            className={styles.link}
-                            href={`tel:+${contact}`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            +{contact}
-                        </Link>
                     </div>
-                </div>
+                </Link>
             );
 
         case "Instagram":
             return (
-                <div className={styles.card}>
+                <Link
+                    className={styles.card}
+                    href={`https://www.instagram.com/${contact}/`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     <FaInstagram className={styles.icon} />
                     <div className={styles.wrapper}>
                         <h1 className={styles.title}>{title}</h1>
-                        <Link
-                            className={styles.link}
-                            href={`https://www.instagram.com/${contact}/`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            @{contact}
-                        </Link>
                     </div>
-                </div>
+                </Link>
             );
 
         case "Mail":
             return (
-                <div className={styles.card}>
+                <Link
+                    className={styles.card}
+                    href={`mailto:${contact}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     <IoMailOutline className={styles.icon} />
                     <div className={styles.wrapper}>
                         <h1 className={styles.title}>{title}</h1>
-                        <Link
-                            className={styles.link}
-                            href={`mailto:${contact}`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            {contact}
-                        </Link>
                     </div>
-                </div>
+                </Link>
             );
 
         default:

@@ -8,6 +8,15 @@
     min-height: 200px;
     max-width: 400px;
     border-radius: 20px;
+    cursor: pointer;
+    transition: transform 250ms, box-shadow 250ms;
+    text-decoration: none;
+    color: inherit;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .icon {
@@ -22,21 +31,7 @@
     font-size: 1.75rem;
 }
 
-.link {
-    font-weight: 700;
-    text-decoration: none;
-    font-size: 1.25rem;
-    color: var(--secondary-clr);
-    transition: text-shadow 250ms;
-    margin: 16px;
-    display: block;
-    text-align: center;
-    line-break: anywhere;
-}
 
-.link:hover {
-    text-shadow: 0 0 1px var(--secondary-clr);
-}
 
 /* RESPONSIVENESS */
 @media screen and (max-width: 900px) {

@@ -18,16 +18,16 @@ export default function MapSection({
                         width: isSmallScreen
                             ? "300px"
                             : isMediumScreen
-                            ? "450px"
-                            : isLargeScreen
-                            ? "725px"
-                            : "1000px",
+                              ? "450px"
+                              : isLargeScreen
+                                ? "725px"
+                                : "1000px",
                         height:
                             isSmallScreen || isMediumScreen
                                 ? "300px"
                                 : isLargeScreen
-                                ? "350px"
-                                : "400px",
+                                  ? "350px"
+                                  : "400px",
                     }}
                 >
                     <div
@@ -36,16 +36,16 @@ export default function MapSection({
                             width: isSmallScreen
                                 ? "300px"
                                 : isMediumScreen
-                                ? "450px"
-                                : isLargeScreen
-                                ? "725px"
-                                : "1000px",
+                                  ? "450px"
+                                  : isLargeScreen
+                                    ? "725px"
+                                    : "1000px",
                             height:
                                 isSmallScreen || isMediumScreen
                                     ? "300px"
                                     : isLargeScreen
-                                    ? "350px"
-                                    : "400px",
+                                      ? "350px"
+                                      : "400px",
                         }}
                     >
                         <iframe
@@ -54,25 +54,25 @@ export default function MapSection({
                                 isSmallScreen
                                     ? "300"
                                     : isMediumScreen
-                                    ? "450"
-                                    : isLargeScreen
-                                    ? "725"
-                                    : "1000"
+                                      ? "450"
+                                      : isLargeScreen
+                                        ? "725"
+                                        : "1000"
                             }
                             height={
                                 isSmallScreen || isMediumScreen
                                     ? "300"
                                     : isLargeScreen
-                                    ? "350"
-                                    : "400"
+                                      ? "350"
+                                      : "400"
                             }
                             className="map-iframe"
                             id="gmap_canvas"
                             src="https://maps.google.com/maps?q=Lucera,%20via%20Napoli,%2016/A,%20Speedservice&t=&z=18&ie=UTF8&iwloc=&output=embed"
-                            frameborder="0"
+                            frameBorder="0"
                             scrolling="no"
-                            marginheight="0"
-                            marginwidth="0"
+                            marginHeight="0"
+                            marginWidth="0"
                         />
                     </div>
                 </div>
