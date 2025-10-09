@@ -2,6 +2,7 @@ import Float from "@/components/Tracking/Float";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { BsWhatsapp } from "react-icons/bs";
+import CarsFloat from "../components/Cars/Float";
 
 const NoSSRNavbar = dynamic(() => import("@/components/Navbar"), {
     ssr: false,
@@ -61,7 +62,7 @@ export default function RootLayout({ children }) {
     return (
         <>
             <NoSSRNavbar />
-            {/* <CarsFloat /> */}
+            <CarsFloat />
             <Float />
             <Link
                 href="https://wa.me/390881042353"
