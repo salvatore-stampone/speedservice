@@ -32,12 +32,12 @@ export const metadata = {
         type: "website",
     },
     icons: {
-        icon: "/images/logo-rounded.png",
-        shortcut: "/images/logo-rounded.png",
-        apple: "/images/logo-rounded.png",
+        icon: "/images/logo-wordmark.png",
+        shortcut: "/images/logo-wordmark.png",
+        apple: "/images/logo-wordmark.png",
         other: {
             rel: "apple-touch-icon-precomposed",
-            url: "/images/logo-rounded.png",
+            url: "/images/logo-wordmark.png",
         },
     },
     manifest: "/manifest.json",
