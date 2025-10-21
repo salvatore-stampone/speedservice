@@ -1,10 +1,5 @@
-import dynamic from "next/dynamic";
 import { Lexend_Deca } from "next/font/google";
 import "./globals.css";
-
-const NoSSRNavbar = dynamic(() => import("@/components/Navbar"), {
-    ssr: false,
-});
 
 export const metadata = {
     title: {

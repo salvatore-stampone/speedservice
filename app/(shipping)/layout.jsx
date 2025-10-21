@@ -1,12 +1,8 @@
 import Float from "@/components/Tracking/Float";
-import dynamic from "next/dynamic";
 import Link from "next/link";
 import { BsWhatsapp } from "react-icons/bs";
 import CarsFloat from "../components/Cars/Float";
-
-const NoSSRNavbar = dynamic(() => import("@/components/Navbar"), {
-    ssr: false,
-});
+import ClientNavbar from "../components/ClientNavbar";
 
 export const metadata = {
     title: {
@@ -61,7 +57,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <>
-            <NoSSRNavbar />
+            <ClientNavbar />
             <CarsFloat />
             <Float />
             <Link
