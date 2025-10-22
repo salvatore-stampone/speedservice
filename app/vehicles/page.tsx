@@ -1,13 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardHeader,
-    CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
     Carousel,
     CarouselContent,
@@ -15,19 +9,16 @@ import {
     CarouselNext,
     CarouselPrevious,
 } from "@/components/ui/carousel";
+import motorcycles from "@/lib/data/vehicles/motorcycles";
 import "@/styles/tailwind.vehicles.css";
 import { Icon } from "@iconify/react";
+import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 import Link from "next/link";
-import motorcycle1 from "public/images/vehicles/motorcycles/ducati-monster/moto-1.jpeg";
-import motorcycle2 from "public/images/vehicles/motorcycles/ducati-monster/moto-2.jpeg";
-import motorcycle3 from "public/images/vehicles/motorcycles/ducati-monster/moto-3.jpeg";
-import motorcycle4 from "public/images/vehicles/motorcycles/ducati-monster/moto-4.jpeg";
-
 type Props = {};
 
 const page = (props: Props) => {
-    const images = [motorcycle1, motorcycle2, motorcycle3, motorcycle4];
+    const featuredVehicle = motorcycles[0];
 
     return (
         <div className="space-y-8">
@@ -43,24 +34,28 @@ const page = (props: Props) => {
             <Card className="bg-card border-border mx-auto max-w-4xl">
                 <CardHeader>
                     <CardTitle className="text-card-foreground text-center text-2xl font-bold">
-                        Ducati Monster S2R 1000 (2007)
+                        {featuredVehicle.title} ({featuredVehicle.year})
                     </CardTitle>
-                    <CardDescription className="text-muted-foreground text-center">
-                        Splendida Ducati Monster S2R 1000, anno 2007, con 50000
-                        km
-                    </CardDescription>
                 </CardHeader>
 
                 <CardContent className="space-y-6">
                     <div className="relative">
-                        <Carousel className="mx-auto w-full max-w-2xl">
+                        <Carousel
+                            className="mx-auto w-full max-w-2xl"
+                            opts={{ align: "start", loop: true }}
+                            plugins={[
+                                Autoplay({
+                                    delay: 2000,
+                                }),
+                            ]}
+                        >
                             <CarouselContent>
-                                {images.map((image, index) => (
+                                {featuredVehicle.images.map((image, index) => (
                                     <CarouselItem key={index}>
                                         <div className="relative aspect-video">
                                             <Image
                                                 src={image}
-                                                alt={`Ducati Monster ${index + 1}`}
+                                                alt={`${featuredVehicle.title} ${index + 1}`}
                                                 fill
                                                 className="rounded-lg object-cover"
                                             />
@@ -79,14 +74,7 @@ const page = (props: Props) => {
                                 Descrizione
                             </h3>
                             <p className="text-muted-foreground leading-relaxed">
-                                Splendida Ducati Monster S2R 1000, anno 2007,
-                                con 50000 km. Ben tenuta.
-                                <br />
-                                Scarichi in carbonio con omologazione, frizione
-                                nuova, tagliandata e gommata al 60%.
-                                <br />
-                                Ottima per chi ha esperienza: bella, aggressiva
-                                e divertente. Qualsiasi prova.
+                                {featuredVehicle.description}
                             </p>
                         </div>
 
@@ -96,7 +84,7 @@ const page = (props: Props) => {
                                     COSTO:{" "}
                                 </span>
                                 <span className="text-primary text-2xl font-bold">
-                                    € 3.600,00
+                                    € {featuredVehicle.price.toLocaleString()}
                                 </span>
                             </div>
                         </div>

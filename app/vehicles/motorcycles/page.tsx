@@ -9,31 +9,19 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card";
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+} from "@/components/ui/carousel";
+import motorcycles from "@/lib/data/vehicles/motorcycles";
 import { Icon } from "@iconify/react";
 import Image from "next/image";
 import Link from "next/link";
-import motorcycle1 from "public/images/vehicles/motorcycles/ducati-monster/moto-1.jpeg";
-import motorcycle2 from "public/images/vehicles/motorcycles/ducati-monster/moto-2.jpeg";
-import motorcycle3 from "public/images/vehicles/motorcycles/ducati-monster/moto-3.jpeg";
-import motorcycle4 from "public/images/vehicles/motorcycles/ducati-monster/moto-4.jpeg";
 
 type Props = {};
-
-const motorcycles = [
-    {
-        id: 1,
-        title: "Ducati Monster S2R 1000",
-        year: 2007,
-        price: 3900,
-        mileage: 70000,
-        engine: "992cc",
-        transmission: "Manuale",
-        images: [motorcycle1, motorcycle2, motorcycle3, motorcycle4],
-        description:
-            "Splendida Ducati Monster S2R 1000, tenuta in ottime condizioni. Tagliando completo, olio freni e pastiglie nuove Brembo.",
-        features: ["Tagliandata", "Olio freni e pastiglie nuove Brembo"],
-    },
-];
 
 export default function Motorcycles({}: Props) {
     return (
@@ -51,16 +39,34 @@ export default function Motorcycles({}: Props) {
                 {motorcycles.map((motorcycle) => (
                     <Card
                         key={motorcycle.id}
-                        className="bg-card border-border overflow-hidden transition-shadow hover:shadow-lg"
+                        className="bg-card border-border overflow-hidden pt-0 transition-shadow hover:shadow-lg"
                     >
                         <div className="relative aspect-video">
-                            <Image
-                                src={motorcycle.images[0]}
-                                alt={motorcycle.title}
-                                fill
-                                className="object-cover"
-                            />
-                            <Badge className="bg-primary text-primary-foreground absolute top-2 right-2 font-bold">
+                            <Carousel
+                                opts={{
+                                    align: "start",
+                                    loop: true,
+                                }}
+                                className="w-full"
+                            >
+                                <CarouselContent>
+                                    {motorcycle.images.map((image, index) => (
+                                        <CarouselItem key={index}>
+                                            <div className="relative aspect-video">
+                                                <Image
+                                                    src={image}
+                                                    alt={`${motorcycle.title} - Immagine ${index + 1}`}
+                                                    fill
+                                                    className="object-cover"
+                                                />
+                                            </div>
+                                        </CarouselItem>
+                                    ))}
+                                </CarouselContent>
+                                <CarouselPrevious className="left-2" />
+                                <CarouselNext className="right-2" />
+                            </Carousel>
+                            <Badge className="bg-primary text-primary-foreground absolute top-2 right-2 z-10 font-bold">
                                 {motorcycle.year}
                             </Badge>
                         </div>

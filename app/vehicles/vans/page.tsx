@@ -9,35 +9,19 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card";
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+} from "@/components/ui/carousel";
+import vans from "@/lib/data/vehicles/vans";
 import { Icon } from "@iconify/react";
 import Image from "next/image";
 import Link from "next/link";
-import van1 from "public/images/vehicles/vans/renault-trafic/furgone-1.jpeg";
-import van2 from "public/images/vehicles/vans/renault-trafic/furgone-2.jpeg";
-import van3 from "public/images/vehicles/vans/renault-trafic/furgone-3.jpeg";
 
 type Props = {};
-
-const vans = [
-    {
-        id: 1,
-        title: "Renault Trafic Terza Serie",
-        year: 2015,
-        price: 6900,
-        mileage: 293000,
-        fuel: "Diesel",
-        transmission: "Manuale",
-        images: [van1, van2, van3],
-        description:
-            "Renault Trafic in ottime condizioni, ideale per trasporti e lavoro. Volano e frizione appena fatti con fattura dimostrabile.",
-        features: [
-            "Volano e frizione appena fatti",
-            "Clima",
-            "Radio CD",
-            "Sensori Parcheggio",
-        ],
-    },
-];
 
 export default function Vans({}: Props) {
     return (
@@ -56,16 +40,34 @@ export default function Vans({}: Props) {
                 {vans.map((van) => (
                     <Card
                         key={van.id}
-                        className="bg-card border-border overflow-hidden transition-shadow hover:shadow-lg"
+                        className="bg-card border-border overflow-hidden pt-0 transition-shadow hover:shadow-lg"
                     >
                         <div className="relative aspect-video">
-                            <Image
-                                src={van.images[0]}
-                                alt={van.title}
-                                fill
-                                className="object-cover"
-                            />
-                            <Badge className="bg-primary text-primary-foreground absolute top-2 right-2 font-bold">
+                            <Carousel
+                                opts={{
+                                    align: "start",
+                                    loop: true,
+                                }}
+                                className="w-full"
+                            >
+                                <CarouselContent>
+                                    {van.images.map((image, index) => (
+                                        <CarouselItem key={index}>
+                                            <div className="relative aspect-video">
+                                                <Image
+                                                    src={image}
+                                                    alt={`${van.title} - Immagine ${index + 1}`}
+                                                    fill
+                                                    className="object-cover"
+                                                />
+                                            </div>
+                                        </CarouselItem>
+                                    ))}
+                                </CarouselContent>
+                                <CarouselPrevious className="left-2" />
+                                <CarouselNext className="right-2" />
+                            </Carousel>
+                            <Badge className="bg-primary text-primary-foreground absolute top-2 right-2 z-10 font-bold">
                                 {van.year}
                             </Badge>
                         </div>

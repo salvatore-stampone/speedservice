@@ -9,32 +9,19 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card";
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+} from "@/components/ui/carousel";
+import cars from "@/lib/data/vehicles/cars";
 import { Icon } from "@iconify/react";
 import Image from "next/image";
 import Link from "next/link";
-import car1 from "public/images/vehicles/cars/fiat-punto/punto-1.jpeg";
-import car2 from "public/images/vehicles/cars/fiat-punto/punto-2.jpeg";
-import car3 from "public/images/vehicles/cars/fiat-punto/punto-3.jpeg";
-import car4 from "public/images/vehicles/cars/fiat-punto/punto-4.jpeg";
-import car5 from "public/images/vehicles/cars/fiat-punto/punto-5.jpeg";
 
 type Props = {};
-
-const cars = [
-    {
-        id: 1,
-        title: "Fiat Punto",
-        year: 2012,
-        price: 4500,
-        mileage: 95000,
-        fuel: "Diesel",
-        transmission: "Manuale",
-        images: [car1, car2, car3, car4, car5],
-        description:
-            "Fiat Punto in ottime condizioni, autocarro 1300 cv 90 cv.",
-        features: ["Radio", "Clima", "Sensori Parcheggio"],
-    },
-];
 
 export default function Cars({}: Props) {
     return (
@@ -52,16 +39,34 @@ export default function Cars({}: Props) {
                 {cars.map((car) => (
                     <Card
                         key={car.id}
-                        className="bg-card border-border overflow-hidden transition-shadow hover:shadow-lg"
+                        className="bg-card border-border overflow-hidden pt-0 transition-shadow hover:shadow-lg"
                     >
                         <div className="relative aspect-video">
-                            <Image
-                                src={car.images[0]}
-                                alt={car.title}
-                                fill
-                                className="object-cover"
-                            />
-                            <Badge className="bg-primary text-primary-foreground absolute top-2 right-2 font-bold">
+                            <Carousel
+                                opts={{
+                                    align: "start",
+                                    loop: true,
+                                }}
+                                className="w-full"
+                            >
+                                <CarouselContent>
+                                    {car.images.map((image, index) => (
+                                        <CarouselItem key={index}>
+                                            <div className="relative aspect-video">
+                                                <Image
+                                                    src={image}
+                                                    alt={`${car.title} - Immagine ${index + 1}`}
+                                                    fill
+                                                    className="object-cover"
+                                                />
+                                            </div>
+                                        </CarouselItem>
+                                    ))}
+                                </CarouselContent>
+                                <CarouselPrevious className="left-2" />
+                                <CarouselNext className="right-2" />
+                            </Carousel>
+                            <Badge className="bg-primary text-primary-foreground absolute top-2 right-2 z-10 font-bold">
                                 {car.year}
                             </Badge>
                         </div>

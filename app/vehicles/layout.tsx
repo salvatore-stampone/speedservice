@@ -32,7 +32,7 @@ const Layout = ({ children }: PropsWithChildren<Props>) => {
         if (pathname.includes("/cars")) return "cars";
         if (pathname.includes("/motorcycles")) return "motorcycles";
         if (pathname.includes("/vans")) return "vans";
-        return "cars";
+        return "";
     };
 
     return (
