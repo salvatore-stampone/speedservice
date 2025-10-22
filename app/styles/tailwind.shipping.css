@@ -1,0 +1,199 @@
+@config "../../tailwind.shipping.config.cjs";
+
+@import "tailwindcss/theme.css";
+@import "tailwindcss/preflight";
+@import "tailwindcss/utilities";
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+}
+
+:root {
+    --light-clr: #F5F5F5;
+    --dark-clr: #212121;
+    --primary-clr: #1357A0;
+    --primary-clr--dark: #0f447d;
+    --secondary-clr: #9D6629;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+input {
+    background-color: var(--light-clr);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.float {
+    position: fixed;
+    bottom: 12px;
+    box-shadow: 2px 2px 8px -4px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.whatsapp__float {
+    background-color: #25d366;
+    color: #FFF;
+    z-index: 10;
+    right: 16px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.whatsapp__icon {
+    font-size: 30px;
+}
+
+.no-aspect {
+    aspect-ratio: 1/1;
+
+    @supports not (aspect-ratio: 1 / 1) {
+        &::before {
+            float: left;
+            padding-top: 100%;
+            content: "";
+        }
+
+        &::after {
+            display: block;
+            content: "";
+            clear: both;
+        }
+    }
+}
+
+/*  */
+
+.main-page {
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    scroll-snap-align: start;
+    padding-bottom: 32px;
+}
+
+.section:nth-of-type(3n-2) {
+    background-color: var(--light-clr);
+    color: var(--dark-clr);
+}
+
+.section:nth-of-type(3n-1) {
+    background-color: var(--primary-clr);
+    color: var(--light-clr);
+}
+
+.section:nth-of-type(3n) {
+    background-color: var(--secondary-clr);
+    color: var(--light-clr);
+}
+
+.section__header {
+    color: var(--light-clr);
+    font-size: clamp(2rem, 8vw, 4rem);
+    font-weight: 700;
+    display: block;
+    text-align: center;
+    margin-inline: 1rem;
+}
+
+.section__subheader {
+    color: lightgray;
+    font-size: clamp(1.25rem, 4vw, 2rem);
+    display: block;
+    text-align: center;
+    margin: 1rem 1rem 0;
+}
+
+.section__subheader-highlight {
+    font-weight: 700;
+    color: var(--light-clr);
+    font-size: 1.1em;
+}
+
+.section__title {
+    color: var(--light-clr);
+    font-size: 3rem;
+    font-weight: 700;
+    margin-inline: 16px;
+    margin-bottom: 24px;
+    display: block;
+    text-align: center;
+}
+
+.section__subtitle {
+    color: var(--light-clr);
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 24px;
+    margin-inline: 16px;
+    display: block;
+    text-align: center;
+    max-width: 100%;
+    position: relative;
+}
+
+.section__title--black,
+.section__subtitle--black {
+    color: var(--dark-clr);
+}
+
+.horizontal-rule {
+    width: 100%;
+    color: var(--primary-clr);
+}
+
+.logo-container {
+    transition: all 0.3s ease;
+}
+
+.logo-container:hover {
+    transform: scale(1.05);
+}
+
+.navbar-logo {
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+/* RESPONSIVENESS */
+@media screen and (max-width: 900px) {
+    .main-page {
+        scroll-snap-type: y proximity;
+    }
+
+    .section {
+        padding-top: 24px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar-logo {
+        height: 2.5rem;
+    }
+
+    .logo-container span {
+        font-size: 1rem;
+    }
+}

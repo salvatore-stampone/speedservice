@@ -1,5 +1,22 @@
-import { Lexend_Deca } from "next/font/google";
-import "./globals.css";
+import { Geist_Mono, JetBrains_Mono, Lexend_Deca } from "next/font/google";
+
+const lexend = Lexend_Deca({
+    subsets: ["latin"],
+    display: "swap",
+    variable: "--font-lexend",
+});
+
+const geistMono = Geist_Mono({
+    subsets: ["latin"],
+    display: "swap",
+    variable: "--font-geist-mono",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+    subsets: ["latin"],
+    display: "swap",
+    variable: "--font-jetbrains-mono",
+});
 
 export const metadata = {
     title: {
@@ -51,19 +68,13 @@ export const metadata = {
     },
 };
 
-// If loading a variable font, you don't need to specify the font weight
-const lexend = Lexend_Deca({
-    subsets: ["latin"],
-    display: "swap",
-    variable: "--font-lexend",
-});
-
 export default function RootLayout({ children }) {
     return (
-        <html lang="it" className={lexend.variable}>
-            <body className="font-lexend">
-                <main>{children}</main>
-            </body>
+        <html
+            lang="it"
+            className={`${lexend.variable} ${geistMono.variable} ${jetbrainsMono.variable}`}
+        >
+            <body>{children}</body>
         </html>
     );
 }

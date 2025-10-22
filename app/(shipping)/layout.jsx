@@ -1,8 +1,9 @@
-import Float from "@/components/Tracking/Float";
+import CarsFloat from "@/components/shipping/Cars/Float";
+import ClientNavbar from "@/components/shipping/ClientNavbar";
+import Float from "@/components/shipping/Tracking/Float";
+import "@/styles/tailwind.shipping.css";
 import Link from "next/link";
 import { BsWhatsapp } from "react-icons/bs";
-import CarsFloat from "../components/Cars/Float";
-import ClientNavbar from "../components/ClientNavbar";
 
 export const metadata = {
     title: {
@@ -56,7 +57,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
     return (
-        <>
+        <main className="font-lexend">
             <ClientNavbar />
             <CarsFloat />
             <Float />
@@ -69,6 +70,6 @@ export default function RootLayout({ children }) {
                 <BsWhatsapp className="whatsapp__icon" />
             </Link>
             <main>{children}</main>
-        </>
+        </main>
     );
 }

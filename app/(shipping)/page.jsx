@@ -1,15 +1,16 @@
 "use client";
 
-import AboutSection from "@/components/sections/AboutSection";
-import AdditionalSection from "@/components/sections/AdditionalSection";
-import ContactsSection from "@/components/sections/ContactsSection";
-import EstimateSection from "@/components/sections/EstimateSection";
-import LogoSection from "@/components/sections/LogoSection";
-import MottoSection from "@/components/sections/MottoSection";
-import ParcelCollectionSection from "@/components/sections/ParcelCollectionSection";
-import ServicesSection from "@/components/sections/ServicesSection";
+import AboutSection from "@/components/shipping/sections/AboutSection";
+import AdditionalSection from "@/components/shipping/sections/AdditionalSection";
+import ContactsSection from "@/components/shipping/sections/ContactsSection";
+import EstimateSection from "@/components/shipping/sections/EstimateSection";
+import LogoSection from "@/components/shipping/sections/LogoSection";
+import MapSection from "@/components/shipping/sections/MapSection";
+import MottoSection from "@/components/shipping/sections/MottoSection";
+import ParcelCollectionSection from "@/components/shipping/sections/ParcelCollectionSection";
+import ServicesSection from "@/components/shipping/sections/ServicesSection";
 import { useWindowSize } from "@/lib/hooks";
-import MapSection from "../components/sections/MapSection";
+import "@/styles/tailwind.shipping.css";
 
 export default function MainPage() {
     const { width } = useWindowSize();

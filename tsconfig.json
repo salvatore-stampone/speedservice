@@ -31,7 +31,9 @@
         "**/*.js",
         "**/*.jsx",
         ".next/types/**/*.ts",
-        "postcss.config.mjs"
+        "postcss.config.mjs",
+        "tailwind.config.cjs",
+        "tailwind.shipping.config.cjs"
     ],
     "exclude": ["node_modules"],
     "typeAcquisition": {
