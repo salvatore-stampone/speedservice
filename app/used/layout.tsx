@@ -37,7 +37,7 @@ const Layout = ({ children }: PropsWithChildren<Props>) => {
             <div className="checkered-border border-b bg-white shadow-lg">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <Tabs value={getCurrentTab()} className="w-full">
-                        <TabsList className="grid w-full grid-cols-3 bg-gradient-to-r from-gray-100 to-gray-200">
+                        <TabsList className="grid w-full grid-cols-3 bg-linear-to-r from-gray-100 to-gray-200">
                             {links.map((link) => (
                                 <TabsTrigger
                                     key={link.name}

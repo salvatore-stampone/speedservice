@@ -32,7 +32,8 @@
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
-        "lint": "next lint"
+        "lint": "eslint .",
+        "clean": "find . -name '._*' -delete"
     },
     "eslintConfig": {
         "extends": [
@@ -54,7 +55,6 @@
     },
     "homepage": "https://www.speedservicelucera.com",
     "devDependencies": {
-        "@eslint/eslintrc": "^3.3.1",
         "@eslint/js": "^9.38.0",
         "@iconify/react": "^6.0.2",
         "@types/node": "24.9.1",
@@ -63,7 +63,8 @@
         "@typescript-eslint/parser": "^8.46.2",
         "autoprefixer": "^10.4.21",
         "eslint": "^9.38.0",
-        "eslint-config-next": "^15.5.6",
+        "eslint-config-next": "^16.0.0",
+        "eslint-config-prettier": "^10.1.8",
         "postcss": "^8.5.6",
         "prettier": "^3.6.2",
         "prettier-plugin-tailwindcss": "^0.7.1",
