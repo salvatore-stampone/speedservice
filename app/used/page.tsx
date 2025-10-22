@@ -1,8 +1,21 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
+import {
+    Card,
+    CardContent,
+    CardDescription,
+    CardHeader,
+    CardTitle,
+} from "@/components/ui/card";
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+} from "@/components/ui/carousel";
 import { Icon } from "@iconify/react";
-import { Splide, SplideSlide } from "@splidejs/react-splide";
-import "@splidejs/react-splide/css";
 import Image from "next/image";
 import Link from "next/link";
 import car1 from "public/images/cars/1/1.jpeg";
@@ -15,70 +28,101 @@ import car6 from "public/images/cars/1/6.jpeg";
 type Props = {};
 
 const page = (props: Props) => {
+    const images = [car1, car2, car3, car4, car5, car6];
+
     return (
-        <div className="mx-auto flex max-w-[1024px] flex-col items-center justify-center gap-y-8 px-[22px] py-10">
-            <h1 className="text-[30px] font-bold">IN PRIMO PIANO</h1>
-            <Splide
-                options={{
-                    rewind: true,
-                    gap: "1rem",
-                    focus: "center",
-                    mediaQuery: "min",
-                    fixedHeight: "260px",
-                    breakpoints: {
-                        1280: {
-                            autoWidth: true,
-                        },
-                    },
-                }}
-                aria-label="Images"
-            >
-                <SplideSlide>
-                    <Image src={car1} alt="Image 1" />
-                </SplideSlide>
-                <SplideSlide>
-                    <Image src={car2} alt="Image 2" />
-                </SplideSlide>
-                <SplideSlide>
-                    <Image src={car3} alt="Image 3" />
-                </SplideSlide>
-                <SplideSlide>
-                    <Image src={car4} alt="Image 4" />
-                </SplideSlide>
-                <SplideSlide>
-                    <Image src={car5} alt="Image 5" />
-                </SplideSlide>
-                <SplideSlide>
-                    <Image src={car6} alt="Image 6" />
-                </SplideSlide>
-            </Splide>
-            <h2 className="pt-5 text-[18px] font-bold uppercase">
-                Ducati Monster S2R 1000 (2007)
-            </h2>
-            <p className="pb-4 text-[14px]">
-                Splendida Ducati Monster S2R 1000, anno 2007, con 50000 km. Ben
-                tenuta.
-                <br />
-                Scarichi in carbonio con omologazione, frizione nuova,
-                tagliandata e gommata al 60%.
-                <br />
-                Ottima per chi ha esperienza: bella, aggressiva e divertente.
-                Qualsiasi prova.
-            </p>
-            <p>
-                <span className="font-bold uppercase">COSTO: </span>
-                <span>€ 3600,00</span>
-            </p>
-            <Link
-                href="tel:3923391613"
-                className="flex items-center gap-x-2 rounded-xl border border-solid border-dark bg-dark px-4 py-3.5 uppercase text-light transition-colors hover:bg-transparent hover:text-dark"
-            >
-                <Icon
-                    icon="material-symbols:info-outline-rounded"
-                    className="text-[24px]"
-                />
-                Più info
-            </Link>
+        <div className="space-y-8">
+            <div className="text-center">
+                <h1 className="mb-2 text-4xl font-bold text-gray-900">
+                    IN PRIMO PIANO
+                </h1>
+                <p className="text-gray-600">
+                    Scopri i nostri veicoli in evidenza
+                </p>
+            </div>
+
+            <Card className="mx-auto max-w-4xl">
+                <CardHeader>
+                    <CardTitle className="text-center text-2xl font-bold">
+                        Ducati Monster S2R 1000 (2007)
+                    </CardTitle>
+                    <CardDescription className="text-center">
+                        Splendida Ducati Monster S2R 1000, anno 2007, con 50000
+                        km
+                    </CardDescription>
+                </CardHeader>
+
+                <CardContent className="space-y-6">
+                    <div className="relative">
+                        <Carousel className="mx-auto w-full max-w-2xl">
+                            <CarouselContent>
+                                {images.map((image, index) => (
+                                    <CarouselItem key={index}>
+                                        <div className="relative aspect-video">
+                                            <Image
+                                                src={image}
+                                                alt={`Ducati Monster ${index + 1}`}
+                                                fill
+                                                className="rounded-lg object-cover"
+                                            />
+                                        </div>
+                                    </CarouselItem>
+                                ))}
+                            </CarouselContent>
+                            <CarouselPrevious />
+                            <CarouselNext />
+                        </Carousel>
+                    </div>
+
+                    <div className="space-y-4">
+                        <div className="rounded-lg bg-gray-50 p-4">
+                            <h3 className="mb-2 text-lg font-semibold">
+                                Descrizione
+                            </h3>
+                            <p className="leading-relaxed text-gray-700">
+                                Splendida Ducati Monster S2R 1000, anno 2007,
+                                con 50000 km. Ben tenuta.
+                                <br />
+                                Scarichi in carbonio con omologazione, frizione
+                                nuova, tagliandata e gommata al 60%.
+                                <br />
+                                Ottima per chi ha esperienza: bella, aggressiva
+                                e divertente. Qualsiasi prova.
+                            </p>
+                        </div>
+
+                        <div className="flex items-center justify-between rounded-lg border border-green-200 bg-green-50 p-4">
+                            <div>
+                                <span className="text-lg font-bold text-green-800">
+                                    COSTO:{" "}
+                                </span>
+                                <span className="text-2xl font-bold text-green-900">
+                                    € 3.600,00
+                                </span>
+                            </div>
+                        </div>
+
+                        <div className="flex justify-center">
+                            <Button
+                                asChild
+                                size="lg"
+                                className="racing-accent font-bold tracking-wide text-white uppercase"
+                            >
+                                <Link
+                                    href="tel:3923391613"
+                                    className="flex items-center gap-2"
+                                >
+                                    <Icon
+                                        icon="material-symbols:info-outline-rounded"
+                                        className="text-xl"
+                                    />
+                                    Più informazioni
+                                </Link>
+                            </Button>
+                        </div>
+                    </div>
+                </CardContent>
+            </Card>
         </div>
     );
 };

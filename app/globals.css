@@ -38,6 +38,8 @@ code {
     --primary-clr: #1357A0;
     --primary-clr--dark: #0f447d;
     --secondary-clr: #9D6629;
+    --racing-red: #DC143C;
+    --racing-red-dark: #B22222;
 }
 
 ::-webkit-scrollbar {
@@ -181,6 +183,53 @@ input::-webkit-inner-spin-button {
 .horizontal-rule {
     width: 100%;
     color: var(--primary-clr);
+}
+
+/* RACING THEME STYLES */
+.racing-red {
+    background-color: var(--racing-red);
+    color: white;
+}
+
+.racing-red:hover {
+    background-color: var(--racing-red-dark);
+}
+
+.racing-red-dark {
+    background-color: var(--racing-red-dark);
+    color: white;
+}
+
+.checkered-pattern {
+    background-image:
+        linear-gradient(45deg, #000 25%, transparent 25%),
+        linear-gradient(-45deg, #000 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #000 75%),
+        linear-gradient(-45deg, transparent 75%, #000 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}
+
+.checkered-border {
+    border: 4px solid;
+    border-image:
+        linear-gradient(45deg, #000 25%, transparent 25%),
+        linear-gradient(-45deg, #000 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #000 75%),
+        linear-gradient(-45deg, transparent 75%, #000 75%) 1;
+    border-image-slice: 1;
+}
+
+.racing-accent {
+    background: linear-gradient(135deg, var(--racing-red) 0%, var(--racing-red-dark) 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(220, 20, 60, 0.3);
+}
+
+.racing-accent:hover {
+    background: linear-gradient(135deg, var(--racing-red-dark) 0%, #8B0000 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(220, 20, 60, 0.4);
 }
 
 /* RESPONSIVENESS */
