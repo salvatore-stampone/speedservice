@@ -54,6 +54,8 @@
     },
     "homepage": "https://www.speedservicelucera.com",
     "devDependencies": {
+        "@eslint/eslintrc": "^3.3.1",
+        "@eslint/js": "^9.38.0",
         "@iconify/react": "^6.0.2",
         "@types/node": "24.9.1",
         "@types/react": "19.2.2",
