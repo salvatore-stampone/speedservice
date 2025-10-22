@@ -1,1 +1,5 @@
 /* Empty file: there are 2 main themes (shipping and vehicles), each with its own file to be imported where needed. */
+
+@import "tailwindcss/theme.css";
+@import "tailwindcss/preflight";
+@import "tailwindcss/utilities";

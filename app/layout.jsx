@@ -1,4 +1,5 @@
 import { Geist_Mono, JetBrains_Mono, Lexend_Deca } from "next/font/google";
+// import "./styles/globals.css";
 
 const lexend = Lexend_Deca({
     subsets: ["latin"],

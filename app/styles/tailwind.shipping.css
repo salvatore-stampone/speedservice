@@ -173,10 +173,6 @@ input::-webkit-inner-spin-button {
     transform: scale(1.05);
 }
 
-.navbar-logo {
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
-}
-
 /* RESPONSIVENESS */
 @media screen and (max-width: 900px) {
     .main-page {

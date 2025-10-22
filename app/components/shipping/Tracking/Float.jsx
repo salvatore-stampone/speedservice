@@ -63,7 +63,7 @@ export default function Float() {
                 <>
                     {/* BACKDROP */}
                     <div
-                        class="absolute inset-0 z-20 backdrop-blur-md"
+                        className="absolute inset-0 z-20 backdrop-blur-md"
                         onClick={() => setIsModalOpen(false)}
                     ></div>
                     <div
