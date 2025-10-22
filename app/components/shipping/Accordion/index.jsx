@@ -102,19 +102,19 @@ const RadixAccordion = () => {
         collectAddress: "",
         collectCity: "",
         collectZipCode: "",
-        collectPhoneNumber: null,
+        collectPhoneNumber: "",
         recipientName: "",
         recipientAddress: "",
         recipientCity: "",
         recipientZipCode: "",
-        recipientPhoneNumber: null,
+        recipientPhoneNumber: "",
         parcelsNumber: 1,
-        length: null,
-        width: null,
-        height: null,
-        weight: null,
+        length: "",
+        width: "",
+        height: "",
+        weight: "",
         payOnDelivery: false,
-        amountToPay: null,
+        amountToPay: "",
     };
 
     const [formData, setFormData] = useState(initialFormData);
@@ -150,7 +150,8 @@ const RadixAccordion = () => {
 
         if (
             hasEmptyOrNullValues(formData) ||
-            (formData.payOnDelivery && !formData.amountToPay)
+            (formData.payOnDelivery &&
+                (!formData.amountToPay || formData.amountToPay === ""))
         ) {
             alert(
                 "Informazioni mancanti, si prega di compilare tutti i campi."
@@ -168,7 +169,7 @@ const RadixAccordion = () => {
                     {
                         ...formData,
                         payOnDelivery: formData.payOnDelivery ? "Sì" : "No",
-                        amountToPay: formData.amountToPay ?? 0,
+                        amountToPay: formData.amountToPay || 0,
                     },
                     "user_822onMwRmoXrdFmoP0kTE"
                 )
