@@ -21,9 +21,7 @@ import { Icon } from "@iconify/react";
 import Image from "next/image";
 import Link from "next/link";
 
-type Props = {};
-
-export default function Motorcycles({}: Props) {
+export default function Motorcycles() {
     return (
         <div className="space-y-6 sm:space-y-8">
             <div className="text-center">

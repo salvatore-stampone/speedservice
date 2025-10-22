@@ -10,7 +10,7 @@ import logo from "public/images/logo.png";
 import vehiclesLogo from "public/images/vehicles-logo.png";
 import { PropsWithChildren } from "react";
 
-type Props = {};
+type Props = object;
 
 const links = [
     {

@@ -1,6 +1,6 @@
 import RadixAccordion from "../Accordion";
 
-const ParcelCollectionSection = (props) => {
+const ParcelCollectionSection = () => {
     return (
         <section
             id="parcel-collection"

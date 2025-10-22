@@ -15,9 +15,8 @@ import { Icon } from "@iconify/react";
 import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 import Link from "next/link";
-type Props = {};
 
-const page = (props: Props) => {
+const page = () => {
     const featuredVehicle = motorcycles[0];
 
     return (
