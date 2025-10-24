@@ -1,3 +1,4 @@
+import { useImageDimensions } from "./useImageDimensions";
 import useWindowSize from "./useWindowSize";
 
-export { useWindowSize };
+export { useImageDimensions, useWindowSize };

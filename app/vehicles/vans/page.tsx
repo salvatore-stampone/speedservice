@@ -1,14 +1,9 @@
 "use client";
 
-import { Badge } from "@/components/ui/badge";
+import { DynamicImage } from "@/components/DynamicImage";
+import { ImageModal } from "@/components/ImageModal";
 import { Button } from "@/components/ui/button";
-import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardHeader,
-    CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
     Carousel,
     CarouselContent,
@@ -18,10 +13,26 @@ import {
 } from "@/components/ui/carousel";
 import vans from "@/lib/data/vehicles/vans";
 import { Icon } from "@iconify/react";
-import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Vans() {
+    const [modalOpen, setModalOpen] = useState(false);
+    const [modalImages, setModalImages] = useState<string[]>([]);
+    const [modalTitle, setModalTitle] = useState("");
+    const [modalCurrentIndex, setModalCurrentIndex] = useState(0);
+
+    const handleImageClick = (
+        images: string[],
+        title: string,
+        currentIndex: number
+    ) => {
+        setModalImages(images);
+        setModalTitle(title);
+        setModalCurrentIndex(currentIndex);
+        setModalOpen(true);
+    };
+
     return (
         <div className="space-y-6 sm:space-y-8">
             <div className="text-center">
@@ -34,130 +45,94 @@ export default function Vans() {
                 </p>
             </div>
 
-            <div className="grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-6">
                 {vans.map((van) => (
                     <Card
                         key={van.id}
-                        className="bg-card border-border overflow-hidden pt-0 transition-shadow hover:shadow-lg"
+                        className="bg-card border-border mx-auto w-full max-w-4xl"
                     >
-                        <div className="relative aspect-video">
-                            <Carousel
-                                opts={{
-                                    align: "start",
-                                    loop: true,
-                                }}
-                                className="w-full"
-                            >
-                                <CarouselContent>
-                                    {van.images.map((image, index) => (
-                                        <CarouselItem key={index}>
-                                            <div className="relative aspect-video">
-                                                <Image
-                                                    src={image}
-                                                    alt={`${van.title} - Immagine ${index + 1}`}
-                                                    fill
-                                                    className="object-cover"
-                                                />
-                                            </div>
-                                        </CarouselItem>
-                                    ))}
-                                </CarouselContent>
-                                <CarouselPrevious className="left-2" />
-                                <CarouselNext className="right-2" />
-                            </Carousel>
-                            <Badge className="bg-primary text-primary-foreground absolute top-2 right-2 z-10 font-bold">
-                                {van.year}
-                            </Badge>
-                        </div>
-
-                        <CardHeader className="px-3 py-3 sm:px-6 sm:py-4">
-                            <CardTitle className="text-card-foreground text-lg sm:text-xl">
-                                {van.title}
+                        <CardHeader className="px-3 py-4 sm:px-6 sm:py-6">
+                            <CardTitle className="text-card-foreground text-center text-lg font-bold sm:text-xl lg:text-2xl">
+                                {van.title} ({van.year})
                             </CardTitle>
-                            <CardDescription className="text-muted-foreground text-sm sm:text-base">
-                                {van.description}
-                            </CardDescription>
                         </CardHeader>
-
-                        <CardContent className="space-y-3 px-3 pb-3 sm:space-y-4 sm:px-6 sm:pb-4">
-                            <div className="grid grid-cols-2 gap-2 text-xs sm:gap-4 sm:text-sm">
-                                <div className="flex items-center gap-1 sm:gap-2">
-                                    <Icon
-                                        icon="material-symbols:speed"
-                                        className="text-muted-foreground text-sm sm:text-base"
-                                    />
-                                    <span className="text-foreground truncate">
-                                        {van.mileage.toLocaleString()} km
-                                    </span>
-                                </div>
-                                <div className="flex items-center gap-1 sm:gap-2">
-                                    <Icon
-                                        icon="material-symbols:local-gas-station"
-                                        className="text-muted-foreground text-sm sm:text-base"
-                                    />
-                                    <span className="text-foreground truncate">
-                                        {van.fuel}
-                                    </span>
-                                </div>
-                                <div className="flex items-center gap-1 sm:gap-2">
-                                    <Icon
-                                        icon="material-symbols:settings"
-                                        className="text-muted-foreground text-sm sm:text-base"
-                                    />
-                                    <span className="text-foreground truncate">
-                                        {van.transmission}
-                                    </span>
-                                </div>
-                                {/* <div className="flex items-center gap-2">
-                                    <Icon
-                                        icon="material-symbols:scale"
-                                        className="text-muted-foreground"
-                                    />
-                                    <span className="text-foreground">
-                                        {van.capacity}
-                                    </span>
-                                </div> */}
-                            </div>
-
-                            <div className="space-y-2">
-                                <h4 className="text-foreground text-xs font-semibold sm:text-sm">
-                                    Caratteristiche:
-                                </h4>
-                                <div className="flex flex-wrap gap-1">
-                                    {van.features.map((feature, index) => (
-                                        <Badge
-                                            key={index}
-                                            variant="secondary"
-                                            className="text-xs"
-                                        >
-                                            {feature}
-                                        </Badge>
-                                    ))}
-                                </div>
-                            </div>
-
-                            <div className="border-border flex flex-col gap-3 border-t pt-3 sm:flex-row sm:items-center sm:justify-between sm:gap-0 sm:pt-4">
-                                <div>
-                                    <span className="text-primary text-xl font-bold sm:text-2xl">
-                                        € {van.price.toLocaleString()}
-                                    </span>
-                                </div>
-                                <Button
-                                    asChild
-                                    size="sm"
-                                    className="bg-primary text-primary-foreground hover:bg-primary/90 w-full font-bold uppercase sm:w-auto"
+                        <CardContent className="space-y-4 px-3 pb-4 sm:space-y-6 sm:px-6 sm:pb-6">
+                            <div className="relative">
+                                <Carousel
+                                    className="mx-auto w-full max-w-2xl overflow-hidden"
+                                    opts={{ align: "start", loop: true }}
                                 >
-                                    <Link
-                                        href="tel:3923391613"
-                                        className="flex items-center justify-center gap-1"
+                                    <CarouselContent>
+                                        {van.images.map((image, index) => (
+                                            <CarouselItem
+                                                key={`${van.id}-${index}`}
+                                            >
+                                                <div className="flex w-full justify-center overflow-hidden">
+                                                    <DynamicImage
+                                                        src={image.src}
+                                                        alt={`${van.title} ${index + 1}`}
+                                                        className="rounded-lg"
+                                                        maxWidth={800}
+                                                        maxHeight={500}
+                                                        onClick={() =>
+                                                            handleImageClick(
+                                                                van.images.map(
+                                                                    (img) =>
+                                                                        img.src
+                                                                ),
+                                                                van.title,
+                                                                index
+                                                            )
+                                                        }
+                                                    />
+                                                </div>
+                                            </CarouselItem>
+                                        ))}
+                                    </CarouselContent>
+                                    <CarouselPrevious className="left-1 sm:left-2" />
+                                    <CarouselNext className="right-1 sm:right-2" />
+                                </Carousel>
+                            </div>
+
+                            <div className="space-y-3 sm:space-y-4">
+                                <div className="bg-muted rounded-lg p-3 sm:p-4">
+                                    <h3 className="text-foreground mb-2 text-base font-semibold sm:text-lg">
+                                        Descrizione
+                                    </h3>
+                                    <p className="text-muted-foreground text-sm leading-relaxed sm:text-base">
+                                        {van.description}
+                                    </p>
+                                </div>
+
+                                <div className="border-primary bg-primary/10 flex items-center justify-between rounded-lg border p-3 sm:p-4">
+                                    <div>
+                                        <span className="text-primary text-sm font-bold sm:text-base lg:text-lg">
+                                            COSTO:{" "}
+                                        </span>
+                                        <span className="text-primary text-xl font-bold sm:text-2xl">
+                                            € {van.price.toLocaleString()}
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div className="flex justify-center">
+                                    <Button
+                                        asChild
+                                        size="lg"
+                                        className="bg-primary text-primary-foreground hover:bg-primary/90 w-full font-bold tracking-wide uppercase sm:w-auto"
                                     >
-                                        <Icon
-                                            icon="material-symbols:phone"
-                                            className="text-sm"
-                                        />
-                                        Contattaci
-                                    </Link>
-                                </Button>
+                                        <Link
+                                            href="tel:3923391613"
+                                            className="flex items-center justify-center gap-2"
+                                        >
+                                            <Icon
+                                                icon="material-symbols:info-outline-rounded"
+                                                className="text-lg sm:text-xl"
+                                            />
+                                            Più informazioni
+                                        </Link>
+                                    </Button>
+                                </div>
                             </div>
                         </CardContent>
                     </Card>
@@ -195,6 +170,14 @@ export default function Vans() {
                     </CardContent>
                 </Card>
             </div>
+
+            <ImageModal
+                isOpen={modalOpen}
+                onClose={() => setModalOpen(false)}
+                images={modalImages}
+                title={modalTitle}
+                currentIndex={modalCurrentIndex}
+            />
         </div>
     );
 }

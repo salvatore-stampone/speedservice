@@ -5,6 +5,7 @@
     "dependencies": {
         "@emailjs/browser": "^4.4.1",
         "@radix-ui/react-accordion": "^1.2.12",
+        "@radix-ui/react-dialog": "^1.1.15",
         "@radix-ui/react-slot": "^1.2.3",
         "@radix-ui/react-tabs": "^1.1.13",
         "@splidejs/react-splide": "^0.7.12",
