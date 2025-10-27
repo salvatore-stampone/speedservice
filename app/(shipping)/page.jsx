@@ -1,6 +1,5 @@
 "use client";
 
-import { ImageModal } from "@/components/ImageModal";
 import AboutSection from "@/components/shipping/sections/AboutSection";
 import AdditionalSection from "@/components/shipping/sections/AdditionalSection";
 import ContactsSection from "@/components/shipping/sections/ContactsSection";
@@ -11,6 +10,7 @@ import MapSection from "@/components/shipping/sections/MapSection";
 import MottoSection from "@/components/shipping/sections/MottoSection";
 import ParcelCollectionSection from "@/components/shipping/sections/ParcelCollectionSection";
 import ServicesSection from "@/components/shipping/sections/ServicesSection";
+import SimpleModal from "@/components/shipping/SimpleModal";
 import { useWindowSize } from "@/lib/hooks";
 import "@/styles/tailwind.shipping.css";
 import flyerImage from "public/images/vehicles/flyer.jpeg";
@@ -28,15 +28,12 @@ export default function MainPage() {
         <div className="main-page">
             <Formula1Banner setShowModal={setShowModal} />
             {/* Modal per mostrare il flyer a schermo intero */}
-            {flyerImage && (
-                <ImageModal
-                    isOpen={showModal}
-                    onClose={() => setShowModal(false)}
-                    images={[flyerImage]}
-                    title="Volantino - Trasporto veicoli a domicilio"
-                    currentIndex={0}
-                />
-            )}
+            <SimpleModal
+                isOpen={showModal}
+                onClose={() => setShowModal(false)}
+                image={flyerImage}
+                title="Volantino - Trasporto veicoli a domicilio"
+            />
             <LogoSection />
             <MottoSection />
             <ServicesSection isSmallScreen={isSmallScreen} />

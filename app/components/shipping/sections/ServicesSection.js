@@ -99,7 +99,7 @@ export default function ServicesSection({ isSmallScreen }) {
                     </h3>
                 </div>
                 <div className="section-three__card">
-                    <h2 className="section-three__card-title">IMBALLO</h2>
+                    <h2 className="section-three__card-title">IMBALLAGGIO</h2>
                     <h3 className="section-three__card-subtitle">
                         <BsBoxSeam className="section-three__icon" />
                         Angoliere

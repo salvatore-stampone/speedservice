@@ -17,10 +17,6 @@ const links = [
         href: "#services",
     },
     {
-        text: "Servizi Aggiuntivi",
-        href: "#additional-services",
-    },
-    {
         text: "Preventivo",
         href: "#estimate",
     },
