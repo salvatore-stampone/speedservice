@@ -1,5 +1,5 @@
 // This file is for the vehicles part of the website
-// For the shipping part of the website, use the tailwind.shipping.config.cjs file
+// For the shipping part of the website, use the tailwind.shipping.config.mjs file
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {

@@ -33,7 +33,7 @@
         ".next/types/**/*.ts",
         "postcss.config.mjs",
         "tailwind.config.cjs",
-        "tailwind.shipping.config.cjs"
+        "tailwind.shipping.config.mjs"
     ],
     "exclude": ["node_modules"],
     "typeAcquisition": {

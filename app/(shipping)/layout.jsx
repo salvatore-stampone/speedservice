@@ -1,4 +1,3 @@
-import CarsFloat from "@/components/shipping/Cars/Float";
 import ClientNavbar from "@/components/shipping/ClientNavbar";
 import Float from "@/components/shipping/Tracking/Float";
 import "@/styles/tailwind.shipping.css";
@@ -59,7 +58,6 @@ export default function RootLayout({ children }) {
     return (
         <main className="font-lexend">
             <ClientNavbar />
-            <CarsFloat />
             <Float />
             <Link
                 href="https://wa.me/390881042353"
