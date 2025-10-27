@@ -31,7 +31,7 @@ export default function Formula1Banner({ setShowModal }) {
     };
 
     return (
-        <div className="absolute top-40 right-0 left-0 z-1 h-[30px] w-full overflow-visible">
+        <div className="absolute top-34 right-0 left-0 z-1 h-[30px] w-full overflow-visible">
             {/* Parent div for positioning */}
             <div className="absolute -top-4 right-0 left-0 bg-red-500">
                 {/* Text and logo container (LEFT) */}
@@ -53,6 +53,10 @@ export default function Formula1Banner({ setShowModal }) {
                         height={1080}
                         className="navbar-logo absolute top-1/2 left-0 h-10 w-auto -translate-y-1/2 transition-all duration-1000 ease-in-out group-hover:translate-x-[calc(100%*3)] sm:h-12"
                     />
+                    {/* NEW Badge */}
+                    <span className="absolute -top-8 left-2 z-10 inline-block rotate-[-10deg] animate-pulse rounded-full bg-linear-to-r from-yellow-400 via-orange-500 to-red-600 bg-clip-text px-2 py-0.5 text-[20px] font-bold text-transparent">
+                        NEW
+                    </span>
                 </div>
                 {/* Text and logo container (RIGHT) */}
                 <Link
@@ -90,7 +94,7 @@ export default function Formula1Banner({ setShowModal }) {
                         alt="Volantino - Trasporto veicoli a domicilio"
                         width={1024}
                         height={1536}
-                        className="w-full rounded-lg border-2 border-black/20 shadow-2xl"
+                        className="w-full rounded-lg border-2 border-black/20"
                         priority
                     />
                 </div>
