@@ -9,7 +9,7 @@ export default function LogoSection() {
                 width={1600}
                 height={1600}
                 alt="Speedservice logo"
-                className="z-2 mx-auto aspect-square w-[300px] sm:w-[450px] md:w-[550px] lg:w-[700px]"
+                className="mx-auto aspect-square w-[300px] sm:w-[450px] md:w-[550px] lg:w-[700px]"
                 priority
             />
         </section>
