@@ -177,10 +177,33 @@ input::-webkit-inner-spin-button {
 .checkered-pattern {
     height: 100%;
     width: 100%;
+    position: relative;
+}
+
+.trapezoid-left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20%;
+    height: 100%;
     background: conic-gradient(#000 90deg, #fff 90deg 180deg, #000 180deg 270deg, #fff 270deg);
     background-repeat: repeat;
     background-size: 30px 30px;
     background-position: top left;
+    clip-path: polygon(0% 0%, 100% 0%, 95% 100%, 0% 100%);
+}
+
+.trapezoid-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 20%;
+    height: 100%;
+    background: conic-gradient(#000 90deg, #fff 90deg 180deg, #000 180deg 270deg, #fff 270deg);
+    background-repeat: repeat;
+    background-size: 30px 30px;
+    background-position: top left;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 5% 100%);
 }
 
 /* RESPONSIVENESS */

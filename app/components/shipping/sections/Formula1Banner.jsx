@@ -31,7 +31,7 @@ export default function Formula1Banner({ setShowModal }) {
     };
 
     return (
-        <div className="absolute top-34 right-0 left-0 z-1 h-[30px] w-full overflow-visible">
+        <div className="absolute top-32 right-0 left-0 z-1 h-[30px] w-full overflow-visible">
             {/* Parent div for positioning */}
             <div className="absolute -top-4 right-0 left-0 bg-red-500">
                 {/* Text and logo container (LEFT) */}
@@ -77,8 +77,11 @@ export default function Formula1Banner({ setShowModal }) {
                 </Link>
             </div>
 
-            {/* Bandiera a scacchiera */}
-            <div className="checkered-pattern relative"></div>
+            {/* Bandiera a scacchiera divisa in due trapezi */}
+            <div className="checkered-pattern relative">
+                <div className="trapezoid-left"></div>
+                <div className="trapezoid-right"></div>
+            </div>
 
             {/* Preview del flyer che segue il mouse */}
             {showPreview && (
