@@ -31,7 +31,7 @@ const cars = [
         mileage: 95000,
         fuel: "Diesel",
         transmission: "Manuale",
-        images: [car1, car2, car3, car4, car5],
+        images: [car3, car1, car2, car4, car5],
         description:
             "Fiat Punto in ottime condizioni, autocarro 1300 cv 90 cv.",
         // features: ["Radio", "Clima", "Sensori Parcheggio"],
