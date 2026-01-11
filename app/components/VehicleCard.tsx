@@ -10,6 +10,7 @@ import {
     CarouselNext,
     CarouselPrevious,
 } from "@/components/ui/carousel";
+import { cn } from "@/lib/utils";
 import { Fuel, Gauge, Info, Joystick } from "lucide-react";
 import Link from "next/link";
 
@@ -27,6 +28,7 @@ interface Vehicle {
     mileage?: number;
     fuel?: string;
     transmission?: string;
+    sold?: boolean;
 }
 
 interface VehicleCardProps {
@@ -162,7 +164,11 @@ export function VehicleCard({
                     </div>
 
                     <div className="border-primary bg-primary/10 flex items-center justify-between rounded-lg border p-3 sm:p-4">
-                        <div>
+                        <div
+                            className={cn(
+                                vehicle.sold && "line-through opacity-50"
+                            )}
+                        >
                             <span className="text-primary text-sm font-bold sm:text-base lg:text-lg">
                                 COSTO:{" "}
                             </span>
@@ -170,23 +176,30 @@ export function VehicleCard({
                                 € {vehicle.price.toLocaleString()}
                             </span>
                         </div>
+                        {vehicle.sold && (
+                            <span className="text-primary text-xl font-bold sm:text-2xl">
+                                VENDUTO
+                            </span>
+                        )}
                     </div>
 
-                    <div className="flex justify-center">
-                        <Button
-                            asChild
-                            size="lg"
-                            className="bg-primary text-primary-foreground hover:bg-primary/90 w-full font-bold tracking-wide uppercase sm:w-auto"
-                        >
-                            <Link
-                                href="tel:3923391613"
-                                className="flex items-center justify-center gap-2"
+                    {!vehicle.sold && (
+                        <div className="flex justify-center">
+                            <Button
+                                asChild
+                                size="lg"
+                                className="bg-primary text-primary-foreground hover:bg-primary/90 w-full font-bold tracking-wide uppercase sm:w-auto"
                             >
-                                <Info className="text-lg sm:text-xl" />
-                                Più informazioni
-                            </Link>
-                        </Button>
-                    </div>
+                                <Link
+                                    href="tel:3923391613"
+                                    className="flex items-center justify-center gap-2"
+                                >
+                                    <Info className="text-lg sm:text-xl" />
+                                    Più informazioni
+                                </Link>
+                            </Button>
+                        </div>
+                    )}
                 </div>
             </CardContent>
         </Card>
