@@ -1,11 +1,11 @@
-@import "tailwindcss/theme.css";
-@import "tailwindcss/preflight";
-@import "tailwindcss/utilities";
-
 @import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..900&display=swap');
 
 @config "../../tailwind.config.cjs";
+
+@import "tailwindcss/theme.css";
+@import "tailwindcss/preflight";
+@import "tailwindcss/utilities";
 
 :root {
     --background: #ffffff;
