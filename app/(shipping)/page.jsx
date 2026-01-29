@@ -1,5 +1,6 @@
 "use client";
 
+import EmailScript from "@/components/EmailScript";
 import AboutSection from "@/components/shipping/sections/AboutSection";
 import AdditionalSection from "@/components/shipping/sections/AdditionalSection";
 import ContactsSection from "@/components/shipping/sections/ContactsSection";
@@ -26,6 +27,7 @@ export default function MainPage() {
 
     return (
         <div className="main-page">
+            <EmailScript />
             <Formula1Banner setShowModal={setShowModal} />
             {/* Modal per mostrare il flyer a schermo intero */}
             <SimpleModal

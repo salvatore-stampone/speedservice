@@ -2,7 +2,7 @@ import emailjs from "@emailjs/browser";
 import { Icon } from "@iconify/react";
 import * as Accordion from "@radix-ui/react-accordion";
 import classNames from "classnames";
-import { forwardRef, useState } from "react";
+import { forwardRef, useEffect, useState } from "react";
 
 const collectFields = [
     {
@@ -120,6 +120,16 @@ const RadixAccordion = () => {
     const [formData, setFormData] = useState(initialFormData);
     const [isFormSubmitted, setIsFormSubmitted] = useState(false);
 
+    useEffect(() => {
+        if (isFormSubmitted) {
+            const timer = setTimeout(() => {
+                setIsFormSubmitted(false);
+            }, 5000);
+
+            return () => clearTimeout(timer);
+        }
+    }, [isFormSubmitted]);
+
     const isNullOrEmpty = (value) => value === "" || value === null;
 
     const hasEmptyOrNullValues = (obj) => {
@@ -159,33 +169,23 @@ const RadixAccordion = () => {
             return;
         }
 
-        if (window.confirm("Sei sicuro di voler richiedere il ritiro?")) {
-            setIsFormSubmitted(true);
+        setIsFormSubmitted(true);
 
-            emailjs
-                .send(
-                    "contact_service",
-                    "template_pbq6znk",
-                    {
-                        ...formData,
-                        payOnDelivery: formData.payOnDelivery ? "Sì" : "No",
-                        amountToPay: formData.amountToPay || 0,
-                    },
-                    "user_822onMwRmoXrdFmoP0kTE"
-                )
-                .then(
-                    (result) => {
-                        console.log(result.text);
-                    },
-                    (error) => {
-                        console.log(error.text);
-                    }
-                );
+        emailjs.send("contact_service", "template_pbq6znk", {
+            ...formData,
+            payOnDelivery: formData.payOnDelivery ? "Sì" : "No",
+            amountToPay: formData.amountToPay || 0,
+        });
+        // .then(
+        //     (result) => {
+        //         console.log("Email sent successfully:", result.text);
+        //     },
+        //     (error) => {
+        //         console.log("Email not sent:", error.text);
+        //     }
+        // );
 
-            setFormData(initialFormData);
-        } else {
-            alert("La richiesta di ritiro non è stata inviata.");
-        }
+        setFormData(initialFormData);
     };
 
     return (
@@ -357,9 +357,11 @@ const RadixAccordion = () => {
             </Accordion.Root>
 
             {isFormSubmitted && (
-                <p className="text-light mt-10 max-w-[550px] text-[22px]">
-                    La richiesta di ritiro è stata inviata con successo! Presto
-                    sarai contattato dal nostro team per la conferma definitiva.
+                <p className="text-light mt-1 max-w-[550px] rounded-md border border-green-500 bg-green-600/50 p-4">
+                    ✅ La richiesta di ritiro è stata inviata con successo!{" "}
+                    <br />
+                    Presto sarai contattato dal nostro team per la conferma
+                    definitiva.
                 </p>
             )}
         </>
