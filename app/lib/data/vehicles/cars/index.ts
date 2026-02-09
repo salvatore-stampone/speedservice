@@ -47,6 +47,7 @@ const cars = [
         images: [red1, red2, red3, red4, red5, red6, red7, red8],
         description:
             "Fiat Panda rossa in ottime condizioni, cilindrata 1.2 L, cambio manuale, benzina.",
+        sold: true,
     },
     {
         id: 3,
@@ -70,6 +71,7 @@ const cars = [
         ],
         description:
             "Fiat Panda gialla in ottime condizioni, cilindrata 1.3 L, cambio manuale, diesel.",
+        sold: true,
     },
 ];
 

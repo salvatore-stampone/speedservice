@@ -23,6 +23,7 @@ const vans = [
         images: [trafic1, trafic2, trafic3, trafic4, trafic5, trafic6],
         description:
             "Renault Trafic bianco in ottime condizioni, ideale per trasporti e lavoro. Volano e frizione appena fatti con fattura dimostrabile. Diesel.",
+        sold: true,
         // features: [
         //     "Volano e frizione appena fatti",
         //     "Clima",
