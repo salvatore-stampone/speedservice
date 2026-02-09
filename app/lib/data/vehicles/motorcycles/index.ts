@@ -4,6 +4,7 @@ import monster3 from "public/images/vehicles/motorcycles/ducati-monster/monster-
 // import monster4 from "public/images/vehicles/motorcycles/ducati-monster/monster-4.jpg";
 import monster5 from "public/images/vehicles/motorcycles/ducati-monster/monster-5.jpg";
 // import motorcycle3 from "public/images/vehicles/motorcycles/ducati-monster/moto-3.jpeg";
+import { sortWithSoldLast } from "../utils";
 
 const motorcycles = [
     {
@@ -22,4 +23,4 @@ const motorcycles = [
     },
 ];
 
-export default motorcycles;
+export default sortWithSoldLast(motorcycles);

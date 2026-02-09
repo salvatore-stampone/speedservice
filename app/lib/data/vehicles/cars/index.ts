@@ -21,6 +21,7 @@ import car2 from "public/images/vehicles/cars/fiat-punto/punto-2.jpeg";
 import car3 from "public/images/vehicles/cars/fiat-punto/punto-3.jpeg";
 import car4 from "public/images/vehicles/cars/fiat-punto/punto-4.jpeg";
 import car5 from "public/images/vehicles/cars/fiat-punto/punto-5.jpeg";
+import { sortWithSoldLast } from "../utils";
 
 const cars = [
     {
@@ -75,4 +76,4 @@ const cars = [
     },
 ];
 
-export default cars;
+export default sortWithSoldLast(cars);

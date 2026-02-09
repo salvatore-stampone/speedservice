@@ -9,7 +9,7 @@ import "@/styles/tailwind.vehicles.css";
 import { useState } from "react";
 
 const Page = () => {
-    const featuredVehicles = [cars[0], motorcycles[0], vans[0]];
+    const featuredVehicles = [cars[0], motorcycles[0], vans[2]];
     const [modalOpen, setModalOpen] = useState(false);
     const [modalImages, setModalImages] = useState<string[]>([]);
     const [modalTitle, setModalTitle] = useState("");
