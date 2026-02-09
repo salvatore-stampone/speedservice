@@ -21,9 +21,10 @@ import car2 from "public/images/vehicles/cars/fiat-punto/punto-2.jpeg";
 import car3 from "public/images/vehicles/cars/fiat-punto/punto-3.jpeg";
 import car4 from "public/images/vehicles/cars/fiat-punto/punto-4.jpeg";
 import car5 from "public/images/vehicles/cars/fiat-punto/punto-5.jpeg";
+import type { Vehicle } from "../types";
 import { sortWithSoldLast } from "../utils";
 
-const cars = [
+const cars: Vehicle[] = [
     {
         id: 1,
         title: "Fiat Punto",
@@ -35,7 +36,6 @@ const cars = [
         images: [car3, car1, car2, car4, car5],
         description:
             "Fiat Punto in ottime condizioni, autocarro 1300 cv 90 cv.",
-        // features: ["Radio", "Clima", "Sensori Parcheggio"],
     },
     {
         id: 2,

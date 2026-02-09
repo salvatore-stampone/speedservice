@@ -10,26 +10,10 @@ import {
     CarouselNext,
     CarouselPrevious,
 } from "@/components/ui/carousel";
+import type { Vehicle } from "@/lib/data/vehicles/types";
 import { cn } from "@/lib/utils";
 import { Fuel, Gauge, Info, Joystick } from "lucide-react";
 import Link from "next/link";
-
-interface VehicleImage {
-    src: string;
-}
-
-interface Vehicle {
-    id: number | string;
-    title: string;
-    year: number;
-    price: number;
-    images: VehicleImage[];
-    description: string;
-    mileage?: number;
-    fuel?: string;
-    transmission?: string;
-    sold?: boolean;
-}
 
 interface VehicleCardProps {
     vehicle: Vehicle;

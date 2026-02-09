@@ -14,9 +14,10 @@ import trafic3 from "public/images/vehicles/vans/renault-trafic/trafic-3.jpg";
 import trafic4 from "public/images/vehicles/vans/renault-trafic/trafic-4.jpg";
 import trafic5 from "public/images/vehicles/vans/renault-trafic/trafic-5.jpg";
 import trafic6 from "public/images/vehicles/vans/renault-trafic/trafic-6.jpg";
+import type { Vehicle } from "../types";
 import { sortWithSoldLast } from "../utils";
 
-const vans = [
+const vans: Vehicle[] = [
     {
         id: 1,
         title: "Renault Trafic Terza Serie",
