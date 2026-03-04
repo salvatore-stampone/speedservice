@@ -120,6 +120,7 @@ const cars: Vehicle[] = [
         ],
         description:
             "Fiat 500 1.2 benzina full optional. Chiusura centralizzata, tettuccio apribile, comandi a volante, aria condizionata e servosterzo. Frizione appena sostituita. Gommata doppia, due chiavi, interni come nuovi, carrozzeria in ottime condizioni.",
+        sold: true,
     },
     {
         id: 5,
@@ -139,6 +140,7 @@ const cars: Vehicle[] = [
         ],
         description:
             "Opel Agila dicembre 2008, 214.000 km. Tagliando effettuato. Full optional: chiusura centralizzata, aria condizionata, servosterzo, vetri elettrici. Gommata in buone condizioni, disponibile per qualsiasi prova.",
+        sold: true,
     },
 ];
 
