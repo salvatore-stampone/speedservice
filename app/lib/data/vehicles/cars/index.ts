@@ -12,6 +12,20 @@ import fiat500Red6 from "public/images/vehicles/cars/fiat-500-red/fiat-500-red-6
 import fiat500Red7 from "public/images/vehicles/cars/fiat-500-red/fiat-500-red-7.jpeg";
 import fiat500Red8 from "public/images/vehicles/cars/fiat-500-red/fiat-500-red-8.jpeg";
 import fiat500Red9 from "public/images/vehicles/cars/fiat-500-red/fiat-500-red-9.jpeg";
+import fiat500Red2_1 from "public/images/vehicles/cars/fiat-500-red2/fiat-500-red2-1.jpg";
+import fiat500Red2_10 from "public/images/vehicles/cars/fiat-500-red2/fiat-500-red2-10.jpg";
+import fiat500Red2_11 from "public/images/vehicles/cars/fiat-500-red2/fiat-500-red2-11.jpg";
+import fiat500Red2_12 from "public/images/vehicles/cars/fiat-500-red2/fiat-500-red2-12.jpg";
+import fiat500Red2_13 from "public/images/vehicles/cars/fiat-500-red2/fiat-500-red2-13.jpg";
+import fiat500Red2_14 from "public/images/vehicles/cars/fiat-500-red2/fiat-500-red2-14.jpg";
+import fiat500Red2_2 from "public/images/vehicles/cars/fiat-500-red2/fiat-500-red2-2.jpg";
+import fiat500Red2_3 from "public/images/vehicles/cars/fiat-500-red2/fiat-500-red2-3.jpg";
+import fiat500Red2_4 from "public/images/vehicles/cars/fiat-500-red2/fiat-500-red2-4.jpg";
+import fiat500Red2_5 from "public/images/vehicles/cars/fiat-500-red2/fiat-500-red2-5.jpg";
+import fiat500Red2_6 from "public/images/vehicles/cars/fiat-500-red2/fiat-500-red2-6.jpg";
+import fiat500Red2_7 from "public/images/vehicles/cars/fiat-500-red2/fiat-500-red2-7.jpg";
+import fiat500Red2_8 from "public/images/vehicles/cars/fiat-500-red2/fiat-500-red2-8.jpg";
+import fiat500Red2_9 from "public/images/vehicles/cars/fiat-500-red2/fiat-500-red2-9.jpg";
 import red1 from "public/images/vehicles/cars/fiat-panda-red/red-1.jpg";
 import red2 from "public/images/vehicles/cars/fiat-panda-red/red-2.jpg";
 import red3 from "public/images/vehicles/cars/fiat-panda-red/red-3.jpg";
@@ -35,6 +49,22 @@ import car2 from "public/images/vehicles/cars/fiat-punto/punto-2.jpeg";
 import car3 from "public/images/vehicles/cars/fiat-punto/punto-3.jpeg";
 import car4 from "public/images/vehicles/cars/fiat-punto/punto-4.jpeg";
 import car5 from "public/images/vehicles/cars/fiat-punto/punto-5.jpeg";
+import fordKa1 from "public/images/vehicles/cars/ford-ka/ford-ka-1.jpg";
+import fordKa2 from "public/images/vehicles/cars/ford-ka/ford-ka-2.jpg";
+import fordKa3 from "public/images/vehicles/cars/ford-ka/ford-ka-3.jpg";
+import fordKa4 from "public/images/vehicles/cars/ford-ka/ford-ka-4.jpg";
+import fordKa5 from "public/images/vehicles/cars/ford-ka/ford-ka-5.jpg";
+import fordKa6 from "public/images/vehicles/cars/ford-ka/ford-ka-6.jpg";
+import fordKa7 from "public/images/vehicles/cars/ford-ka/ford-ka-7.jpg";
+import lanciaYpsilon1 from "public/images/vehicles/cars/lancia-ypsilon/lancia-ypsilon-1.jpg";
+import lanciaYpsilon2 from "public/images/vehicles/cars/lancia-ypsilon/lancia-ypsilon-2.jpg";
+import lanciaYpsilon3 from "public/images/vehicles/cars/lancia-ypsilon/lancia-ypsilon-3.jpg";
+import lanciaYpsilon4 from "public/images/vehicles/cars/lancia-ypsilon/lancia-ypsilon-4.jpg";
+import lanciaYpsilon5 from "public/images/vehicles/cars/lancia-ypsilon/lancia-ypsilon-5.jpg";
+import lanciaYpsilon6 from "public/images/vehicles/cars/lancia-ypsilon/lancia-ypsilon-6.jpg";
+import lanciaYpsilon7 from "public/images/vehicles/cars/lancia-ypsilon/lancia-ypsilon-7.jpg";
+import lanciaYpsilon8 from "public/images/vehicles/cars/lancia-ypsilon/lancia-ypsilon-8.jpg";
+import lanciaYpsilon9 from "public/images/vehicles/cars/lancia-ypsilon/lancia-ypsilon-9.jpg";
 import opelAgila1 from "public/images/vehicles/cars/opel-agila/opel-agila-1.jpeg";
 import opelAgila2 from "public/images/vehicles/cars/opel-agila/opel-agila-2.jpeg";
 import opelAgila3 from "public/images/vehicles/cars/opel-agila/opel-agila-3.jpeg";
@@ -56,6 +86,7 @@ const cars: Vehicle[] = [
         images: [car3, car1, car2, car4, car5],
         description:
             "Fiat Punto in ottime condizioni, autocarro 1300 cv 90 cv.",
+        sold: true,
     },
     {
         id: 2,
@@ -141,6 +172,69 @@ const cars: Vehicle[] = [
         description:
             "Opel Agila dicembre 2008, 214.000 km. Tagliando effettuato. Full optional: chiusura centralizzata, aria condizionata, servosterzo, vetri elettrici. Gommata in buone condizioni, disponibile per qualsiasi prova.",
         sold: true,
+    },
+    {
+        id: 6,
+        title: "Fiat 500 1.3 Multijet",
+        year: 2008,
+        price: 4990,
+        mileage: 165000,
+        fuel: "Diesel",
+        transmission: "Manuale",
+        images: [
+            fiat500Red2_1,
+            fiat500Red2_2,
+            fiat500Red2_3,
+            fiat500Red2_4,
+            fiat500Red2_5,
+            fiat500Red2_6,
+            fiat500Red2_7,
+            fiat500Red2_8,
+            fiat500Red2_9,
+            fiat500Red2_10,
+            fiat500Red2_11,
+            fiat500Red2_12,
+            fiat500Red2_13,
+            fiat500Red2_14,
+        ],
+        description:
+            "Fiat 500 1.3 Multijet 75 CV, anno 2008, 165.000 km. Diesel, cambio manuale.",
+        sold: true,
+    },
+    {
+        id: 7,
+        title: "Ford Ka 1.3 Multijet",
+        year: 2012,
+        price: 3490,
+        mileage: 210000,
+        fuel: "Diesel",
+        transmission: "Manuale",
+        images: [fordKa1, fordKa2, fordKa3, fordKa4, fordKa5, fordKa6, fordKa7],
+        description:
+            "Ford Ka 1.3 Multijet 75 CV, anno 2012, 210.000 km. Diesel, cambio manuale.",
+        sold: true,
+    },
+    {
+        id: 8,
+        title: "Lancia Ypsilon 1.2 Benzina",
+        year: 2005,
+        price: 2490,
+        mileage: 165000,
+        fuel: "Benzina",
+        transmission: "Manuale",
+        images: [
+            lanciaYpsilon1,
+            lanciaYpsilon2,
+            lanciaYpsilon3,
+            lanciaYpsilon4,
+            lanciaYpsilon5,
+            lanciaYpsilon6,
+            lanciaYpsilon7,
+            lanciaYpsilon8,
+            lanciaYpsilon9,
+        ],
+        description:
+            "Lancia Ypsilon 1.2 benzina, anno 2005, 165.000 km. Ottime condizioni, tagliando effettuato. Cambio manuale.",
     },
 ];
 
