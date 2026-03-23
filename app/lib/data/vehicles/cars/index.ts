@@ -56,21 +56,44 @@ import fordKa4 from "public/images/vehicles/cars/ford-ka/ford-ka-4.jpg";
 import fordKa5 from "public/images/vehicles/cars/ford-ka/ford-ka-5.jpg";
 import fordKa6 from "public/images/vehicles/cars/ford-ka/ford-ka-6.jpg";
 import fordKa7 from "public/images/vehicles/cars/ford-ka/ford-ka-7.jpg";
-import lanciaYpsilon1 from "public/images/vehicles/cars/lancia-ypsilon/lancia-ypsilon-1.jpg";
-import lanciaYpsilon2 from "public/images/vehicles/cars/lancia-ypsilon/lancia-ypsilon-2.jpg";
-import lanciaYpsilon3 from "public/images/vehicles/cars/lancia-ypsilon/lancia-ypsilon-3.jpg";
-import lanciaYpsilon4 from "public/images/vehicles/cars/lancia-ypsilon/lancia-ypsilon-4.jpg";
-import lanciaYpsilon5 from "public/images/vehicles/cars/lancia-ypsilon/lancia-ypsilon-5.jpg";
-import lanciaYpsilon6 from "public/images/vehicles/cars/lancia-ypsilon/lancia-ypsilon-6.jpg";
-import lanciaYpsilon7 from "public/images/vehicles/cars/lancia-ypsilon/lancia-ypsilon-7.jpg";
-import lanciaYpsilon8 from "public/images/vehicles/cars/lancia-ypsilon/lancia-ypsilon-8.jpg";
-import lanciaYpsilon9 from "public/images/vehicles/cars/lancia-ypsilon/lancia-ypsilon-9.jpg";
+import lanciaYpsilon1 from "public/images/vehicles/cars/lancia-ypsilon/lancia-ypsilon-1.jpeg";
+import lanciaYpsilon10 from "public/images/vehicles/cars/lancia-ypsilon/lancia-ypsilon-10.jpeg";
+import lanciaYpsilon11 from "public/images/vehicles/cars/lancia-ypsilon/lancia-ypsilon-11.jpeg";
+import lanciaYpsilon12 from "public/images/vehicles/cars/lancia-ypsilon/lancia-ypsilon-12.jpeg";
+import lanciaYpsilon13 from "public/images/vehicles/cars/lancia-ypsilon/lancia-ypsilon-13.jpeg";
+import lanciaYpsilon14 from "public/images/vehicles/cars/lancia-ypsilon/lancia-ypsilon-14.jpeg";
+import lanciaYpsilon15 from "public/images/vehicles/cars/lancia-ypsilon/lancia-ypsilon-15.jpeg";
+import lanciaYpsilon16 from "public/images/vehicles/cars/lancia-ypsilon/lancia-ypsilon-16.jpeg";
+import lanciaYpsilon17 from "public/images/vehicles/cars/lancia-ypsilon/lancia-ypsilon-17.jpeg";
+import lanciaYpsilon2 from "public/images/vehicles/cars/lancia-ypsilon/lancia-ypsilon-2.jpeg";
+import lanciaYpsilon3 from "public/images/vehicles/cars/lancia-ypsilon/lancia-ypsilon-3.jpeg";
+import lanciaYpsilon4 from "public/images/vehicles/cars/lancia-ypsilon/lancia-ypsilon-4.jpeg";
+import lanciaYpsilon5 from "public/images/vehicles/cars/lancia-ypsilon/lancia-ypsilon-5.jpeg";
+import lanciaYpsilon6 from "public/images/vehicles/cars/lancia-ypsilon/lancia-ypsilon-6.jpeg";
+import lanciaYpsilon7 from "public/images/vehicles/cars/lancia-ypsilon/lancia-ypsilon-7.jpeg";
+import lanciaYpsilon8 from "public/images/vehicles/cars/lancia-ypsilon/lancia-ypsilon-8.jpeg";
+import lanciaYpsilon9 from "public/images/vehicles/cars/lancia-ypsilon/lancia-ypsilon-9.jpeg";
 import opelAgila1 from "public/images/vehicles/cars/opel-agila/opel-agila-1.jpeg";
 import opelAgila2 from "public/images/vehicles/cars/opel-agila/opel-agila-2.jpeg";
 import opelAgila3 from "public/images/vehicles/cars/opel-agila/opel-agila-3.jpeg";
 import opelAgila4 from "public/images/vehicles/cars/opel-agila/opel-agila-4.jpeg";
 import opelAgila5 from "public/images/vehicles/cars/opel-agila/opel-agila-5.jpeg";
 import opelAgila6 from "public/images/vehicles/cars/opel-agila/opel-agila-6.jpeg";
+import toyotaYaris1 from "public/images/vehicles/cars/toyota-yaris/toyota-yaris-1.jpg";
+import toyotaYaris10 from "public/images/vehicles/cars/toyota-yaris/toyota-yaris-10.jpg";
+import toyotaYaris11 from "public/images/vehicles/cars/toyota-yaris/toyota-yaris-11.jpg";
+import toyotaYaris12 from "public/images/vehicles/cars/toyota-yaris/toyota-yaris-12.jpg";
+import toyotaYaris13 from "public/images/vehicles/cars/toyota-yaris/toyota-yaris-13.jpg";
+import toyotaYaris14 from "public/images/vehicles/cars/toyota-yaris/toyota-yaris-14.jpg";
+import toyotaYaris15 from "public/images/vehicles/cars/toyota-yaris/toyota-yaris-15.jpg";
+import toyotaYaris2 from "public/images/vehicles/cars/toyota-yaris/toyota-yaris-2.jpg";
+import toyotaYaris3 from "public/images/vehicles/cars/toyota-yaris/toyota-yaris-3.jpg";
+import toyotaYaris4 from "public/images/vehicles/cars/toyota-yaris/toyota-yaris-4.jpg";
+import toyotaYaris5 from "public/images/vehicles/cars/toyota-yaris/toyota-yaris-5.jpg";
+import toyotaYaris6 from "public/images/vehicles/cars/toyota-yaris/toyota-yaris-6.jpg";
+import toyotaYaris7 from "public/images/vehicles/cars/toyota-yaris/toyota-yaris-7.jpg";
+import toyotaYaris8 from "public/images/vehicles/cars/toyota-yaris/toyota-yaris-8.jpg";
+import toyotaYaris9 from "public/images/vehicles/cars/toyota-yaris/toyota-yaris-9.jpg";
 import type { Vehicle } from "../types";
 import { sortWithSoldLast } from "../utils";
 
@@ -219,7 +242,7 @@ const cars: Vehicle[] = [
         title: "Lancia Ypsilon 1.2 Benzina",
         year: 2005,
         price: 2490,
-        mileage: 165000,
+        mileage: 158000,
         fuel: "Benzina",
         transmission: "Manuale",
         images: [
@@ -232,9 +255,45 @@ const cars: Vehicle[] = [
             lanciaYpsilon7,
             lanciaYpsilon8,
             lanciaYpsilon9,
+            lanciaYpsilon10,
+            lanciaYpsilon11,
+            lanciaYpsilon12,
+            lanciaYpsilon13,
+            lanciaYpsilon14,
+            lanciaYpsilon15,
+            lanciaYpsilon16,
+            lanciaYpsilon17,
         ],
         description:
             "Lancia Ypsilon 1.2 benzina, anno 2005, 165.000 km. Ottime condizioni, tagliando effettuato. Cambio manuale.",
+    },
+    {
+        id: 9,
+        title: "Toyota Yaris 1.4 Diesel",
+        year: 2009,
+        price: 3790,
+        mileage: 210000,
+        fuel: "Diesel",
+        transmission: "Manuale",
+        images: [
+            toyotaYaris5,
+            toyotaYaris1,
+            toyotaYaris2,
+            toyotaYaris3,
+            toyotaYaris4,
+            toyotaYaris6,
+            toyotaYaris7,
+            toyotaYaris8,
+            toyotaYaris9,
+            toyotaYaris10,
+            toyotaYaris11,
+            toyotaYaris12,
+            toyotaYaris13,
+            toyotaYaris14,
+            toyotaYaris15,
+        ],
+        description:
+            "Toyota Yaris 1.4 diesel, anno 2009, 210.000 km. Ottime condizioni, lavori effettuati recentemente. Cambio manuale. Dischi e pasticche anteriori tagliando completo. Vetri elettrici. Chiusura centralizzata. Aria condizionata. 2 chiavi.",
     },
 ];
 
