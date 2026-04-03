@@ -294,6 +294,7 @@ const cars: Vehicle[] = [
         ],
         description:
             "Toyota Yaris 1.4 diesel, anno 2009, 210.000 km. Ottime condizioni, lavori effettuati recentemente. Cambio manuale. Dischi e pasticche anteriori tagliando completo. Vetri elettrici. Chiusura centralizzata. Aria condizionata. 2 chiavi.",
+        sold: true,
     },
 ];
 
