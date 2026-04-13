@@ -1,8 +1,8 @@
 import Image from "next/image";
 import brtFermopoint from "public/images/brt-fermopoint.png";
-import inPostPoint from "public/images/inPost-point.png";
+import fedexLogo from "public/images/fedex.png";
+import glsParcel from "public/images/gls-parcel.jpg";
 import upsLogo from "public/images/ups-logo.png";
-import wishLocal from "public/images/wish-local.png";
 import { BsBoxSeam } from "react-icons/bs";
 import { FaPeopleCarry, FaTruckLoading } from "react-icons/fa";
 import { IoEarthOutline } from "react-icons/io5";
@@ -64,26 +64,26 @@ export default function ServicesSection({ isSmallScreen }) {
                     <h3 className="section-three__card-subtitle">
                         <Image
                             src={brtFermopoint}
-                            alt="BRT Logo"
+                            alt="BRT-fermopoint Logo"
                             className="section-three__image"
                         />
                         BRT-fermopoint
                     </h3>
                     <h3 className="section-three__card-subtitle">
                         <Image
-                            src={inPostPoint}
-                            alt="inPost Logo"
+                            src={glsParcel}
+                            alt="GLS Parcel Shop"
                             className="section-three__image"
                         />
-                        InPost Point
+                        GLS Parcel Shop
                     </h3>
                     <h3 className="section-three__card-subtitle">
                         <Image
-                            src={wishLocal}
-                            alt="Wish Logo"
+                            src={fedexLogo}
+                            alt="Fedex Logo"
                             className="section-three__image"
                         />
-                        Wish Local
+                        FedEx Point
                     </h3>
 
                     <hr className="horizontal-rule" />

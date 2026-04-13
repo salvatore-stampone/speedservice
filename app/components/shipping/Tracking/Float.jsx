@@ -43,7 +43,7 @@ export default function Float() {
         {
             name: "SDA",
             image: sda,
-            url: "https://www.sda.it/wps/portal/Servizi_online/ricerca_spedizioni?locale=it",
+            url: "https://www.poste.it/cerca/#/risultati-spedizioni/",
         },
         {
             name: "TNT",

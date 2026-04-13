@@ -266,6 +266,7 @@ const cars: Vehicle[] = [
         ],
         description:
             "Lancia Ypsilon 1.2 benzina, anno 2005, 165.000 km. Ottime condizioni, tagliando effettuato. Cambio manuale.",
+        sold: true,
     },
     {
         id: 9,
