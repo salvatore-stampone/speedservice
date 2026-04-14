@@ -15,7 +15,7 @@ export default function Dropdown({ trigger, menu, isDropdownOpen, setIsDropdownO
                         <li key={index} className='bg-light first-of-type:rounded-b-none first-of-type:rounded-t-2xl last-of-type:rounded-t-none last-of-type:rounded-b-2xl hover:bg-gray-200 w-[200px]'>
                             {cloneElement(menuItem, {
                                 onClick: () => {
-                                    menuItem.props.onClick && menuItem.props.onClick();
+                                    menuItem.props.onClick();
                                     setIsDropdownOpen(false);
                                 },
                             })}

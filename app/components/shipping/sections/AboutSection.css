@@ -3,6 +3,7 @@
     border-radius: 50px;
     box-shadow: 0px 10px 15px 10px rgba(0, 0, 0, 0.1);
     margin: 16px;
+    background-color: var(--light-clr);
 }
 
 .about-section__text-wrapper {
@@ -10,6 +11,7 @@
 }
 
 .about-section__text {
+    color: var(--primary-clr);
     margin-bottom: 24px;
     font-size: 1.1rem;
 }
@@ -19,7 +21,7 @@
 }
 
 .about-section__highlight {
-    color: var(--secondary-clr);
+    color: var(--primary-clr);
     font-weight: 700;
     font-size: 1.25em;
 }
