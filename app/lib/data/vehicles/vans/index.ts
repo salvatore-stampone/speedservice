@@ -28,7 +28,7 @@ const vans: Vehicle[] = [
         transmission: "Manuale",
         images: [trafic1, trafic2, trafic3, trafic4, trafic5, trafic6],
         description:
-            "Renault Trafic bianco in ottime condizioni, ideale per trasporti e lavoro. Volano e frizione appena fatti con fattura dimostrabile. Diesel.",
+            "Renault Trafic anno 2015 km 292000 certificati sempre tagliandato in casa madre, lavori effettuati recentemente, frizione e volano tagliando completo, freni e gomme nuove.",
         sold: true,
     },
     {
