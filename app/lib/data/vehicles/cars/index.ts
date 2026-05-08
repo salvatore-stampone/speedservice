@@ -2,7 +2,6 @@ import bmwX6_0 from "public/images/vehicles/cars/bmw/bmw-x6-0.jpeg";
 import bmwX6_1 from "public/images/vehicles/cars/bmw/bmw-x6-1.jpeg";
 import bmwX6_10 from "public/images/vehicles/cars/bmw/bmw-x6-10.jpeg";
 import bmwX6_11 from "public/images/vehicles/cars/bmw/bmw-x6-11.jpeg";
-import bmwX6_12 from "public/images/vehicles/cars/bmw/bmw-x6-12.jpeg";
 import bmwX6_13 from "public/images/vehicles/cars/bmw/bmw-x6-13.jpeg";
 import bmwX6_14 from "public/images/vehicles/cars/bmw/bmw-x6-14.jpeg";
 import bmwX6_15 from "public/images/vehicles/cars/bmw/bmw-x6-15.jpeg";
@@ -146,7 +145,7 @@ const cars: Vehicle[] = [
         mileage: 290000,
         fuel: "Diesel",
         transmission: "Automatico",
-        images: [bmwX6_0, bmwX6_1, bmwX6_2, bmwX6_3, bmwX6_4, bmwX6_5, bmwX6_6, bmwX6_7, bmwX6_8, bmwX6_9, bmwX6_10, bmwX6_11, bmwX6_12, bmwX6_13, bmwX6_14, bmwX6_15, bmwX6_16, bmwX6_17, bmwX6_18, bmwX6_19],
+        images: [bmwX6_0, bmwX6_1, bmwX6_2, bmwX6_3, bmwX6_4, bmwX6_5, bmwX6_6, bmwX6_7, bmwX6_8, bmwX6_9, bmwX6_10, bmwX6_11, bmwX6_13, bmwX6_14, bmwX6_15, bmwX6_16, bmwX6_17, bmwX6_18, bmwX6_19],
         description: "BMW X6 xDrive35d Eletta - Potenza, comfort e stile senza compromessi. Proponiamo in vendita splendida BMW X6 xDrive35d Eletta, SUV sportivo che unisce prestazioni elevate, eleganza e massima comodità di guida. Anno: 2009. Chilometraggio: 290.000 km certificati. Motore: 3.0 Diesel da 286 CV. Cambio: automatico. Trazione: integrale permanente (xDrive). Classe emissioni: Euro 4. Auto in ottime condizioni generali, con interni in pelle perfetti e manutenzione sempre curata. Accessori e comfort: - Climatizzatore automatico bizona - Sensori di parcheggio anteriori e posteriori - Telecamera posteriore - Portellone elettrico - Sedili e volante regolabili elettricamente con memoria - Palette al volante - Vetri posteriori oscurati (privacy) - Chiusura centralizzata e vetri elettrici. Lavori appena effettuati: - 4 pneumatici nuovi - Ammortizzatori anteriori - Tagliando completo - Pulizia e sanificazione interna. Inclusa garanzia 12 mesi MEC Italia, per acquistare in totale tranquillità. Un SUV ideale per chi cerca prestazioni, sicurezza e comfort.",
     },
     {
