@@ -20,6 +20,7 @@ const motorcycles: Vehicle[] = [
         images: [monster1, monster2, monster3, monster5],
         description:
             "Splendida Ducati Monster S2R 1000 rossa, tenuta in ottime condizioni. Benzina. Cambio manuale. Tagliando completo, olio freni e pastiglie nuove Brembo.",
+        sold: true,
     },
 ];
 
