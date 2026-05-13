@@ -74,6 +74,7 @@ export default function RootLayout({ children }) {
         <html
             lang="it"
             className={`${lexend.variable} ${geistMono.variable} ${jetbrainsMono.variable}`}
+            data-scroll-behavior="smooth"
         >
             <body>{children}</body>
         </html>
