@@ -17,6 +17,24 @@ import bmwX6_6 from "public/images/vehicles/cars/bmw/bmw-x6-6.jpeg";
 import bmwX6_7 from "public/images/vehicles/cars/bmw/bmw-x6-7.jpeg";
 import bmwX6_8 from "public/images/vehicles/cars/bmw/bmw-x6-8.jpeg";
 import bmwX6_9 from "public/images/vehicles/cars/bmw/bmw-x6-9.jpeg";
+import chevroletKalos1 from "public/images/vehicles/cars/chevrolet-kalos/chevrolet-kalos-1.jpg";
+import chevroletKalos10 from "public/images/vehicles/cars/chevrolet-kalos/chevrolet-kalos-10.jpg";
+import chevroletKalos11 from "public/images/vehicles/cars/chevrolet-kalos/chevrolet-kalos-11.jpg";
+import chevroletKalos12 from "public/images/vehicles/cars/chevrolet-kalos/chevrolet-kalos-12.jpg";
+import chevroletKalos13 from "public/images/vehicles/cars/chevrolet-kalos/chevrolet-kalos-13.jpg";
+import chevroletKalos14 from "public/images/vehicles/cars/chevrolet-kalos/chevrolet-kalos-14.jpg";
+import chevroletKalos15 from "public/images/vehicles/cars/chevrolet-kalos/chevrolet-kalos-15.jpg";
+import chevroletKalos16 from "public/images/vehicles/cars/chevrolet-kalos/chevrolet-kalos-16.jpg";
+import chevroletKalos17 from "public/images/vehicles/cars/chevrolet-kalos/chevrolet-kalos-17.jpg";
+import chevroletKalos18 from "public/images/vehicles/cars/chevrolet-kalos/chevrolet-kalos-18.jpg";
+import chevroletKalos2 from "public/images/vehicles/cars/chevrolet-kalos/chevrolet-kalos-2.jpg";
+import chevroletKalos3 from "public/images/vehicles/cars/chevrolet-kalos/chevrolet-kalos-3.jpg";
+import chevroletKalos4 from "public/images/vehicles/cars/chevrolet-kalos/chevrolet-kalos-4.jpg";
+import chevroletKalos5 from "public/images/vehicles/cars/chevrolet-kalos/chevrolet-kalos-5.jpg";
+import chevroletKalos6 from "public/images/vehicles/cars/chevrolet-kalos/chevrolet-kalos-6.jpg";
+import chevroletKalos7 from "public/images/vehicles/cars/chevrolet-kalos/chevrolet-kalos-7.jpg";
+import chevroletKalos8 from "public/images/vehicles/cars/chevrolet-kalos/chevrolet-kalos-8.jpg";
+import chevroletKalos9 from "public/images/vehicles/cars/chevrolet-kalos/chevrolet-kalos-9.jpg";
 import fiat500Red1 from "public/images/vehicles/cars/fiat-500-red/fiat-500-red-1.jpeg";
 import fiat500Red10 from "public/images/vehicles/cars/fiat-500-red/fiat-500-red-10.jpeg";
 import fiat500Red11 from "public/images/vehicles/cars/fiat-500-red/fiat-500-red-11.jpeg";
@@ -118,6 +136,23 @@ import opelAgila3 from "public/images/vehicles/cars/opel-agila/opel-agila-3.jpeg
 import opelAgila4 from "public/images/vehicles/cars/opel-agila/opel-agila-4.jpeg";
 import opelAgila5 from "public/images/vehicles/cars/opel-agila/opel-agila-5.jpeg";
 import opelAgila6 from "public/images/vehicles/cars/opel-agila/opel-agila-6.jpeg";
+import toyotaAygo10 from "public/images/vehicles/cars/toyota-aygo/toyota-aygo-10.jpg";
+import toyotaAygo11 from "public/images/vehicles/cars/toyota-aygo/toyota-aygo-11.jpg";
+import toyotaAygo12 from "public/images/vehicles/cars/toyota-aygo/toyota-aygo-12.jpg";
+import toyotaAygo13 from "public/images/vehicles/cars/toyota-aygo/toyota-aygo-13.jpg";
+import toyotaAygo14 from "public/images/vehicles/cars/toyota-aygo/toyota-aygo-14.jpg";
+import toyotaAygo15 from "public/images/vehicles/cars/toyota-aygo/toyota-aygo-15.jpg";
+import toyotaAygo16 from "public/images/vehicles/cars/toyota-aygo/toyota-aygo-16.jpg";
+import toyotaAygo17 from "public/images/vehicles/cars/toyota-aygo/toyota-aygo-17.jpg";
+import toyotaAygo18 from "public/images/vehicles/cars/toyota-aygo/toyota-aygo-18.jpg";
+import toyotaAygo2 from "public/images/vehicles/cars/toyota-aygo/toyota-aygo-2.jpg";
+import toyotaAygo3 from "public/images/vehicles/cars/toyota-aygo/toyota-aygo-3.jpg";
+import toyotaAygo4 from "public/images/vehicles/cars/toyota-aygo/toyota-aygo-4.jpg";
+import toyotaAygo5 from "public/images/vehicles/cars/toyota-aygo/toyota-aygo-5.jpg";
+import toyotaAygo6 from "public/images/vehicles/cars/toyota-aygo/toyota-aygo-6.jpg";
+import toyotaAygo7 from "public/images/vehicles/cars/toyota-aygo/toyota-aygo-7.jpg";
+import toyotaAygo8 from "public/images/vehicles/cars/toyota-aygo/toyota-aygo-8.jpg";
+import toyotaAygo9 from "public/images/vehicles/cars/toyota-aygo/toyota-aygo-9.jpg";
 import toyotaYaris1 from "public/images/vehicles/cars/toyota-yaris/toyota-yaris-1.jpg";
 import toyotaYaris10 from "public/images/vehicles/cars/toyota-yaris/toyota-yaris-10.jpg";
 import toyotaYaris11 from "public/images/vehicles/cars/toyota-yaris/toyota-yaris-11.jpg";
@@ -369,7 +404,70 @@ const cars: Vehicle[] = [
         images: [fiat500White_1, fiat500White_2, fiat500White_3, fiat500White_4, fiat500White_5, fiat500White_6, fiat500White_7],
         description: "FIAT 500 1.2 BENZINA ANNO 2007 VERSIONE LOUNGE APPENA TAGLIANDATA FRIZIONE NUOVA GOMME 80% TETTUCCIO PANORAMICO DOPPIE CHIAVI Chiusura centralizzata Vetri elettrici Aria condizionata BATTERIA NUOVA CONDIZIONI ECCELLENTI",
         sold: true,
-    }
+    },
+    {
+        id: 13,
+        title: "Toyota Aygo 1.0 now Connect",
+        year: 2011,
+        price: 3290,
+        mileage: 220000,
+        engine: "1.0 12v",
+        fuel: "Benzina",
+        transmission: "Manuale",
+        images: [
+            toyotaAygo2,
+            toyotaAygo3,
+            toyotaAygo4,
+            toyotaAygo5,
+            toyotaAygo6,
+            toyotaAygo7,
+            toyotaAygo8,
+            toyotaAygo9,
+            toyotaAygo10,
+            toyotaAygo11,
+            toyotaAygo12,
+            toyotaAygo13,
+            toyotaAygo14,
+            toyotaAygo15,
+            toyotaAygo16,
+            toyotaAygo17,
+            toyotaAygo18,
+        ],
+        description:
+            "Proponiamo in vendita splendida Toyota Aygo 1000 benzina now Connect, utilitaria con consumi irrisori e bassi costi di gestione, adatta anche a neopatentati. Anno: 2011. Chilometraggio: 220.000 km certificati. Motore: 1.0 12v. Cambio: manuale. Trazione: anteriore. Classe emissioni: Euro 5A. Auto in ottime condizioni generali, con interni perfetti e manutenzione sempre curata. Accessori e comfort: climatizzatore; chiusura centralizzata e vetri elettrici; doppie chiavi; navigatore TomTom di serie; antifurto casa madre Toyota. Lavori appena effettuati: 4 pneumatici nuovi; tagliando completo (pre consegna); pulizia e sanificazione interna. Inclusa garanzia 12 mesi MEC Italia, per acquistare in totale tranquillità. Un’auto ideale per chi cerca parcheggio facile e un’utilitaria con sicurezza e comfort, senza rinunciare allo stile. La dotazione tecnica e gli optional potrebbero, in alcuni casi, differire dall’effettivo equipaggiamento della vettura.",
+    },
+    {
+        id: 14,
+        title: "Chevrolet Kalos 1.2",
+        year: 2006,
+        price: 1690,
+        mileage: 101000,
+        engine: "1.2 benzina/GPL",
+        fuel: "Benzina / GPL",
+        transmission: "Manuale",
+        images: [
+            chevroletKalos1,
+            chevroletKalos2,
+            chevroletKalos3,
+            chevroletKalos4,
+            chevroletKalos5,
+            chevroletKalos6,
+            chevroletKalos7,
+            chevroletKalos8,
+            chevroletKalos9,
+            chevroletKalos10,
+            chevroletKalos11,
+            chevroletKalos12,
+            chevroletKalos13,
+            chevroletKalos14,
+            chevroletKalos15,
+            chevroletKalos16,
+            chevroletKalos17,
+            chevroletKalos18,
+        ],
+        description:
+            "Proponiamo in vendita splendida Chevrolet Kalos, utilitaria da consumi irrisori e comoda per la città. Anno: 2006. Chilometraggio: 101.000 km certificati. Motore: 1.2 benzina/GPL. Cambio: manuale. Trazione: anteriore. Auto in ottime condizioni generali, con interni in stoffa ben tenuti e manutenzione sempre curata. Accessori e comfort: aria condizionata; chiusura centralizzata; doppie chiavi; vetri elettrici; impianto GPL. Lavori appena effettuati: 4 pneumatici; pulizia e sanificazione interna. Ideale per chi cerca consumi ridotti, compattezza e bassi costi di gestione.",
+    },
 ];
 
 export default sortWithSoldLast(cars);
