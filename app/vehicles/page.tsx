@@ -1,6 +1,7 @@
 "use client";
 
 import { ImageModal } from "@/components/ImageModal";
+import VehiclesLogoSection from "@/components/vehicles/sections/VehiclesLogoSection";
 import { VehicleCard } from "@/components/VehicleCard";
 import cars from "@/lib/data/vehicles/cars";
 import motorcycles from "@/lib/data/vehicles/motorcycles";
@@ -27,10 +28,12 @@ const Page = () => {
 
     return (
         <div className="space-y-6 sm:space-y-8">
+            <VehiclesLogoSection />
+
             <div className="text-center">
-                <h1 className="text-foreground mb-2 text-2xl font-bold sm:text-3xl lg:text-4xl">
-                    IN PRIMO PIANO
-                </h1>
+                <h2 className="text-foreground mb-2 text-xl font-bold sm:text-2xl lg:text-3xl">
+                    In primo piano
+                </h2>
                 <p className="text-muted-foreground text-sm sm:text-base">
                     Scopri i nostri veicoli in evidenza
                 </p>
