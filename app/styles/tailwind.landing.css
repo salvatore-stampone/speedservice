@@ -1,0 +1,5 @@
+@config "../../tailwind.landing.config.cjs";
+
+@import "tailwindcss/theme.css";
+@import "tailwindcss/preflight";
+@import "tailwindcss/utilities";

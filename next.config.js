@@ -7,6 +7,9 @@ const nextConfig = {
     },
     reactStrictMode: true,
     images: {
+        // ExFAT volumes create AppleDouble `._*` files; sharp can serve those instead of
+        // real images in dev. Public/static paths still work; skip the optimizer locally.
+        unoptimized: process.env.NODE_ENV === "development",
         remotePatterns: [
             {
                 protocol: "https",

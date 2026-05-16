@@ -1,6 +1,5 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import "@/styles/tailwind.vehicles.css";
 import Image from "next/image";
@@ -87,22 +86,17 @@ const Layout = ({ children }: PropsWithChildren<Props>) => {
 
             {/* Floating Back Button */}
             <div className="fixed bottom-4 left-4 z-50">
-                <Button
-                    asChild
-                    size="icon"
-                    className="text-primary-foreground h-16 w-16 rounded-full border border-[#0f447d]/20 bg-[#0f447d]/90 shadow-lg backdrop-blur-sm hover:bg-[#0f447d]"
-                    title="Torna alla home (spedizioni)"
+                <Link href="/shipping" className="fixed bottom-3 left-4 z-10 flex size-16 items-center justify-center rounded-full border border-[#0f447d]/60 bg-white backdrop-blur-sm transition-colors hover:border-[#0f447d]"
+                    title="Vai a spedizioni"
                 >
-                    <Link href="/" className="flex items-center justify-center">
-                        <Image
-                            src={logo}
-                            alt="Speedservice Logo"
-                            width={1600}
-                            height={1600}
-                            className="h-12 w-12"
-                        />
-                    </Link>
-                </Button>
+                    <Image
+                        src={logo}
+                        alt="Speedservice Logo"
+                        width={1600}
+                        height={1600}
+                        className="h-12 w-12"
+                    />
+                </Link>
             </div>
         </div>
     );

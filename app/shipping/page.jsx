@@ -5,21 +5,16 @@ import AboutSection from "@/components/shipping/sections/AboutSection";
 import AdditionalSection from "@/components/shipping/sections/AdditionalSection";
 import ContactsSection from "@/components/shipping/sections/ContactsSection";
 import EstimateSection from "@/components/shipping/sections/EstimateSection";
-import Formula1Banner from "@/components/shipping/sections/Formula1Banner";
 import LogoSection from "@/components/shipping/sections/LogoSection";
 import MapSection from "@/components/shipping/sections/MapSection";
 import MottoSection from "@/components/shipping/sections/MottoSection";
 import ParcelCollectionSection from "@/components/shipping/sections/ParcelCollectionSection";
 import ServicesSection from "@/components/shipping/sections/ServicesSection";
-import SimpleModal from "@/components/shipping/SimpleModal";
 import { useWindowSize } from "@/lib/hooks";
 import "@/styles/tailwind.shipping.css";
-import flyerImage from "public/images/vehicles/flyer.jpeg";
-import { useState } from "react";
 
 export default function MainPage() {
     const { width } = useWindowSize();
-    const [showModal, setShowModal] = useState(false);
 
     const isSmallScreen = width <= 480;
     const isMediumScreen = width <= 768;
@@ -28,14 +23,6 @@ export default function MainPage() {
     return (
         <div className="main-page">
             <EmailScript />
-            <Formula1Banner setShowModal={setShowModal} />
-            {/* Modal per mostrare il flyer a schermo intero */}
-            <SimpleModal
-                isOpen={showModal}
-                onClose={() => setShowModal(false)}
-                image={flyerImage}
-                title="Volantino - Trasporto veicoli a domicilio"
-            />
             <LogoSection />
             <MottoSection />
             <ServicesSection isSmallScreen={isSmallScreen} />

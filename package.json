@@ -30,11 +30,12 @@
         "web-vitals": "^5.1.0"
     },
     "scripts": {
+        "predev": "npm run clean",
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
         "lint": "eslint .",
-        "clean": "find . -name '._*' -delete"
+        "clean": "find ./public ./app ./.next -name '._*' -delete 2>/dev/null; true"
     },
     "eslintConfig": {
         "extends": [

@@ -46,7 +46,7 @@ export function VehicleCard({
                                 <CarouselItem key={`${vehicle.id}-${index}`}>
                                     <div className="flex w-full justify-center overflow-hidden">
                                         <DynamicImage
-                                            src={image.src}
+                                            src={image}
                                             alt={`${vehicle.title} ${index + 1}`}
                                             className="rounded-lg"
                                             maxWidth={800}
@@ -89,7 +89,8 @@ export function VehicleCard({
                                         Chilometraggio
                                     </span>
                                     <span className="text-foreground text-sm font-semibold sm:text-base">
-                                        {vehicle.mileage.toLocaleString()} km
+                                        {vehicle.mileage.toLocaleString("it-IT")}{" "}
+                                        km
                                     </span>
                                 </div>
                             </div>
@@ -157,7 +158,7 @@ export function VehicleCard({
                                 COSTO:{" "}
                             </span>
                             <span className="text-primary text-xl font-bold sm:text-2xl">
-                                € {vehicle.price.toLocaleString()}
+                                € {vehicle.price.toLocaleString("it-IT")}
                             </span>
                         </div>
                         {vehicle.sold && (

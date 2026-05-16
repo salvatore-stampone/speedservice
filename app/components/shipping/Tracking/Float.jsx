@@ -124,7 +124,7 @@ export default function Float() {
                 onClick={() => {
                     setIsModalOpen(!isModalOpen);
                 }}
-                className="float bg-primary-dark text-light left-4 z-2 cursor-pointer rounded-full px-4 py-4"
+                className="fixed bottom-3 right-22 z-2 flex cursor-pointer items-center justify-center rounded-full bg-primary-dark px-4 py-4 min-h-16 text-light hover:bg-primary-dark/90"
             >
                 TRACKING
             </button>

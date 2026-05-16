@@ -1,16 +1,23 @@
 import Link from "next/link";
-import "./styles/globals.css";
 
 function NotFound() {
     return (
-        <div className="grid min-h-[70vh] place-items-center text-center text-lg">
+        <div
+            style={{
+                display: "grid",
+                minHeight: "70vh",
+                placeItems: "center",
+                textAlign: "center",
+                fontSize: "1.125rem",
+            }}
+        >
             <span>
                 Pagina non trovata
                 <br />
                 <br />
                 <Link
                     href="/"
-                    className="text-[#989898] no-underline hover:underline"
+                    style={{ color: "#989898", textDecoration: "none" }}
                 >
                     Torna alla home
                 </Link>

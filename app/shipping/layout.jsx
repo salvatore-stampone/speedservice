@@ -1,7 +1,9 @@
 import ClientNavbar from "@/components/shipping/ClientNavbar";
 import Float from "@/components/shipping/Tracking/Float";
 import "@/styles/tailwind.shipping.css";
+import Image from "next/image";
 import Link from "next/link";
+import vehiclesLogo from "public/images/landing/speed-usato-garantito.png";
 import { BsWhatsapp } from "react-icons/bs";
 
 export const metadata = {
@@ -58,14 +60,27 @@ export default function RootLayout({ children }) {
     return (
         <main className="font-lexend">
             <ClientNavbar />
+            <Link
+                href="/vehicles"
+                className="fixed bottom-3 left-4 z-10 flex size-16 items-center justify-center rounded-full border border-red-600/60 bg-white backdrop-blur-sm transition-colors hover:border-red-600"
+                title="Vai a usato garantito"
+            >
+                <Image
+                    src={vehiclesLogo}
+                    alt="Speedservice usato garantito"
+                    width={1080}
+                    height={1080}
+                    className="h-auto w-12"
+                />
+            </Link>
             <Float />
             <Link
                 href="https://wa.me/390881042353"
-                className="float whatsapp__float"
+                className="fixed bottom-3 right-4 z-10 flex size-16 items-center justify-center rounded-full bg-[#25d366] text-white hover:bg-[#25d366]/90"
                 target="_blank"
                 rel="noopener noreferrer"
             >
-                <BsWhatsapp className="whatsapp__icon" />
+                <BsWhatsapp className="text-[30px]" />
             </Link>
             <main>{children}</main>
         </main>

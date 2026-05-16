@@ -5,7 +5,6 @@ import { VehicleCard } from "@/components/VehicleCard";
 import cars from "@/lib/data/vehicles/cars";
 import motorcycles from "@/lib/data/vehicles/motorcycles";
 import vans from "@/lib/data/vehicles/vans";
-import "@/styles/tailwind.vehicles.css";
 import { useState } from "react";
 
 const Page = () => {

@@ -8,13 +8,21 @@ interface ImageDimensions {
     aspectRatio: number;
 }
 
-export const useImageDimensions = (src: string) => {
+export const useImageDimensions = (src: string, enabled = true) => {
     const [dimensions, setDimensions] = useState<ImageDimensions | null>(null);
-    const [isLoading, setIsLoading] = useState(true);
+    const [isLoading, setIsLoading] = useState(enabled);
+    const [hasError, setHasError] = useState(false);
     const imgRef = useRef<HTMLImageElement>(null);
 
     useEffect(() => {
-        if (!src) return;
+        if (!enabled || !src) {
+            setIsLoading(false);
+            return;
+        }
+
+        setIsLoading(true);
+        setHasError(false);
+        setDimensions(null);
 
         const img = new Image();
 
@@ -29,11 +37,12 @@ export const useImageDimensions = (src: string) => {
         };
 
         img.onerror = () => {
+            setHasError(true);
             setIsLoading(false);
         };
 
         img.src = src;
-    }, [src]);
+    }, [src, enabled]);
 
-    return { dimensions, isLoading, imgRef };
+    return { dimensions, isLoading, hasError, imgRef };
 };
