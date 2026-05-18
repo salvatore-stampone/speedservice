@@ -7,6 +7,8 @@ module.exports = {
         "./app/not-found.tsx",
         "./app/(shipping)/**/*.{html,js,ts,jsx,tsx,mdx}",
         "./app/components/shipping/**/*.{html,js,ts,jsx,tsx,mdx}",
+        "!./app/(landing)/**/*.{html,js,ts,jsx,tsx,mdx}",
+        "!./app/components/landing/**/*.{html,js,ts,jsx,tsx,mdx}",
         "!./app/vehicles/**/*.{html,js,ts,jsx,tsx,mdx}",
         "!./app/components/ui/**/*.{html,js,ts,jsx,tsx,mdx}",
     ],
