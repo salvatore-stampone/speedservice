@@ -86,7 +86,7 @@ const Layout = ({ children }: PropsWithChildren<Props>) => {
 
             {/* Floating Back Button */}
             <div className="fixed bottom-4 left-4 z-50">
-                <Link href="/shipping" className="fixed bottom-3 left-4 z-10 flex size-16 items-center justify-center rounded-full border border-[#0f447d]/60 bg-white backdrop-blur-sm transition-colors hover:border-[#0f447d]"
+                <Link href="/shipping" className="fixed bottom-3 left-4 z-10 flex size-16 items-center justify-center rounded-full border border-[#1357A0]/60 bg-white backdrop-blur-sm transition-colors hover:border-[#1357A0]"
                     title="Vai a spedizioni"
                 >
                     <Image
