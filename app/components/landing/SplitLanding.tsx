@@ -17,8 +17,8 @@ type Side = {
     ariaLabel: string;
     logo: StaticImageData;
     logoAlt: string;
-    mobileButtonLabel: string;
-    mobileButtonClass: string;
+    buttonLabel: string;
+    buttonClass: string;
 };
 
 const sides: Side[] = [
@@ -27,16 +27,16 @@ const sides: Side[] = [
         ariaLabel: "Entra nella sezione Spedizioni",
         logo: shippingLogo,
         logoAlt: "Speedservice spedizioni",
-        mobileButtonLabel: "Clicca qui",
-        mobileButtonClass: "bg-[#1357A0]",
+        buttonLabel: "Clicca qui",
+        buttonClass: "bg-[#1357A0]",
     },
     {
         href: "/vehicles",
         ariaLabel: "Entra nella sezione Usato garantito",
         logo: vehiclesLogo,
         logoAlt: "Speedservice usato garantito",
-        mobileButtonLabel: "Clicca qui",
-        mobileButtonClass: "bg-[#C6191F]",
+        buttonLabel: "Clicca qui",
+        buttonClass: "bg-[#C6191F]",
     },
 ];
 
@@ -105,13 +105,13 @@ function Panel({
                         alt={entry.logoAlt}
                         priority={priority}
                         sizes="(min-width: 768px) 38vw, 80vw"
-                        className="!relative block h-auto max-h-[26dvh] w-auto max-w-[min(320px,88vw)] object-contain drop-shadow-[0_2px_24px_rgba(15,23,42,0.06)] md:max-h-none md:w-[min(420px,36vw)]"
+                        className="relative! block h-auto max-h-[26dvh] w-auto max-w-[min(320px,88vw)] object-contain drop-shadow-[0_2px_24px_rgba(15,23,42,0.06)] md:max-h-none md:w-[min(420px,36vw)]"
                     />
                     <span
-                        className={`pointer-events-none absolute -bottom-10 right-0 z-10 rounded-md px-3.5 py-1.5 text-xs font-semibold tracking-wide text-white shadow-md md:hidden ${entry.mobileButtonClass}`}
+                        className={`pointer-events-none absolute -bottom-10 right-0 md:-bottom-16 md:-right-4 z-10 rounded-md px-3.5 py-1.5 text-xs font-semibold tracking-wide text-white shadow-md md:text-xl ${entry.buttonClass}`}
                         aria-hidden
                     >
-                        {entry.mobileButtonLabel}
+                        {entry.buttonLabel}
                     </span>
                 </div>
             </div>
@@ -247,7 +247,7 @@ export default function SplitLanding() {
     return (
         <div
             ref={rootRef}
-            className="relative isolate min-h-dvh bg-[#ececee]"
+            className="relative isolate min-h-dvh bg-white"
             style={{
                 fontFamily:
                     "var(--font-lexend), ui-sans-serif, system-ui, sans-serif",
@@ -303,14 +303,6 @@ export default function SplitLanding() {
                     flexGrow={panelFlex(1)}
                 />
             </div>
-
-            <span
-                className="pointer-events-none bg-[#ececee] absolute md:bg-transparent md:bottom-5 md:left-0 md:right-0 left-[50%] -translate-x-1/2 md:translate-x-0 md:translate-y-0 bottom-[50%] translate-y-1/2 z-20 text-center text-[13px] font-medium tracking-[0.12em] w-fit mx-auto"
-                aria-hidden
-            >
-                <span className="text-[#1357A0]">Lucera </span>
-                <span className="text-red-600">s.r.l.s.</span>
-            </span>
         </div>
     );
 }
