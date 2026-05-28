@@ -392,6 +392,7 @@ const cars: Vehicle[] = [
         transmission: "Manuale",
         images: [opelAgilaWhite_1, opelAgilaWhite_2, opelAgilaWhite_3, opelAgilaWhite_4, opelAgilaWhite_5, opelAgilaWhite_6, opelAgilaWhite_7, opelAgilaWhite_8, opelAgilaWhite_9, opelAgilaWhite_10, opelAgilaWhite_11, opelAgilaWhite_12, opelAgilaWhite_13],
         description: "Proponiamo in vendita: Opel Agila anno 2011 Km 184000 (certificati). Motorizzazione 1.0 benzina 5 porte. Dotazioni: - Chiusura centralizzata (2 chiavi) - Vetri elettrici - Aria condizionata - Interni in condizioni perfette. Lavori recentemente effettuati: - Frizione - Tagliando completo - Pulizia e sanificazione interna - Garanzia 12 mesi (MEC Italia). La dotazione tecnica e gli optional potrebbero, in alcuni casi, differire dall’effettivo equipaggiamento della vettura. Si declina ogni responsabilità per eventuali involontarie incongruenze, che non rappresentano in alcun modo un impegno contrattuale.",
+        sold: true,
     },
     {
         id: 12,
