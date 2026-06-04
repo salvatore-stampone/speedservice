@@ -100,6 +100,28 @@ import fordKa4 from "public/images/vehicles/cars/ford-ka/ford-ka-4.jpg";
 import fordKa5 from "public/images/vehicles/cars/ford-ka/ford-ka-5.jpg";
 import fordKa6 from "public/images/vehicles/cars/ford-ka/ford-ka-6.jpg";
 import fordKa7 from "public/images/vehicles/cars/ford-ka/ford-ka-7.jpg";
+import golf7_1 from "public/images/vehicles/cars/golf-7/golf-7-1.jpeg";
+import golf7_10 from "public/images/vehicles/cars/golf-7/golf-7-10.jpeg";
+import golf7_11 from "public/images/vehicles/cars/golf-7/golf-7-11.jpeg";
+import golf7_12 from "public/images/vehicles/cars/golf-7/golf-7-12.jpeg";
+import golf7_13 from "public/images/vehicles/cars/golf-7/golf-7-13.jpeg";
+import golf7_14 from "public/images/vehicles/cars/golf-7/golf-7-14.jpeg";
+import golf7_15 from "public/images/vehicles/cars/golf-7/golf-7-15.jpeg";
+import golf7_16 from "public/images/vehicles/cars/golf-7/golf-7-16.jpeg";
+import golf7_17 from "public/images/vehicles/cars/golf-7/golf-7-17.jpeg";
+import golf7_18 from "public/images/vehicles/cars/golf-7/golf-7-18.jpeg";
+import golf7_19 from "public/images/vehicles/cars/golf-7/golf-7-19.jpeg";
+import golf7_2 from "public/images/vehicles/cars/golf-7/golf-7-2.jpeg";
+import golf7_20 from "public/images/vehicles/cars/golf-7/golf-7-20.jpeg";
+import golf7_21 from "public/images/vehicles/cars/golf-7/golf-7-21.jpeg";
+import golf7_22 from "public/images/vehicles/cars/golf-7/golf-7-22.jpeg";
+import golf7_3 from "public/images/vehicles/cars/golf-7/golf-7-3.jpeg";
+import golf7_4 from "public/images/vehicles/cars/golf-7/golf-7-4.jpeg";
+import golf7_5 from "public/images/vehicles/cars/golf-7/golf-7-5.jpeg";
+import golf7_6 from "public/images/vehicles/cars/golf-7/golf-7-6.jpeg";
+import golf7_7 from "public/images/vehicles/cars/golf-7/golf-7-7.jpeg";
+import golf7_8 from "public/images/vehicles/cars/golf-7/golf-7-8.jpeg";
+import golf7_9 from "public/images/vehicles/cars/golf-7/golf-7-9.jpeg";
 import lanciaYpsilon1 from "public/images/vehicles/cars/lancia-ypsilon/lancia-ypsilon-1.jpeg";
 import lanciaYpsilon10 from "public/images/vehicles/cars/lancia-ypsilon/lancia-ypsilon-10.jpeg";
 import lanciaYpsilon11 from "public/images/vehicles/cars/lancia-ypsilon/lancia-ypsilon-11.jpeg";
@@ -136,6 +158,13 @@ import opelAgila3 from "public/images/vehicles/cars/opel-agila/opel-agila-3.jpeg
 import opelAgila4 from "public/images/vehicles/cars/opel-agila/opel-agila-4.jpeg";
 import opelAgila5 from "public/images/vehicles/cars/opel-agila/opel-agila-5.jpeg";
 import opelAgila6 from "public/images/vehicles/cars/opel-agila/opel-agila-6.jpeg";
+import smartFortwo1 from "public/images/vehicles/cars/smart-fortwo/smart-fortwo-1.jpeg";
+import smartFortwo2 from "public/images/vehicles/cars/smart-fortwo/smart-fortwo-2.jpeg";
+import smartFortwo3 from "public/images/vehicles/cars/smart-fortwo/smart-fortwo-3.jpeg";
+import smartFortwo4 from "public/images/vehicles/cars/smart-fortwo/smart-fortwo-4.jpeg";
+import smartFortwo5 from "public/images/vehicles/cars/smart-fortwo/smart-fortwo-5.jpeg";
+import smartFortwo6 from "public/images/vehicles/cars/smart-fortwo/smart-fortwo-6.jpeg";
+import smartFortwo7 from "public/images/vehicles/cars/smart-fortwo/smart-fortwo-7.jpeg";
 import toyotaAygo10 from "public/images/vehicles/cars/toyota-aygo/toyota-aygo-10.jpg";
 import toyotaAygo11 from "public/images/vehicles/cars/toyota-aygo/toyota-aygo-11.jpg";
 import toyotaAygo12 from "public/images/vehicles/cars/toyota-aygo/toyota-aygo-12.jpg";
@@ -174,44 +203,42 @@ import { sortWithSoldLast } from "../utils";
 const cars: Vehicle[] = [
     {
         id: 11,
-        title: "BMW X6 xDrive35d Eletta",
+        title: "BMW X6 xDrive35d Eletta 3.0 Diesel 286CV",
         year: 2009,
         price: 12990,
         mileage: 290000,
         fuel: "Diesel",
         transmission: "Automatico",
         images: [bmwX6_0, bmwX6_1, bmwX6_2, bmwX6_3, bmwX6_4, bmwX6_5, bmwX6_6, bmwX6_7, bmwX6_8, bmwX6_9, bmwX6_10, bmwX6_11, bmwX6_13, bmwX6_14, bmwX6_15, bmwX6_16, bmwX6_17, bmwX6_18, bmwX6_19],
-        description: "BMW X6 xDrive35d Eletta - Potenza, comfort e stile senza compromessi. Proponiamo in vendita splendida BMW X6 xDrive35d Eletta, SUV sportivo che unisce prestazioni elevate, eleganza e massima comodità di guida. Anno: 2009. Chilometraggio: 290.000 km certificati. Motore: 3.0 Diesel da 286 CV. Cambio: automatico. Trazione: integrale permanente (xDrive). Classe emissioni: Euro 4. Auto in ottime condizioni generali, con interni in pelle perfetti e manutenzione sempre curata. Accessori e comfort: - Climatizzatore automatico bizona - Sensori di parcheggio anteriori e posteriori - Telecamera posteriore - Portellone elettrico - Sedili e volante regolabili elettricamente con memoria - Palette al volante - Vetri posteriori oscurati (privacy) - Chiusura centralizzata e vetri elettrici. Lavori appena effettuati: - 4 pneumatici nuovi - Ammortizzatori anteriori - Tagliando completo - Pulizia e sanificazione interna. Inclusa garanzia 12 mesi MEC Italia, per acquistare in totale tranquillità. Un SUV ideale per chi cerca prestazioni, sicurezza e comfort.",
+        description: "BMW X6 xDrive35d Eletta 3.0 Diesel 286CV, anno 2009, 290.000 km certificati. Vettura in ottime condizioni generali, interni in pelle perfetti e manutenzione sempre curata. Trazione integrale permanente xDrive, cambio automatico. Accessori: climatizzatore automatico bizona, sensori di parcheggio anteriori e posteriori, telecamera posteriore, portellone elettrico, sedili e volante regolabili elettricamente con memoria, palette al volante, vetri posteriori oscurati (privacy), chiusura centralizzata e vetri elettrici. Lavori eseguiti: 4 pneumatici nuovi, ammortizzatori anteriori, tagliando completo, pulizia e sanificazione interna. Garanzia 12 mesi MEC Italia inclusa.",
     },
     {
         id: 1,
-        title: "Fiat Punto",
+        title: "Fiat Punto 1.3 MJT Autocarro 90CV",
         year: 2012,
         price: 4500,
         mileage: 95000,
         fuel: "Diesel",
         transmission: "Manuale",
         images: [car3, car1, car2, car4, car5],
-        description:
-            "Fiat Punto in ottime condizioni, autocarro 1300 cv 90 cv.",
+        description: "Fiat Punto 1.3 MJT 90CV Autocarro, anno 2012, in ottime condizioni generali. 95.000 km percorsi. Motore brillante ed economico nei consumi.",
         sold: true,
     },
     {
         id: 2,
-        title: "Fiat Panda Rossa",
+        title: "Fiat Panda 1.2 Benzina Rosso",
         year: 2004,
         price: 2990,
         mileage: 134000,
         fuel: "Benzina",
         transmission: "Manuale",
         images: [red1, red2, red3, red4, red5, red6, red7, red8],
-        description:
-            "Fiat Panda rossa in ottime condizioni, cilindrata 1.2 L, cambio manuale, benzina.",
+        description: "Fiat Panda 1.2 benzina rossa, anno 2004, 134.000 km. Cambio manuale, ottime condizioni, ideale per la città.",
         sold: true,
     },
     {
         id: 3,
-        title: "Fiat Panda Gialla",
+        title: "Fiat Panda 1.3 Multijet Gialla",
         year: 2006,
         price: 2990,
         mileage: 215000,
@@ -229,13 +256,12 @@ const cars: Vehicle[] = [
             yellow9,
             yellow10,
         ],
-        description:
-            "Fiat Panda gialla in ottime condizioni, cilindrata 1.3 L, cambio manuale, diesel.",
+        description: "Fiat Panda 1.3 Multijet diesel gialla, anno 2006, 215.000 km, cambio manuale. Auto economica ed affidabile in ottime condizioni.",
         sold: true,
     },
     {
         id: 4,
-        title: "Fiat 500 1.2 Benzina",
+        title: "Fiat 500 1.2 Lounge Benzina",
         year: 2010,
         price: 4390,
         mileage: 187000,
@@ -257,13 +283,12 @@ const cars: Vehicle[] = [
             fiat500Red13,
             fiat500Red14,
         ],
-        description:
-            "Fiat 500 1.2 benzina full optional. Chiusura centralizzata, tettuccio apribile, comandi a volante, aria condizionata e servosterzo. Frizione appena sostituita. Gommata doppia, due chiavi, interni come nuovi, carrozzeria in ottime condizioni.",
+        description: "Fiat 500 1.2 benzina Lounge, full optional: chiusura centralizzata, tettuccio apribile, comandi al volante, aria condizionata e servosterzo. Frizione appena sostituita. Dotata di doppio treno di gomme, due chiavi, interni come nuovi e carrozzeria in ottime condizioni. 187.000 km, anno 2010.",
         sold: true,
     },
     {
         id: 5,
-        title: "Opel Agila 2008",
+        title: "Opel Agila 1.2 Twinport Benzina",
         year: 2008,
         price: 2990,
         mileage: 214000,
@@ -277,13 +302,12 @@ const cars: Vehicle[] = [
             opelAgila5,
             opelAgila6,
         ],
-        description:
-            "Opel Agila dicembre 2008, 214.000 km. Tagliando effettuato. Full optional: chiusura centralizzata, aria condizionata, servosterzo, vetri elettrici. Gommata in buone condizioni, disponibile per qualsiasi prova.",
+        description: "Opel Agila 1.2 Twinport benzina dicembre 2008, 214.000 km. Tagliando effettuato. Full optional: chiusura centralizzata, aria condizionata, servosterzo, vetri elettrici. Gomme in buone condizioni. Pronta per qualsiasi prova.",
         sold: true,
     },
     {
         id: 6,
-        title: "Fiat 500 1.3 Multijet",
+        title: "Fiat 500 1.3 Multijet 75CV",
         year: 2008,
         price: 4990,
         mileage: 165000,
@@ -305,26 +329,24 @@ const cars: Vehicle[] = [
             fiat500Red2_13,
             fiat500Red2_14,
         ],
-        description:
-            "Fiat 500 1.3 Multijet 75 CV, anno 2008, 165.000 km. Diesel, cambio manuale.",
+        description: "Fiat 500 1.3 Multijet 75CV, anno 2008, 165.000 km. Motore diesel con cambio manuale. Ottime condizioni generali.",
         sold: true,
     },
     {
         id: 7,
-        title: "Ford Ka 1.3 Multijet",
+        title: "Ford Ka 1.3 TDCi 75CV",
         year: 2012,
         price: 3490,
         mileage: 210000,
         fuel: "Diesel",
         transmission: "Manuale",
         images: [fordKa1, fordKa2, fordKa3, fordKa4, fordKa5, fordKa6, fordKa7],
-        description:
-            "Ford Ka 1.3 Multijet 75 CV, anno 2012, 210.000 km. Diesel, cambio manuale.",
+        description: "Ford Ka 1.3 TDCi 75CV, anno 2012, 210.000 km. Motore diesel, cambio manuale. Auto agile ed economica.",
         sold: true,
     },
     {
         id: 8,
-        title: "Lancia Ypsilon 1.2 Benzina",
+        title: "Lancia Ypsilon 1.2 Benzina Argento",
         year: 2005,
         price: 2490,
         mileage: 158000,
@@ -349,13 +371,12 @@ const cars: Vehicle[] = [
             lanciaYpsilon16,
             lanciaYpsilon17,
         ],
-        description:
-            "Lancia Ypsilon 1.2 benzina, anno 2005, 165.000 km. Ottime condizioni, tagliando effettuato. Cambio manuale.",
+        description: "Lancia Ypsilon 1.2 benzina argento, anno 2005, 165.000 km. Ottime condizioni generali, tagliando effettuato e cambio manuale.",
         sold: true,
     },
     {
         id: 9,
-        title: "Toyota Yaris 1.4 Diesel",
+        title: "Toyota Yaris 1.4 D-4D Diesel",
         year: 2009,
         price: 3790,
         mileage: 210000,
@@ -378,37 +399,36 @@ const cars: Vehicle[] = [
             toyotaYaris14,
             toyotaYaris15,
         ],
-        description:
-            "Toyota Yaris 1.4 diesel, anno 2009, 210.000 km. Ottime condizioni, lavori effettuati recentemente. Cambio manuale. Dischi e pasticche anteriori tagliando completo. Vetri elettrici. Chiusura centralizzata. Aria condizionata. 2 chiavi.",
+        description: "Toyota Yaris 1.4 D-4D diesel, anno 2009, 210.000 km. Ottime condizioni, lavori eseguiti: dischi e pasticche anteriori, tagliando completo. Vetri elettrici, chiusura centralizzata, aria condizionata, due chiavi. Cambio manuale.",
         sold: true,
     },
     {
         id: 10,
-        title: "Opel Agila 2011",
+        title: "Opel Agila 1.0 5 Porte Benzina",
         year: 2011,
         price: 3290,
         mileage: 184000,
         fuel: "Benzina",
         transmission: "Manuale",
         images: [opelAgilaWhite_1, opelAgilaWhite_2, opelAgilaWhite_3, opelAgilaWhite_4, opelAgilaWhite_5, opelAgilaWhite_6, opelAgilaWhite_7, opelAgilaWhite_8, opelAgilaWhite_9, opelAgilaWhite_10, opelAgilaWhite_11, opelAgilaWhite_12, opelAgilaWhite_13],
-        description: "Proponiamo in vendita: Opel Agila anno 2011 Km 184000 (certificati). Motorizzazione 1.0 benzina 5 porte. Dotazioni: - Chiusura centralizzata (2 chiavi) - Vetri elettrici - Aria condizionata - Interni in condizioni perfette. Lavori recentemente effettuati: - Frizione - Tagliando completo - Pulizia e sanificazione interna - Garanzia 12 mesi (MEC Italia). La dotazione tecnica e gli optional potrebbero, in alcuni casi, differire dall’effettivo equipaggiamento della vettura. Si declina ogni responsabilità per eventuali involontarie incongruenze, che non rappresentano in alcun modo un impegno contrattuale.",
+        description: "Opel Agila 1.0 benzina 5 porte, anno 2011, 184.000 km certificati. Dotazioni: chiusura centralizzata (2 chiavi), vetri elettrici, aria condizionata, interni in condizioni perfette. Lavori eseguiti: frizione, tagliando completo, pulizia e sanificazione interna. Garanzia 12 mesi (MEC Italia). La dotazione tecnica e gli optional potrebbero differire dall'effettiva configurazione.",
         sold: true,
     },
     {
         id: 12,
-        title: "Fiat 500 1.2 Benzina Anno 2007 Versione Lounge",
+        title: "Fiat 500 1.2 Lounge Benzina 2007",
         year: 2007,
         price: 2400,
         mileage: 150000,
         fuel: "Benzina",
         transmission: "Manuale",
         images: [fiat500White_1, fiat500White_2, fiat500White_3, fiat500White_4, fiat500White_5, fiat500White_6, fiat500White_7],
-        description: "FIAT 500 1.2 BENZINA ANNO 2007 VERSIONE LOUNGE APPENA TAGLIANDATA FRIZIONE NUOVA GOMME 80% TETTUCCIO PANORAMICO DOPPIE CHIAVI Chiusura centralizzata Vetri elettrici Aria condizionata BATTERIA NUOVA CONDIZIONI ECCELLENTI",
+        description: "Fiat 500 1.2 Lounge benzina anno 2007, 150.000 km. Appena tagliandata, frizione nuova, gomme 80%, tettuccio panoramico, doppie chiavi, chiusura centralizzata, vetri elettrici, aria condizionata, batteria nuova. Condizioni eccellenti.",
         sold: true,
     },
     {
         id: 13,
-        title: "Toyota Aygo 1.0 now Connect",
+        title: "Toyota Aygo 1.0 12v Now Connect",
         year: 2011,
         price: 3290,
         mileage: 220000,
@@ -434,12 +454,11 @@ const cars: Vehicle[] = [
             toyotaAygo17,
             toyotaAygo18,
         ],
-        description:
-            "Proponiamo in vendita splendida Toyota Aygo 1000 benzina now Connect, utilitaria con consumi irrisori e bassi costi di gestione, adatta anche a neopatentati. Anno: 2011. Chilometraggio: 220.000 km certificati. Motore: 1.0 12v. Cambio: manuale. Trazione: anteriore. Classe emissioni: Euro 5A. Auto in ottime condizioni generali, con interni perfetti e manutenzione sempre curata. Accessori e comfort: climatizzatore; chiusura centralizzata e vetri elettrici; doppie chiavi; navigatore TomTom di serie; antifurto casa madre Toyota. Lavori appena effettuati: 4 pneumatici nuovi; tagliando completo (pre consegna); pulizia e sanificazione interna. Inclusa garanzia 12 mesi MEC Italia, per acquistare in totale tranquillità. Un’auto ideale per chi cerca parcheggio facile e un’utilitaria con sicurezza e comfort, senza rinunciare allo stile. La dotazione tecnica e gli optional potrebbero, in alcuni casi, differire dall’effettivo equipaggiamento della vettura.",
+        description: "Toyota Aygo 1.0 12v Now Connect, anno 2011, 220.000 km certificati. Consumi ridottissimi e bassi costi di gestione, adatta anche a neopatentati. Accessoriata con climatizzatore, chiusura centralizzata, vetri elettrici, doppie chiavi, navigatore TomTom di serie, antifurto Toyota. Tagliando pre-consegna e 4 pneumatici nuovi, pulizia e sanificazione interna. Ottime condizioni generali. Garanzia 12 mesi MEC Italia.",
     },
     {
         id: 14,
-        title: "Chevrolet Kalos 1.2",
+        title: "Chevrolet Kalos 1.2 Benzina/GPL",
         year: 2006,
         price: 1690,
         mileage: 101000,
@@ -466,9 +485,33 @@ const cars: Vehicle[] = [
             chevroletKalos17,
             chevroletKalos18,
         ],
-        description:
-            "Proponiamo in vendita splendida Chevrolet Kalos, utilitaria da consumi irrisori e comoda per la città. Anno: 2006. Chilometraggio: 101.000 km certificati. Motore: 1.2 benzina/GPL. Cambio: manuale. Trazione: anteriore. Auto in ottime condizioni generali, con interni in stoffa ben tenuti e manutenzione sempre curata. Accessori e comfort: aria condizionata; chiusura centralizzata; doppie chiavi; vetri elettrici; impianto GPL. Lavori appena effettuati: 4 pneumatici; pulizia e sanificazione interna. Ideale per chi cerca consumi ridotti, compattezza e bassi costi di gestione.",
+        description: "Chevrolet Kalos 1.2 benzina/GPL anno 2006, 101.000 km certificati. Cambio manuale, trazione anteriore. Interni in stoffa ben tenuti, aria condizionata, chiusura centralizzata, doppie chiavi, vetri elettrici, impianto GPL. Appena eseguite pulizia e sanificazione interna e 4 pneumatici nuovi. Compatta e dai consumi ridotti, ottima soluzione economica.",
     },
+    {
+        id: 15,
+        title: "Smart Fortwo Cabrio 1.0 52 kW Pure",
+        year: 2007,
+        price: 1290,
+        mileage: 171000,
+        engine: "1.0 benzina 71cv",
+        fuel: "Benzina",
+        transmission: "Automatico",
+        images: [smartFortwo1, smartFortwo2, smartFortwo3, smartFortwo4, smartFortwo5, smartFortwo6, smartFortwo7],
+        description: "Proponiamo in vendita una splendida Smart Fortwo Cabrio Pure 1000 52 kW, ideale per la città grazie alla sua compattezza e ai consumi davvero irrisori. Anno: 2007. Chilometraggio: 171.000 km certificati. Motore: 1000 benzina 71 CV. Cambio: automatico. Trazione: posteriore. Classe emissioni: Euro 4. L'auto è in ottime condizioni generali, con interni in stoffa ben tenuti e manutenzione sempre curata. Accessori e comfort: climatizzatore automatico, cabrio automatica, autoradio Android, doppie chiavi, chiusura centralizzata e vetri elettrici, cerchi in lega. Lavori recenti: 4 pneumatici sostituiti da poco, tagliando completo pre consegna, pulizia e sanificazione interna. Utilitaria perfetta per chi cerca una piccola cabrio affidabile e confortevole, senza rinunciare allo stile. La dotazione tecnica e gli optional potrebbero variare rispetto all'annuncio, che non costituisce vincolo contrattuale.",
+        sold: true,
+    },
+    {
+        id: 16,
+        title: "Volkswagen Golf 7 CUP 1.6 TDI",
+        year: 2015,
+        price: 1290,
+        mileage: 218500,
+        engine: "1.6 Diesel 110 CV",
+        fuel: "Diesel",
+        transmission: "Manuale",
+        images: [golf7_1, golf7_2, golf7_3, golf7_4, golf7_5, golf7_6, golf7_7, golf7_8, golf7_9, golf7_10, golf7_11, golf7_12, golf7_13, golf7_14, golf7_15, golf7_16, golf7_17, golf7_18, golf7_19, golf7_20, golf7_21, golf7_22],
+        description: "Proponiamo in vendita una splendida Volkswagen Golf 7 CUP, sportiva che unisce eleganza e massima comodità di guida. Anno: 2015. Chilometraggio: 218.500 km certificati. Motore: 1.6 Diesel da 110 CV. Cambio: manuale. Trazione: anteriore. Classe emissioni: Euro 6b. L'auto è in ottime condizioni generali, con interni in stoffa e manutenzione sempre curata. Accessori e comfort: climatizzatore automatico bizona, sensori di parcheggio anteriori e posteriori, park assist, volante regolabile, doppie chiavi, vetri posteriori oscurati (privacy), chiusura centralizzata e vetri elettrici, navigatore, freno a mano elettrico, luci di cortesia esterne, fari automatici, cerchi in lega da 16\". Lavori recentemente eseguiti: 4 pneumatici sostituiti da poco, pastiglie anteriori e posteriori, tagliando completo pre consegna, pulizia e sanificazione interna. Inclusa garanzia 12 mesi MEC Italia, per acquistare in totale tranquillità. Utilitaria ideale per chi cerca consumi ridotti, sicurezza e comfort."
+    }
 ];
 
 export default sortWithSoldLast(cars);
