@@ -10,7 +10,7 @@ import {
     CarouselNext,
     CarouselPrevious,
 } from "@/components/ui/carousel";
-import type { Vehicle } from "@/lib/data/vehicles/types";
+import type { Vehicle } from "@/lib/vehicles/types";
 import { cn } from "@/lib/utils";
 import { Fuel, Gauge, Info, Joystick } from "lucide-react";
 import Link from "next/link";
@@ -42,20 +42,18 @@ export function VehicleCard({
                         opts={{ align: "start", loop: true }}
                     >
                         <CarouselContent>
-                            {vehicle.images.map((image, index) => (
+                            {vehicle.image_urls.map((imageUrl, index) => (
                                 <CarouselItem key={`${vehicle.id}-${index}`}>
                                     <div className="flex w-full justify-center overflow-hidden">
                                         <DynamicImage
-                                            src={image}
+                                            src={imageUrl}
                                             alt={`${vehicle.title} ${index + 1}`}
                                             className="rounded-lg"
                                             maxWidth={800}
                                             maxHeight={500}
                                             onClick={() =>
                                                 onImageClick(
-                                                    vehicle.images.map(
-                                                        (img) => img.src
-                                                    ),
+                                                    vehicle.image_urls,
                                                     vehicle.title,
                                                     index
                                                 )

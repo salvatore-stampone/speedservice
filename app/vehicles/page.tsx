@@ -1,30 +1,10 @@
-"use client";
-
 import { ImageModal } from "@/components/ImageModal";
 import VehiclesLogoSection from "@/components/vehicles/sections/VehiclesLogoSection";
-import { VehicleCard } from "@/components/VehicleCard";
-import cars from "@/lib/data/vehicles/cars";
-import motorcycles from "@/lib/data/vehicles/motorcycles";
-import vans from "@/lib/data/vehicles/vans";
-import { useState } from "react";
+import { VehicleListingClient } from "@/components/vehicles/VehicleListingClient";
+import { getFeaturedVehicles } from "@/lib/vehicles/queries";
 
-const Page = () => {
-    const featuredVehicles = [cars[0], motorcycles[0], vans[0]];
-    const [modalOpen, setModalOpen] = useState(false);
-    const [modalImages, setModalImages] = useState<string[]>([]);
-    const [modalTitle, setModalTitle] = useState("");
-    const [modalCurrentIndex, setModalCurrentIndex] = useState(0);
-
-    const handleImageClick = (
-        images: string[],
-        title: string,
-        currentIndex: number
-    ) => {
-        setModalImages(images);
-        setModalTitle(title);
-        setModalCurrentIndex(currentIndex);
-        setModalOpen(true);
-    };
+export default async function VehiclesPage() {
+    const featuredVehicles = await getFeaturedVehicles();
 
     return (
         <div className="space-y-6 sm:space-y-8">
@@ -39,25 +19,7 @@ const Page = () => {
                 </p>
             </div>
 
-            <div className="grid gap-6">
-                {featuredVehicles.map((vehicle, idx) => (
-                    <VehicleCard
-                        key={`featured-${vehicle.id}-${vehicle.title}-${idx}`}
-                        vehicle={vehicle}
-                        onImageClick={handleImageClick}
-                    />
-                ))}
-            </div>
-
-            <ImageModal
-                isOpen={modalOpen}
-                onClose={() => setModalOpen(false)}
-                images={modalImages}
-                title={modalTitle}
-                currentIndex={modalCurrentIndex}
-            />
+            <VehicleListingClient vehicles={featuredVehicles} />
         </div>
     );
-};
-
-export default Page;
+}
