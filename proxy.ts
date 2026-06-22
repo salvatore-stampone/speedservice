@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { isAdminSessionValid } from "@/lib/auth/admin";
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
     const { pathname } = request.nextUrl;
     const session = request.cookies.get("admin_session")?.value;
     const authenticated = isAdminSessionValid(session);
