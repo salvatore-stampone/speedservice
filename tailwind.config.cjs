@@ -5,7 +5,12 @@
 module.exports = {
     content: [
         "./app/vehicles/**/*.{html,js,ts,jsx,tsx,mdx}",
+        "./app/admin/**/*.{html,js,ts,jsx,tsx,mdx}",
         "./app/components/ui/**/*.{html,js,ts,jsx,tsx,mdx}",
+        "./app/components/admin/**/*.{html,js,ts,jsx,tsx,mdx}",
+        "./app/components/VehicleCard.tsx",
+        "./app/components/ImageModal.tsx",
+        "./app/components/vehicles/**/*.{html,js,ts,jsx,tsx,mdx}",
         "!./app/layout.jsx",
         "!./app/not-found.tsx",
         "!./app/(shipping)/**/*.{html,js,ts,jsx,tsx,mdx}",
