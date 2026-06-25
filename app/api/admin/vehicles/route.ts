@@ -1,6 +1,7 @@
 import { isAdminAuthenticated } from "@/lib/auth/admin";
 import { createSupabaseAdminClient } from "@/lib/supabase/client";
 import { rowToVehicle } from "@/lib/vehicles/mappers";
+import { revalidateVehiclePages } from "@/lib/vehicles/revalidate";
 import type { VehicleFormData } from "@/lib/vehicles/types";
 import { NextResponse } from "next/server";
 
@@ -36,6 +37,8 @@ export async function POST(request: Request) {
     if (error) {
         return NextResponse.json({ error: error.message }, { status: 500 });
     }
+
+    revalidateVehiclePages();
 
     return NextResponse.json({ vehicle: rowToVehicle(data) }, { status: 201 });
 }

@@ -3,6 +3,7 @@ import { deleteCloudinaryImages } from "@/lib/cloudinary";
 import type { VehicleUpdate } from "@/lib/supabase/database.types";
 import { createSupabaseAdminClient } from "@/lib/supabase/client";
 import { rowToVehicle } from "@/lib/vehicles/mappers";
+import { revalidateVehiclePages } from "@/lib/vehicles/revalidate";
 import type { VehicleFormData } from "@/lib/vehicles/types";
 import { NextResponse } from "next/server";
 
@@ -91,6 +92,8 @@ export async function PUT(request: Request, context: RouteContext) {
         return NextResponse.json({ error: error.message }, { status: 500 });
     }
 
+    revalidateVehiclePages();
+
     return NextResponse.json({ vehicle: rowToVehicle(data) });
 }
 
@@ -126,6 +129,8 @@ export async function DELETE(_request: Request, context: RouteContext) {
         return NextResponse.json({ error: error.message }, { status: 500 });
     }
 
+    revalidateVehiclePages();
+
     return NextResponse.json({ ok: true });
 }
 
@@ -152,6 +157,8 @@ export async function PATCH(request: Request, context: RouteContext) {
     if (error) {
         return NextResponse.json({ error: error.message }, { status: 500 });
     }
+
+    revalidateVehiclePages();
 
     return NextResponse.json({ vehicle: rowToVehicle(data) });
 }
