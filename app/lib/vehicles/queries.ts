@@ -73,11 +73,9 @@ export async function getVehiclesByCategory(
 ): Promise<Vehicle[]> {
     try {
         const rows = await fetchRows(category);
-        if (!rows.length) {
-            return getStaticFallback(category);
-        }
         return sortVehicles(rows.map(rowToVehicle));
-    } catch {
+    } catch (error) {
+        console.error(`Failed to load vehicles for ${category}`, error);
         return getStaticFallback(category);
     }
 }
@@ -85,13 +83,6 @@ export async function getVehiclesByCategory(
 export async function getFeaturedVehicles(): Promise<Vehicle[]> {
     try {
         const rows = await fetchRows();
-        if (!rows.length) {
-            return [
-                getStaticFallback("cars")[0],
-                getStaticFallback("motorcycles")[0],
-                getStaticFallback("vans")[0],
-            ].filter(Boolean);
-        }
 
         const vehicles = sortVehicles(rows.map(rowToVehicle));
         const featured = vehicles.filter((vehicle) => vehicle.featured);
@@ -112,7 +103,8 @@ export async function getFeaturedVehicles(): Promise<Vehicle[]> {
         }
 
         return picked;
-    } catch {
+    } catch (error) {
+        console.error("Failed to load featured vehicles", error);
         return [
             getStaticFallback("cars")[0],
             getStaticFallback("motorcycles")[0],
