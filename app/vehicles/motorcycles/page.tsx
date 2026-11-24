@@ -5,6 +5,8 @@ import { getVehiclesByCategory } from "@/lib/vehicles/queries";
 import { Motorbike, Phone } from "lucide-react";
 import Link from "next/link";
 
+export const dynamic = "force-dynamic";
+
 export default async function MotorcyclesPage() {
     const motorcycles = await getVehiclesByCategory("motorcycles");
 

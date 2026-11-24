@@ -3,6 +3,8 @@ import VehiclesLogoSection from "@/components/vehicles/sections/VehiclesLogoSect
 import { VehicleListingClient } from "@/components/vehicles/VehicleListingClient";
 import { getFeaturedVehicles } from "@/lib/vehicles/queries";
 
+export const dynamic = "force-dynamic";
+
 export default async function VehiclesPage() {
     const featuredVehicles = await getFeaturedVehicles();
 

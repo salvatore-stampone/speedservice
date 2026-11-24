@@ -5,6 +5,8 @@ import { getVehiclesByCategory } from "@/lib/vehicles/queries";
 import { Phone, Truck } from "lucide-react";
 import Link from "next/link";
 
+export const dynamic = "force-dynamic";
+
 export default async function VansPage() {
     const vans = await getVehiclesByCategory("vans");
 
